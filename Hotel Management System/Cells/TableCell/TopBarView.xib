@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopBarView" customModule="Hotel_Management_System" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="JKe-w0-9Cj" id="CY3-Ys-WEA"/>
+                <outlet property="menuBtn" destination="M9Q-uh-6K6" id="2ok-a6-wPc"/>
+                <outlet property="menuLbl" destination="5X3-Wr-0Hj" id="AAv-op-jBW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JKe-w0-9Cj">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9Q-uh-6K6">
+                    <rect key="frame" x="12" y="24" width="51" height="36"/>
+                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="list.bullet" catalog="system"/>
+                    <connections>
+                        <action selector="menuBtn:" destination="-1" eventType="touchUpInside" id="KYu-kC-ldT"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Bar Menu " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X3-Wr-0Hj">
+                    <rect key="frame" x="128.33333333333331" y="29.333333333333336" width="136.33333333333331" height="25.333333333333336"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="isC-pz-6ZP"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="M9Q-uh-6K6" firstAttribute="leading" secondItem="isC-pz-6ZP" secondAttribute="leading" constant="12" id="3Xj-aj-S9h"/>
+                <constraint firstItem="5X3-Wr-0Hj" firstAttribute="centerX" secondItem="JKe-w0-9Cj" secondAttribute="centerX" id="GYk-5K-IAv"/>
+                <constraint firstItem="M9Q-uh-6K6" firstAttribute="centerY" secondItem="JKe-w0-9Cj" secondAttribute="centerY" id="U9h-gA-WIa"/>
+                <constraint firstItem="5X3-Wr-0Hj" firstAttribute="centerY" secondItem="M9Q-uh-6K6" secondAttribute="centerY" id="fOi-CZ-pPa"/>
+                <constraint firstItem="M9Q-uh-6K6" firstAttribute="top" secondItem="JKe-w0-9Cj" secondAttribute="top" constant="24" id="ff8-Nu-oqQ"/>
+                <constraint firstItem="isC-pz-6ZP" firstAttribute="trailing" secondItem="5X3-Wr-0Hj" secondAttribute="trailing" constant="128.33000000000001" id="hPG-8f-b6k"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24" y="5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
