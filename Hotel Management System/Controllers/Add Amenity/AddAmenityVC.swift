@@ -2,7 +2,7 @@
 //  AddAmenityVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 04/11/23.
+//  Created by mayur bobade on 03/11/23.
 //
 
 import UIKit
@@ -20,6 +20,10 @@ class AddAmenityVC: UIViewController {
         addAmenityTableCell.register(UINib(nibName: "AddAmenityCell", bundle: nil), forCellReuseIdentifier: "AddAmenityCell")
         addAmenityTableCell.register(UINib(nibName: "FooterCell", bundle: nil), forCellReuseIdentifier: "FooterCell")
     }
+    
+
+   
+
 }
 
 
@@ -38,9 +42,5 @@ extension AddAmenityVC:UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateAmenityVC") as! CreateAmenityVC
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
     
 }

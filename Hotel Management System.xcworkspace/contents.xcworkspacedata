@@ -2,54 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Cosmos.h">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosAccessibility.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosDefaultSettings.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosLayerHelper.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosLayers.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosLocalizedRating.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosRating.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosSettings.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosSize.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosText.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosTouch.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosTouchTarget.swift">
-   </FileRef>
-   <FileRef
-      location = "group:CosmosView.swift">
-   </FileRef>
-   <FileRef
-      location = "group:RightToLeft.swift">
-   </FileRef>
-   <FileRef
-      location = "group:StarFillMode.swift">
-   </FileRef>
-   <FileRef
-      location = "group:StarLayer.swift">
-   </FileRef>
-   <FileRef
       location = "group:Hotel Management System.xcodeproj">
    </FileRef>
    <FileRef

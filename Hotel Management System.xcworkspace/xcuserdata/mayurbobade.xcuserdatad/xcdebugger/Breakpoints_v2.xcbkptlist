@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "6EC740C2-5BFD-4C56-87CD-14FD22F872A4"
+   uuid = "6C76EF3A-11C5-444D-B32D-A6AF59732033"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DAE84CE8-E186-453E-912A-8D7C26D4BD60"
+            uuid = "CB39EC19-CC10-4A47-A333-8087C03F3FB4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Hotel Management System/Controllers/Create Amenity/CreateAmenityVC.swift"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "CreateAmenityVC"
-            landmarkType = "3">
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "viewController(_:didAutocompleteWith:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,8 +10,6 @@ import UIKit
 class OnboardingScreenVC: UIViewController {
 
     @IBOutlet weak var onboardingCollectionCell: UICollectionView!
-    
-    
     var arrHeading = ["Let’s add your properties", "Let’s add rooms in properties", "Nothing to display"]
     var arrImg = ["EmptyChainImage","Emptydashborad","EmpltyTableImg"]
     override func viewDidLoad() {
@@ -19,9 +17,7 @@ class OnboardingScreenVC: UIViewController {
 
         onboardingCollectionCell.register(UINib(nibName: "OnboardingCollectionCell", bundle: .main), forCellWithReuseIdentifier: "OnboardingCollectionCell")
     }
-
 }
-
 
 extension OnboardingScreenVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,7 +32,7 @@ extension OnboardingScreenVC:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.size.width, height: 550)
+        return CGSize(width: UIScreen.main.bounds.size.width, height: 500)
 
       }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

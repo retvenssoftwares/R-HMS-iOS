@@ -21,7 +21,13 @@ class ViewAllPropertyVC: UIViewController {
         viewAllProperties.register(UINib(nibName: "ViewAllPropertyCell", bundle: nil), forCellReuseIdentifier: "ViewAllPropertyCell")
         viewAllProperties.register(UINib(nibName: "HeaderCell", bundle: nil), forCellReuseIdentifier: "HeaderCell")
     }
+    
+    @IBAction func addNewPropertybtnPressed(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddPropertyVC") as! AddPropertyVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
+
 // MARK: - Extension TableView
 extension ViewAllPropertyVC:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,9 +51,7 @@ extension ViewAllPropertyVC:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAmenityVC") as! AddAmenityVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
-    
     
 }

@@ -2,18 +2,19 @@
 //  CreateAmenityVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 04/11/23.
+//  Created by mayur bobade on 03/11/23.
 //
 
 import UIKit
+import iOSDropDown
 
 class CreateAmenityVC: UIViewController {
     
     
     // MARK: - Outlet
 
-    @IBOutlet weak var backmenityBtn: UIButton!
     @IBOutlet weak var collectionview: UICollectionView!
+    @IBOutlet weak var txtFieldAmintyType: DropDown!
     @IBOutlet weak var viewSearchBar: UIView!
     @IBOutlet weak var viewAnemintyName: UIView!
     @IBOutlet weak var viewAnemityType: UIView!
@@ -23,7 +24,7 @@ class CreateAmenityVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        txtFieldAmintyType.optionArray = ["HTYHB", "HYJKJKB", "TGDBC"]
         collectionview.register(UINib(nibName: "CreateAmenityCollectionCell", bundle: .main), forCellWithReuseIdentifier: "CreateAmenityCollectionCell")
         viewAnemintyName.layer.borderWidth = 1
         viewAnemintyName.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
@@ -44,10 +45,7 @@ class CreateAmenityVC: UIViewController {
 //        txtFieldCreatePAssword.attributedPlaceholder = NSAttributedString(string: txtFieldCreatePAssword.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
     }
     
-    @IBAction func backAmenityBtn(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+
  
 }
 

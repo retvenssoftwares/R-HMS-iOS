@@ -7,6 +7,10 @@ target 'Hotel Management System' do
 
   # Pods for Hotel Management System
     pod 'SVPinView', '~> 1.0'
+    pod 'iOSDropDown'
+    pod 'DateTimePicker'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 
   target 'Hotel Management SystemTests' do
     inherit! :search_paths

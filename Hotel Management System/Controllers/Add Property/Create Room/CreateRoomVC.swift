@@ -275,7 +275,4 @@ extension CreateRoomVC:UICollectionViewDelegate,UICollectionViewDataSource, UICo
         
         }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
 }

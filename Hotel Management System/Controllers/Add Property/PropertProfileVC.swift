@@ -2,23 +2,25 @@
 //  PropertProfileVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade 04/11/23.
+//  Created by mayur bobade on 04/11/23.
 //
 
 import UIKit
+import iOSDropDown
 
-class PropertProfileVC: UIViewController {
+class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     
     // MARK: - Outlet
+    @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var btnContinue: UIButton!
     @IBOutlet weak var viewPropertyName: UIView!
     @IBOutlet weak var txtFieldPropertName: UITextField!
     @IBOutlet weak var viewPropertyType: UIView!
-    @IBOutlet weak var txtFieldPropertyType: UITextField!
+    @IBOutlet weak var txtFieldPropertyType: DropDown!
     @IBOutlet weak var viewPropertyRating: UIView!
-    @IBOutlet weak var txtFieldPropertyRating: UITextField!
+    @IBOutlet weak var txtFieldPropertyRating: DropDown!
     @IBOutlet weak var viewBooking: UIView!
     @IBOutlet weak var txtFieldBooking: UITextField!
     @IBOutlet weak var propertyTableView: UITableView!
@@ -27,6 +29,8 @@ class PropertProfileVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtFieldPropertyType.optionArray = ["Hotel", "Home", "Resturant"]
+        txtFieldPropertyRating.optionArray = ["25%", "35%", "100%"]
         propertyTableView.register(UINib(nibName: "AddAmenityCell", bundle: nil), forCellReuseIdentifier: "AddAmenityCell")
         
         propertyCollectionView.register(UINib(nibName: "PropertyProfileCollectionCell", bundle: .main), forCellWithReuseIdentifier: "PropertyProfileCollectionCell")
@@ -71,7 +75,16 @@ class PropertProfileVC: UIViewController {
         txtFieldBooking.attributedPlaceholder = NSAttributedString(string: txtFieldBooking.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
 
     }
-    
+    // MARK: - Function
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]){
+        guard let image = info[.editedImage] as? UIImage else {return}
+        imgProfile.image = image
+        dismiss(animated: true)
+    }
+
     
     // MARK: - Action
     @IBAction func continueBtnPressed(_ sender: UIButton) {
@@ -82,6 +95,11 @@ class PropertProfileVC: UIViewController {
     
  
     @IBAction func changeProfileBtnPressed(_ sender: Any) {
+        
+        let picker = UIImagePickerController()
+          picker.allowsEditing = true
+          picker.delegate = self
+          present(picker, animated: true)
     }
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
     }
@@ -120,9 +138,4 @@ extension PropertProfileVC:UICollectionViewDelegate,UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
             return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreateRoom2VC") as! CreateRoom2VC
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 }

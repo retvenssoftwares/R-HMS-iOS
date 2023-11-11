@@ -31,7 +31,8 @@ class ErrorVC: UIViewController {
         viewConformPassword.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
         viewConformPassword.layer.cornerRadius = 10
         
-
+      
+        
     }
     
 
