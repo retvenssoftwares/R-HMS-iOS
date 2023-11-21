@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResticationsTableCell" id="KGk-i7-Jjw" customClass="ResticationsTableCell" customModule="Hotel_Management_System" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="455" height="53"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WX6-Jb-5J9">
+                        <rect key="frame" x="10" y="5" width="435" height="43"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIP Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0T-Qo-awG">
+                                <rect key="frame" x="10" y="14" width="54" height="14"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CQ-Yh-Xzv">
+                                <rect key="frame" x="369" y="5" width="56" height="32"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.92549020049999997" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="XUP-e9-JUI"/>
+                                    <constraint firstAttribute="width" constant="56" id="aQ0-Dp-n0i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDI-5s-RhM">
+                                <rect key="frame" x="303" y="5" width="56" height="32"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.92549020049999997" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="NDk-Pf-ezD"/>
+                                    <constraint firstAttribute="width" constant="56" id="g0c-Fi-uyH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoV-0P-BIH">
+                                <rect key="frame" x="270" y="12" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="GYt-S3-fCV"/>
+                                    <constraint firstAttribute="width" secondItem="MoV-0P-BIH" secondAttribute="height" multiplier="1:1" id="orf-C8-BeN"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="0" image="Cheak"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgN-HG-kkb">
+                                <rect key="frame" x="237" y="12" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="TTM-Cg-VYm"/>
+                                    <constraint firstAttribute="width" secondItem="sgN-HG-kkb" secondAttribute="height" multiplier="1:1" id="pr7-Cm-o3S"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="0" image="Cheak"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqE-pV-PX3">
+                                <rect key="frame" x="204" y="12" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xqE-pV-PX3" secondAttribute="height" multiplier="1:1" id="O0D-sT-VHj"/>
+                                    <constraint firstAttribute="height" constant="18" id="mwR-ON-Foc"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="0" image="AgodaDropDown"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0CQ-Yh-Xzv" firstAttribute="leading" secondItem="UDI-5s-RhM" secondAttribute="trailing" constant="10" id="8eH-Dj-gwe"/>
+                            <constraint firstItem="i0T-Qo-awG" firstAttribute="leading" secondItem="WX6-Jb-5J9" secondAttribute="leading" constant="10" id="CKb-B4-koX"/>
+                            <constraint firstItem="xqE-pV-PX3" firstAttribute="width" secondItem="xqE-pV-PX3" secondAttribute="height" multiplier="1:1" id="DUK-oC-vKk"/>
+                            <constraint firstItem="UDI-5s-RhM" firstAttribute="leading" secondItem="MoV-0P-BIH" secondAttribute="trailing" constant="15" id="DZj-bl-561"/>
+                            <constraint firstItem="sgN-HG-kkb" firstAttribute="width" secondItem="sgN-HG-kkb" secondAttribute="height" multiplier="1:1" id="GAd-0R-GGy"/>
+                            <constraint firstAttribute="trailing" secondItem="0CQ-Yh-Xzv" secondAttribute="trailing" constant="10" id="GyA-Er-zab"/>
+                            <constraint firstItem="xqE-pV-PX3" firstAttribute="centerY" secondItem="UDI-5s-RhM" secondAttribute="centerY" id="Oog-oi-r6e"/>
+                            <constraint firstItem="MoV-0P-BIH" firstAttribute="leading" secondItem="sgN-HG-kkb" secondAttribute="trailing" constant="15" id="Qda-WM-Rrg"/>
+                            <constraint firstItem="sgN-HG-kkb" firstAttribute="centerY" secondItem="UDI-5s-RhM" secondAttribute="centerY" id="TdP-z7-cbs"/>
+                            <constraint firstItem="i0T-Qo-awG" firstAttribute="centerY" secondItem="UDI-5s-RhM" secondAttribute="centerY" id="Um3-c9-yaf"/>
+                            <constraint firstAttribute="bottom" secondItem="UDI-5s-RhM" secondAttribute="bottom" constant="6" id="Xue-rY-nSo"/>
+                            <constraint firstItem="0CQ-Yh-Xzv" firstAttribute="top" secondItem="WX6-Jb-5J9" secondAttribute="top" constant="5" id="agH-5Y-hsz"/>
+                            <constraint firstItem="xqE-pV-PX3" firstAttribute="width" secondItem="xqE-pV-PX3" secondAttribute="height" multiplier="1:1" id="c33-oa-35R"/>
+                            <constraint firstItem="sgN-HG-kkb" firstAttribute="leading" secondItem="xqE-pV-PX3" secondAttribute="trailing" constant="15" id="jYP-BC-r3s"/>
+                            <constraint firstItem="MoV-0P-BIH" firstAttribute="centerY" secondItem="UDI-5s-RhM" secondAttribute="centerY" id="qCO-2c-xoP"/>
+                            <constraint firstItem="UDI-5s-RhM" firstAttribute="centerY" secondItem="0CQ-Yh-Xzv" secondAttribute="centerY" id="qQ2-tb-av4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WX6-Jb-5J9" secondAttribute="bottom" constant="5" id="6Ja-EV-apf"/>
+                    <constraint firstAttribute="trailing" secondItem="WX6-Jb-5J9" secondAttribute="trailing" constant="10" id="71b-D7-aMD"/>
+                    <constraint firstItem="WX6-Jb-5J9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Gua-LE-Tce"/>
+                    <constraint firstItem="WX6-Jb-5J9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KoQ-pl-qp9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="213" y="-48"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AgodaDropDown" width="9.6666669845581055" height="6"/>
+        <image name="Cheak" width="18" height="18"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

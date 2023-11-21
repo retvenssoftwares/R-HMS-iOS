@@ -1,0 +1,36 @@
+PODS:
+  - DateTimePicker (2.5.3)
+  - GoogleMaps (8.2.0):
+    - GoogleMaps/Maps (= 8.2.0)
+  - GoogleMaps/Base (8.2.0)
+  - GoogleMaps/Maps (8.2.0):
+    - GoogleMaps/Base
+  - GooglePlaces (8.2.1)
+  - iOSDropDown (0.4.0)
+  - SVPinView (1.0.11)
+
+DEPENDENCIES:
+  - DateTimePicker
+  - GoogleMaps
+  - GooglePlaces
+  - iOSDropDown
+  - SVPinView (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - DateTimePicker
+    - GoogleMaps
+    - GooglePlaces
+    - iOSDropDown
+    - SVPinView
+
+SPEC CHECKSUMS:
+  DateTimePicker: 52701ddf656a50856d3510955933f767cd2c947c
+  GoogleMaps: 081f2547b60a1c0870a8f49166a653900e5055d5
+  GooglePlaces: 867722fe422f5a4cc19c68bc28f9f74a24470e40
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
+  SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
+
+PODFILE CHECKSUM: 0ccb323ca07f936c3ef6c4057fd2a0096855de75
+
+COCOAPODS: 1.14.2

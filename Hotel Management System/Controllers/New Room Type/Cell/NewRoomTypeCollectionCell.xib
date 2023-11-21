@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewRoomTypeCollectionCell" id="gTV-IL-0wX" customClass="NewRoomTypeCollectionCell" customModule="Hotel_Management_System" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="28"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="28"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLb-rq-VFX">
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="28"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmenityImg" translatesAutoresizingMaskIntoConstraints="NO" id="ReT-Ff-df8">
+                                <rect key="frame" x="10" y="10" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="81j-qe-Vd1"/>
+                                    <constraint firstAttribute="width" secondItem="ReT-Ff-df8" secondAttribute="height" multiplier="1:1" id="jxF-xv-LZO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chield-friendly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRG-kh-VIL">
+                                <rect key="frame" x="33" y="10" width="83" height="15.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRM-cq-Ajf">
+                                <rect key="frame" x="121" y="8.6666666666666643" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="77L-Br-wkX"/>
+                                    <constraint firstAttribute="height" constant="18" id="hgC-gn-5uA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Delete"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PRG-kh-VIL" firstAttribute="top" secondItem="KLb-rq-VFX" secondAttribute="top" constant="10" id="2I9-fh-fCR"/>
+                            <constraint firstItem="PRG-kh-VIL" firstAttribute="leading" secondItem="ReT-Ff-df8" secondAttribute="trailing" constant="5" id="PIB-gI-KkI"/>
+                            <constraint firstItem="iRM-cq-Ajf" firstAttribute="centerY" secondItem="PRG-kh-VIL" secondAttribute="centerY" id="Ujl-4O-dDU"/>
+                            <constraint firstItem="ReT-Ff-df8" firstAttribute="leading" secondItem="KLb-rq-VFX" secondAttribute="leading" constant="10" id="nkM-xl-2ve"/>
+                            <constraint firstItem="iRM-cq-Ajf" firstAttribute="leading" secondItem="PRG-kh-VIL" secondAttribute="trailing" constant="5" id="tAe-xg-QXU"/>
+                            <constraint firstAttribute="trailing" secondItem="iRM-cq-Ajf" secondAttribute="trailing" constant="10" id="y3T-MR-Lys"/>
+                            <constraint firstItem="ReT-Ff-df8" firstAttribute="top" secondItem="KLb-rq-VFX" secondAttribute="top" constant="10" id="z3j-Qz-Afu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KLb-rq-VFX" secondAttribute="bottom" id="6Yn-9D-eDZ"/>
+                <constraint firstItem="KLb-rq-VFX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GFa-gc-xhE"/>
+                <constraint firstItem="KLb-rq-VFX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P9q-ck-hUb"/>
+                <constraint firstAttribute="trailing" secondItem="KLb-rq-VFX" secondAttribute="trailing" id="vdX-lr-hUC"/>
+            </constraints>
+            <size key="customSize" width="149" height="37"/>
+            <point key="canvasLocation" x="110.68702290076335" y="14.084507042253522"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AmenityImg" width="18" height="18"/>
+        <image name="Delete" width="18.333333969116211" height="18"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
