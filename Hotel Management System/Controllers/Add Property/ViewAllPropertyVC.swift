@@ -17,7 +17,7 @@ class ViewAllPropertyVC: UIViewController {
     // MARK: - Lufecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hideKeyboardWhenTappedAround()
         viewAllProperties.register(UINib(nibName: "ViewAllPropertyCell", bundle: nil), forCellReuseIdentifier: "ViewAllPropertyCell")
         viewAllProperties.register(UINib(nibName: "HeaderCell", bundle: nil), forCellReuseIdentifier: "HeaderCell")
     }
@@ -26,8 +26,12 @@ class ViewAllPropertyVC: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddPropertyVC") as! AddPropertyVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
+   
+    
+    
 }
-
 // MARK: - Extension TableView
 extension ViewAllPropertyVC:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,10 +52,6 @@ extension ViewAllPropertyVC:UITableViewDelegate, UITableViewDataSource{
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ViewAllPropertyCell", for: indexPath) as! ViewAllPropertyCell
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
     
 }

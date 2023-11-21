@@ -44,7 +44,6 @@ extension UIView{
         }
     }
     
-    
     func makeCircular() {
         self.layer.cornerRadius = min(self.frame.size.height, self.frame.size.width) / 2.0
         self.clipsToBounds = true
@@ -202,3 +201,16 @@ enum Selection {
     case second
 }
 
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+            tap.cancelsTouchesInView = false
+            view.addGestureRecognizer(tap)
+        }
+        
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+}

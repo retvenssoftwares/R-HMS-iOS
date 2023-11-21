@@ -8,7 +8,8 @@
 import UIKit
 
 class OTASVC: UIViewController {
-
+    
+    // MARK: - Outlet
     @IBOutlet weak var btnOverview: UIButton!
     @IBOutlet weak var btnMapping: UIButton!
     @IBOutlet weak var btnReservations: UIButton!
@@ -18,13 +19,19 @@ class OTASVC: UIViewController {
     @IBOutlet weak var viewReservation: UIView!
     @IBOutlet weak var viewLogo: UIView!
     @IBOutlet weak var containerView: UIView!
+    
+    // MARK: - Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         addSubView(storyBoard: "Main", controllerName: "OverviewVC")
-    
+        viewOverview.isHidden = false
+        viewMapping.isHidden = true
+        viewReservation.isHidden = true
+        viewLogo.isHidden = true
+        hideKeyboardWhenTappedAround()
     }
     
+    // MARK: - Action
     @IBAction func overviewBtnPressed(_ sender: UIButton) {
         addSubView(storyBoard: "Main", controllerName: "OverviewVC")
         viewOverview.isHidden = false
@@ -32,18 +39,13 @@ class OTASVC: UIViewController {
         viewReservation.isHidden = true
         viewLogo.isHidden = true
         btnOverview.setTitleColor(UIColor.init(named: "SementController"), for: .normal)
-
-       
     }
-    
     @IBAction func mapingBtnPressed(_ sender: UIButton) {
         addSubView(storyBoard: "Main", controllerName: "MappingVC")
         viewMapping.isHidden = false
         viewOverview.isHidden = true
         viewReservation.isHidden = true
         viewLogo.isHidden = true
-        
-        
     }
     @IBAction func reservationBtnPressed(_ sender: UIButton) {
         addSubView(storyBoard: "Main", controllerName: "ArrivalsVC")
@@ -52,7 +54,6 @@ class OTASVC: UIViewController {
         viewMapping.isHidden = true
         viewOverview.isHidden = true
         viewLogo.isHidden = true
-        
     }
     @IBAction func logoBtnPressed(_ sender: UIButton) {
         addSubView(storyBoard: "Main", controllerName: "LogsVC")
@@ -61,19 +62,10 @@ class OTASVC: UIViewController {
         viewReservation.isHidden = true
         viewOverview.isHidden = true
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
 
-
+// MARK: - Extension SegmentController
 extension OTASVC{
     func addSubView(storyBoard:String,controllerName:String){
         containerView.subviews.forEach({ $0.removeFromSuperview() })
@@ -81,7 +73,6 @@ extension OTASVC{
         let showVC = storyBoard.instantiateViewController(withIdentifier: "\(controllerName)")
         showVC.view.frame = CGRect(x: 0, y: 0, width: self.containerView.frame.size.width, height: self.containerView.frame.size.height)
         containerView.addSubview(showVC.view)
-        
         self.addChild(showVC)
     }
 }

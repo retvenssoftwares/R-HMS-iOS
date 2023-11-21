@@ -32,7 +32,7 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
         txtFieldPropertyType.optionArray = ["Hotel", "Home", "Resturant"]
         txtFieldPropertyRating.optionArray = ["25%", "35%", "100%"]
         propertyTableView.register(UINib(nibName: "AddAmenityCell", bundle: nil), forCellReuseIdentifier: "AddAmenityCell")
-        
+        hideKeyboardWhenTappedAround()
         propertyCollectionView.register(UINib(nibName: "PropertyProfileCollectionCell", bundle: .main), forCellWithReuseIdentifier: "PropertyProfileCollectionCell")
         
         btnContinue.layer.cornerRadius = 5
@@ -40,7 +40,13 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
         textFieldPlaceholederTextColorChange()
     
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
     
     // MARK: - Function
     

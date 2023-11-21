@@ -12,16 +12,14 @@ class VerificationPandingVC: UIViewController {
     @IBOutlet weak var verifactionPandingCOllectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         verifactionPandingCOllectionView.register(UINib(nibName: "VerificationPandingCollectionView", bundle: .main), forCellWithReuseIdentifier: "VerificationPandingCollectionView")
     }
     
 
     
     func gotoDashBoardBtnTapeed(){
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
-//        self.navigationController?.pushViewController(vc, animated: true)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabbarController") as! TabbarController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
   

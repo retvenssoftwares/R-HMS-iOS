@@ -42,7 +42,7 @@ class OnboardingSingleProperty2VC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         btnSubmit.layer.cornerRadius = 10
         viewPropertyType.layer.cornerRadius = 10
         viewPropertyType.layer.borderWidth = 1
@@ -74,31 +74,20 @@ class OnboardingSingleProperty2VC: UIViewController {
         rateSomeValue = 0
     }
     
-
-   
     // MARK: - Action
 
     @IBAction func addBtnPressed(_ sender: Any) {
         someValue += 1
     }
     @IBAction func removeBtnPressed(_ sender: UIButton) {
-        if someValue > 0 {
-            someValue += -1
-        } else {
-            someValue = 0
-        }
+        someValue -= 1
     }
     
     @IBAction func rateAddBtnPressed(_ sender: UIButton) {
         rateSomeValue += 1
     }
     @IBAction func rateRemoveBtnPressed(_ sender: UIButton) {
-        if rateSomeValue > 0 {
-            rateSomeValue += -1
-        } else {
-            rateSomeValue = 0
-        }
-
+        rateSomeValue -= 1
     }
     @IBAction func submitBtnPressed(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "VerificationPandingVC") as! VerificationPandingVC
@@ -106,4 +95,3 @@ class OnboardingSingleProperty2VC: UIViewController {
 
     }
 }
-

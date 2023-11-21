@@ -12,6 +12,7 @@ target 'Hotel Management System' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
 
+
   target 'Hotel Management SystemTests' do
     inherit! :search_paths
     # Pods for testing

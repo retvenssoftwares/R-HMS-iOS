@@ -36,17 +36,23 @@
                                     <constraint firstAttribute="width" secondItem="D6q-jp-5I4" secondAttribute="height" multiplier="1:1" id="gpZ-I4-sHu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relvents Booking Engine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy5-2N-Tlq">
-                                <rect key="frame" x="70" y="4" width="144" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relvents Booking Engine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy5-2N-Tlq" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                <rect key="frame" x="69.999999999999986" y="4" width="143.66666666666663" height="16"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Rooms Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZr-b3-wL8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Rooms Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZr-b3-wL8" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
                                 <rect key="frame" x="70" y="28" width="76" height="13"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dot" translatesAutoresizingMaskIntoConstraints="NO" id="adU-uK-ff5">
                                 <rect key="frame" x="149" y="32.666666666666664" width="4" height="4"/>
@@ -55,27 +61,37 @@
                                     <constraint firstAttribute="width" constant="4" id="Wlg-lt-zWX"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Rooms Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ej-YC-fjy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 Rooms Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ej-YC-fjy" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
                                 <rect key="frame" x="156" y="28" width="76" height="13"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-ST-9wY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-ST-9wY" customClass="CustomButton" customModule="Hotel_Management_System" customModuleProvider="target">
                                 <rect key="frame" x="424" y="15" width="31" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Phone"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-ob-w2z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bn-ob-w2z" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
                                 <rect key="frame" x="70" y="47" width="30.333333333333329" height="13"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenDot" translatesAutoresizingMaskIntoConstraints="NO" id="mKT-G5-A6l">
                                 <rect key="frame" x="103.33333333333333" y="51.666666666666664" width="4" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="4" id="88J-AG-naN"/>
+                                    <constraint firstAttribute="width" secondItem="mKT-G5-A6l" secondAttribute="height" multiplier="1:1" id="9O8-Lg-OVP"/>
                                     <constraint firstAttribute="width" secondItem="mKT-G5-A6l" secondAttribute="height" multiplier="1:1" id="rAl-b9-LaS"/>
                                 </constraints>
                             </imageView>
@@ -86,7 +102,6 @@
                             <constraint firstItem="Wxx-ST-9wY" firstAttribute="centerY" secondItem="D6q-jp-5I4" secondAttribute="centerY" id="3kr-Lg-1SI"/>
                             <constraint firstItem="Wy5-2N-Tlq" firstAttribute="top" secondItem="Sac-Bh-SOZ" secondAttribute="top" constant="4" id="6bU-X7-foJ"/>
                             <constraint firstItem="adU-uK-ff5" firstAttribute="centerY" secondItem="qZr-b3-wL8" secondAttribute="centerY" id="6zs-so-Y6R"/>
-                            <constraint firstItem="mKT-G5-A6l" firstAttribute="width" secondItem="mKT-G5-A6l" secondAttribute="height" multiplier="1:1" id="9O8-Lg-OVP"/>
                             <constraint firstAttribute="bottom" secondItem="2bn-ob-w2z" secondAttribute="bottom" constant="4" id="FA8-lK-vyv"/>
                             <constraint firstItem="qZr-b3-wL8" firstAttribute="top" secondItem="Wy5-2N-Tlq" secondAttribute="bottom" constant="8" symbolic="YES" id="Khe-zw-lSp"/>
                             <constraint firstItem="mKT-G5-A6l" firstAttribute="centerY" secondItem="2bn-ob-w2z" secondAttribute="centerY" id="KtY-GQ-QeF"/>
@@ -101,6 +116,11 @@
                             <constraint firstItem="adU-uK-ff5" firstAttribute="leading" secondItem="qZr-b3-wL8" secondAttribute="trailing" constant="3" id="qVr-Do-gYu"/>
                             <constraint firstItem="2bn-ob-w2z" firstAttribute="top" secondItem="qZr-b3-wL8" secondAttribute="bottom" constant="6" id="tW2-EG-hVh"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.90196079019999997" green="0.92549020049999997" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

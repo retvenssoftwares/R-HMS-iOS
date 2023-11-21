@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DashboardHeaderCell" id="KGk-i7-Jjw" customClass="DashboardHeaderCell" customModule="Hotel_Management_System" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="38"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uil-wd-UIN">
+                        <rect key="frame" x="0.0" y="0.0" width="408" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Sellers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyh-dY-AKH" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                <rect key="frame" x="10" y="11" width="64.333333333333329" height="16"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="ADR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zO8-DT-exQ" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                <rect key="frame" x="346" y="11.333333333333332" width="52" height="15.333333333333332"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nights Sold" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWV-uV-Ipy" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                <rect key="frame" x="238.66666666666666" y="11.333333333333332" width="67.333333333333343" height="15.333333333333332"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revenue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXn-NK-Xge" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                <rect key="frame" x="134.33333333333334" y="11.333333333333332" width="64.333333333333343" height="15.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64.333333333333314" id="ddV-mb-VK7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529780000001" green="0.21960783" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Nyh-dY-AKH" secondAttribute="bottom" constant="11" id="0Bu-lg-0v0"/>
+                            <constraint firstItem="eXn-NK-Xge" firstAttribute="leading" secondItem="Nyh-dY-AKH" secondAttribute="trailing" constant="60" id="BM2-r5-Q7M"/>
+                            <constraint firstItem="zO8-DT-exQ" firstAttribute="centerY" secondItem="Nyh-dY-AKH" secondAttribute="centerY" id="D6h-oG-BVx"/>
+                            <constraint firstItem="eXn-NK-Xge" firstAttribute="centerY" secondItem="Nyh-dY-AKH" secondAttribute="centerY" id="PF8-Vu-Af1"/>
+                            <constraint firstItem="zO8-DT-exQ" firstAttribute="leading" secondItem="xWV-uV-Ipy" secondAttribute="trailing" constant="40" id="Pbx-jb-XPa"/>
+                            <constraint firstItem="xWV-uV-Ipy" firstAttribute="centerY" secondItem="Nyh-dY-AKH" secondAttribute="centerY" id="S4Q-Rs-4sB"/>
+                            <constraint firstItem="Nyh-dY-AKH" firstAttribute="leading" secondItem="Uil-wd-UIN" secondAttribute="leading" constant="10" id="blE-14-ocg"/>
+                            <constraint firstAttribute="trailing" secondItem="zO8-DT-exQ" secondAttribute="trailing" constant="10" id="lyb-2T-rJl"/>
+                            <constraint firstItem="Nyh-dY-AKH" firstAttribute="top" secondItem="Uil-wd-UIN" secondAttribute="top" constant="11" id="wpk-ad-cCG"/>
+                            <constraint firstItem="xWV-uV-Ipy" firstAttribute="leading" secondItem="eXn-NK-Xge" secondAttribute="trailing" constant="40" id="z1W-k8-mZe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Uil-wd-UIN" secondAttribute="trailing" id="8fl-9W-fHZ"/>
+                    <constraint firstItem="Uil-wd-UIN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TmQ-42-bwE"/>
+                    <constraint firstItem="Uil-wd-UIN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pnr-Oj-EYZ"/>
+                    <constraint firstAttribute="bottom" secondItem="Uil-wd-UIN" secondAttribute="bottom" id="q37-mm-zwT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="240" y="9"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -21,12 +21,11 @@ class ErrorVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         btnResetPAssword.layer.cornerRadius = 10
         viewCreatePassword.layer.borderWidth = 1
-        viewCreatePassword.layer.borderColor = UIColor.red.cgColor
+       // viewCreatePassword.layer.borderColor = UIColor.red.cgColor
         viewCreatePassword.layer.cornerRadius = 10
-        
         viewConformPassword.layer.borderWidth = 1
         viewConformPassword.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
         viewConformPassword.layer.cornerRadius = 10

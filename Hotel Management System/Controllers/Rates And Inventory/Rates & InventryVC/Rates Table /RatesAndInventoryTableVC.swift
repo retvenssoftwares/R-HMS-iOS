@@ -8,37 +8,27 @@
 import UIKit
 
 class RatesAndInventoryTableVC: UIViewController {
-    
-    var datePicker = UIDatePicker()
+
     @IBOutlet weak var RatesAndInventoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
         RatesAndInventoryTableView.register(UINib(nibName: "RatesAndInventoryTableCell", bundle: nil), forCellReuseIdentifier: "RatesAndInventoryTableCell")
         RatesAndInventoryTableView.register(UINib(nibName: "RateHeaderCell", bundle: nil), forCellReuseIdentifier: "RateHeaderCell")
     }
     
-    @objc private func dateChanged() {
-        presentedViewController?.dismiss(animated: true, completion: nil)
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    @objc
-    func dateSelected(){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-       
-        datePicker.preferredDatePickerStyle = .inline
-        let date = dateFormatter.string(from: datePicker.date)
-        
-    }
-    
-    
-    @objc func pickerTapped(){
-        self.datePicker.preferredDatePickerStyle = .wheels
-        self.datePicker.preferredDatePickerStyle = .automatic
-    }
+    */
+
 }
 
 
@@ -57,5 +47,6 @@ extension RatesAndInventoryTableVC:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "RatesAndInventoryTableCell", for: indexPath) as! RatesAndInventoryTableCell
         return cell
     }
+   
+    
 }
-

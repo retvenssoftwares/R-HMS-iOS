@@ -12,27 +12,46 @@ class TabbarController: UIViewController {
     @IBOutlet weak var viewCointainer: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem?.isHidden = true
+        hideKeyboardWhenTappedAround()
+        self.navigationController?.navigationBar.isHidden = true
+       addSubView(storyBoard: "Main", controllerName: "OnboardingScreenVC")
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func tabbarbtnPressed(_ sender: UIButton) {
         if sender.tag == 1{
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if sender.tag == 2 {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RatesAndInventoryVC") as! RatesAndInventoryVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if sender.tag == 3 {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChannelsVC") as! ChannelsVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if sender.tag == 4 {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReservationVC") as! ReservationVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if sender.tag == 5 {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAmenityVC") as! AddAmenityVC
-            self.navigationController?.pushViewController(vc, animated: true)
+            addSubView(storyBoard: "Main", controllerName: "OnboardingScreenVC")
+        }
+        if sender.tag == 2{
+            addSubView(storyBoard: "Main", controllerName: "PropertProfileVC")
+           
+        }
+        if sender.tag == 3{
+            addSubView(storyBoard: "Main", controllerName: "ChannelsVC")
+           
+        }
+        if sender.tag == 4{
+            addSubView(storyBoard: "Main", controllerName: "ReservationsVC")
+        }
+        
+        if sender.tag == 5{
+            addSubView(storyBoard: "Main", controllerName: "CreateRoomVC")
         }
     }
+    
+  
+
 }
+
 
 extension TabbarController{
     func addSubView(storyBoard:String,controllerName:String){

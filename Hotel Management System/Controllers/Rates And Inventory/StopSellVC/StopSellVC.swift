@@ -13,7 +13,7 @@ class StopSellVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         stopSellTableView.register(UINib(nibName: "StopCellTableCell", bundle: nil), forCellReuseIdentifier: "StopCellTableCell")
             }
     

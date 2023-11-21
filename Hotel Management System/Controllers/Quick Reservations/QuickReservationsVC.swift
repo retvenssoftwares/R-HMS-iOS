@@ -9,8 +9,11 @@ import UIKit
 
 class QuickReservationsVC: UIViewController {
     
-    // MARK: - Outlet
     
+    
+    // MARK: - Outlet
+    @IBOutlet weak var datePickerCheakOut: UIDatePicker!
+    @IBOutlet weak var viewCheakOutDate: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var viewDatePicker: UIView!
     @IBOutlet weak var lblCHeakOutDate: UILabel!
@@ -78,10 +81,25 @@ class QuickReservationsVC: UIViewController {
     @IBOutlet weak var btnChildFour: UIButton!
     @IBOutlet weak var btnChildFive: UIButton!
     
+    
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        datePicker.locale = .current
+        datePicker.date = Date()
+        datePicker.preferredDatePickerStyle = .compact
+        
+        datePickerCheakOut.locale = .current
+        datePickerCheakOut.date = Date()
+        datePickerCheakOut.preferredDatePickerStyle = .compact
+        
+        datePicker.addTarget(self, action: #selector(dateSelected), for: .valueChanged)
+        datePicker.addTarget(self, action: #selector(pickerTapped), for: .primaryActionTriggered)
+        
+        datePickerCheakOut.addTarget(self, action: #selector(cheakOutDateSelected), for: .valueChanged)
+        datePickerCheakOut.addTarget(self, action: #selector(pickerTappedCheakOutDate), for: .primaryActionTriggered)
+        hideKeyboardWhenTappedAround()
         txtFieldPlaceHolderTextColor()
         vieBgSelectReservationType.isHidden = true
         viewSelectRoomType.isHidden = true
@@ -89,45 +107,57 @@ class QuickReservationsVC: UIViewController {
         viewAddPayments.isHidden = true
         viewSetOccupancy.isHidden = true
         viewDatePicker.isHidden = true
+        viewCheakOutDate.isHidden = true
+        
     }
-    
     // MARK: - Function
     
-    func textFeildBorder(){
-        bookingTypeView.layer.borderWidth = 1
-        bookingTypeView.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        bookingTypeView.layer.cornerRadius = 10
-        viewRoomDetails.layer.borderWidth = 1
-        viewRoomDetails.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewRoomDetails.layer.cornerRadius = 10
-        viewPhoneNumber.layer.borderWidth = 1
-        viewPhoneNumber.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewPhoneNumber.layer.cornerRadius = 10
-        viewSaluatations.layer.borderWidth = 1
-        viewSaluatations.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewSaluatations.layer.cornerRadius = 10
-        viewGuestName.layer.borderWidth = 1
-        viewGuestName.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewGuestName.layer.cornerRadius = 10
-        viewEmailAdress.layer.borderWidth = 1
-        viewEmailAdress.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewEmailAdress.layer.cornerRadius = 10
-        viewRemark.layer.borderWidth = 1
-        viewRemark.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewRemark.layer.cornerRadius = 20
-        viewInternalNote.layer.borderWidth = 1
-        viewInternalNote.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewInternalNote.layer.cornerRadius = 20
-        viewConfirmbooking.layer.borderWidth = 1
-        viewConfirmbooking.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewConfirmbooking.layer.cornerRadius = 10
-        viewEnquiryonly.layer.borderWidth = 1
-        viewEnquiryonly.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewEnquiryonly.layer.cornerRadius = 10
-        viewHoldRooms.layer.borderWidth = 1
-        viewHoldRooms.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewHoldRooms.layer.cornerRadius = 10
+    
+    @objc private func dateChanged() {
+        presentedViewController?.dismiss(animated: true, completion: nil)
     }
+    
+    @objc
+    func dateSelected(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        datePicker?.preferredDatePickerStyle = .inline
+        let date = dateFormatter.string(from: datePicker.date)
+        lblCheakInDate.text = date
+    }
+    
+    
+    @objc func pickerTapped(){
+        self.datePicker.preferredDatePickerStyle = .wheels
+        self.datePicker.preferredDatePickerStyle = .automatic
+        self.viewDatePicker.isHidden = true
+    }
+    
+    @objc
+    func cheakOutDateSelected(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+       
+        datePickerCheakOut?.preferredDatePickerStyle = .inline
+        let date = dateFormatter.string(from: datePickerCheakOut.date)
+        lblCHeakOutDate.text = date
+    
+        
+    }
+    
+    
+    @objc func pickerTappedCheakOutDate(){
+        self.datePickerCheakOut.preferredDatePickerStyle = .wheels
+        self.datePickerCheakOut.preferredDatePickerStyle = .automatic
+        self.viewCheakOutDate.isHidden = true
+    }
+    
+    
+    
+    
+   
     
     func txtFieldPlaceHolderTextColor(){
         let color = UIColor.init(named: "TextColor")
@@ -139,10 +169,13 @@ class QuickReservationsVC: UIViewController {
         txtFieldInternalNote.attributedPlaceholder = NSAttributedString(string: txtFieldInternalNote.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
     }
     
+    
+    
+    
     // MARK: - Action
+    
     @IBAction func EstimatedTottalEditBtnPressed(_ sender: UIButton) {
     }
-    
     @IBAction func AddPaymentsBtnPressed(_ sender: UIButton) {
         viewAddPayments.isHidden = false
         viewAddPayments.backgroundColor = UIColor.black.withAlphaComponent(0.6)
@@ -152,29 +185,28 @@ class QuickReservationsVC: UIViewController {
         vieBgSelectReservationType.isHidden = false
         vieBgSelectReservationType.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     }
-    
     @IBAction func roomTypeBtnPressed(_ sender: UIButton) {
         viewSelectRoomType.isHidden = false
+        viewSelectRoomType.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     }
     @IBAction func btnRatePlanePressed(_ sender: UIButton) {
-        
         viewSelectRatePlane.isHidden = false
         viewSelectRatePlane.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     }
     
+    
     @IBAction func btnConfirmPressed(_ sender: UIButton) {
-        lblRoomType.text = "Conformed"
+        lblBookingTypeConfirmed.text = "Conformed"
         vieBgSelectReservationType.isHidden = true
         viewConfirmbooking.backgroundColor = UIColor.init(named: "SementController")
-        
         if  viewConfirmbooking.backgroundColor == UIColor.init(named: "SementController") {
             viewEnquiryonly.backgroundColor = .white
             viewHoldRooms.backgroundColor = .white
         }
+  
     }
-    
     @IBAction func btnEnquiryonlyPressed(_ sender: UIButton) {
-        lblRoomType.text = "Enquiry Only"
+        lblBookingTypeConfirmed.text = "Enquiry Only"
         vieBgSelectReservationType.isHidden = true
         viewEnquiryonly.backgroundColor = UIColor.init(named: "SementController")
         if  viewEnquiryonly.backgroundColor == UIColor.init(named: "SementController") {
@@ -182,9 +214,8 @@ class QuickReservationsVC: UIViewController {
             viewHoldRooms.backgroundColor = .white
         }
     }
-    
     @IBAction func btnHoldRoomsPressed(_ sender: UIButton) {
-        lblRoomType.text = "Hold Rooms"
+        lblBookingTypeConfirmed.text = "Hold Room"
         vieBgSelectReservationType.isHidden = true
         viewHoldRooms.backgroundColor = UIColor.init(named: "SementController")
         if  viewHoldRooms.backgroundColor == UIColor.init(named: "SementController") {
@@ -192,6 +223,7 @@ class QuickReservationsVC: UIViewController {
             viewConfirmbooking.backgroundColor = .white
         }
     }
+    
     
     @IBAction func DeluxeRoomBtnPressed(_ sender: UIButton) {
         lblRoomType.text = "Deluxe Room"
@@ -217,11 +249,11 @@ class QuickReservationsVC: UIViewController {
             btnFamilyRoom.backgroundColor = UIColor.clear
         }
     }
-    
     @IBAction func VIPRoomBtnPressed(_ sender: UIButton) {
         lblRoomType.text = "VIP Room"
         btnVIPRoom.backgroundColor = UIColor.init(named: "SementController")
         viewSelectRoomType.isHidden = true
+        
         if btnVIPRoom.backgroundColor == UIColor.init(named: "SementController") {
             btnSuperDeluxe.backgroundColor = UIColor.clear
             btnDeluxeRoom.backgroundColor = UIColor.clear
@@ -229,11 +261,11 @@ class QuickReservationsVC: UIViewController {
             btnFamilyRoom.backgroundColor = UIColor.clear
         }
     }
-    
     @IBAction func supermeDeluxeBtnPressed(_ sender: UIButton) {
         lblRoomType.text = "Superme Deluxe "
         btnSuperDeluxe.backgroundColor = UIColor.init(named: "SementController")
         viewSelectRoomType.isHidden = true
+        
         if btnSuperDeluxe.backgroundColor == UIColor.init(named: "SementController") {
             btnSuperDeluxe.backgroundColor = UIColor.clear
             btnVIPRoom.backgroundColor = UIColor.clear
@@ -241,11 +273,11 @@ class QuickReservationsVC: UIViewController {
             btnFamilyRoom.backgroundColor = UIColor.clear
         }
     }
-    
     @IBAction func familyRoomBtnPressed(_ sender: UIButton) {
         lblRoomType.text = "Family Room"
         btnFamilyRoom.backgroundColor = UIColor.init(named: "SementController")
         viewSelectRoomType.isHidden = true
+        
         if btnFamilyRoom.backgroundColor == UIColor.init(named: "SementController") {
             btnSuperDeluxe.backgroundColor = UIColor.clear
             btnVIPRoom.backgroundColor = UIColor.clear
@@ -253,6 +285,7 @@ class QuickReservationsVC: UIViewController {
             btnDeluxeRoom.backgroundColor = UIColor.clear
         }
     }
+    
     
     @IBAction func europeaneBtnPressed(_ sender: UIButton) {
         lblRatePlane.text = "European Plan"
@@ -265,12 +298,14 @@ class QuickReservationsVC: UIViewController {
             btnModifieAmericanPlane.backgroundColor = .clear
             btnFullBoardPlane.backgroundColor = .clear
         }
+        
     }
     
     @IBAction func continentailbtnPressed(_ sender: UIButton) {
         lblRatePlane.text = "Continental Plan"
         viewSelectRatePlane.isHidden = true
         btnContinentalPlane.backgroundColor = UIColor.init(named: "SementController")
+        
         if  btnContinentalPlane.backgroundColor == UIColor.init(named: "SementController"){
             btnEuropeanePlane.backgroundColor = .clear
             btnAmericanPlane.backgroundColor = .clear
@@ -291,11 +326,11 @@ class QuickReservationsVC: UIViewController {
             btnFullBoardPlane.backgroundColor = .clear
         }
     }
-    
     @IBAction func modifiedAmericanBtnPRessed(_ sender: UIButton) {
         lblRatePlane.text = "Modified American Palne."
         viewSelectRatePlane.isHidden = true
         btnModifieAmericanPlane.backgroundColor = UIColor.init(named: "SementController")
+        
         if  btnModifieAmericanPlane.backgroundColor == UIColor.init(named: "SementController"){
             btnEuropeanePlane.backgroundColor = .clear
             btnEuropeanePlane.backgroundColor = .clear
@@ -303,7 +338,6 @@ class QuickReservationsVC: UIViewController {
             btnFullBoardPlane.backgroundColor = .clear
         }
     }
-    
     @IBAction func fullBoardBtnPressed(_ sender: UIButton) {
         lblRatePlane.text = "Full Board Plan"
         viewSelectRatePlane.isHidden = true
@@ -316,16 +350,15 @@ class QuickReservationsVC: UIViewController {
             btnEuropeanePlane.backgroundColor = .clear
         }
     }
-    
     @IBAction func savePaymentsBtnPressed(_ sender: UIButton) {
         viewAddPayments.isHidden = true
     }
-    
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         viewAddPayments.isHidden = true
     }
     
     @IBAction func adults1BtnPressed(_ sender: UIButton) {
+        
     }
     
     @IBAction func adults2BtnPressed(_ sender: UIButton) {
@@ -336,25 +369,19 @@ class QuickReservationsVC: UIViewController {
     
     @IBAction func adults4BtnPressed(_ sender: UIButton) {
     }
-    
     @IBAction func adults5BtnPressed(_ sender: UIButton) {
     }
-    
     @IBAction func childBtn1Pressed(_ sender: UIButton) {
     }
-    
     @IBAction func childBtn2Pressed(_ sender: UIButton) {
     }
-    
     @IBAction func childBtn3Pressed(_ sender: UIButton) {
     }
-    
     @IBAction func childBtn4Pressed(_ sender: UIButton) {
     }
     
     @IBAction func childBtn5Pressed(_ sender: UIButton) {
     }
-    
     @IBAction func cheakInDataBtnPressed(_ sender: UIButton) {
         if sender.isEnabled == true{
             viewDatePicker.isHidden = false
@@ -362,12 +389,11 @@ class QuickReservationsVC: UIViewController {
             viewDatePicker.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         }
     }
-    
     @IBAction func cheakOutDateBtnPreseed(_ sender: UIButton) {
         if sender.isEnabled == true{
-            viewDatePicker.isHidden = false
-            datePicker.preferredDatePickerStyle = .inline
-            viewDatePicker.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+            viewCheakOutDate.isHidden = false
+            datePickerCheakOut.preferredDatePickerStyle = .inline
+            viewCheakOutDate.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         }
     }
 }

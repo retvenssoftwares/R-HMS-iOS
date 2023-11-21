@@ -16,24 +16,27 @@ class RatesAndInventoryCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         
     }
+
+    
+    
     
     func setData(no:Int){
-        if no == 1 {
+        if no == 1{
             stackView.backgroundColor = UIColor.black
             lblDay.textColor = UIColor.white
             lblDate.textColor = UIColor.white
-            stackView.layer.cornerRadius = 5
+            stackView.layer.cornerRadius = 2
             lblDay.text = "Tue"
             lblDate.text = "23"
             
-        } else if no == 2 {
+        }else if no == 2{
             lblDay.text = "Wed"
             lblDate.text = "24"
         }
         else if no == 3{
             lblDay.text = "Thu"
             lblDate.text = "25"
-        } else if no == 4{
+        }else if no == 4{
             lblDay.text = "Fri"
             lblDate.text = "26"
         }else if no == 5{

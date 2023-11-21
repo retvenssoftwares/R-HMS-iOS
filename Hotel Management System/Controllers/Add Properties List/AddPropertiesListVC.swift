@@ -17,7 +17,7 @@ class AddPropertiesListVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         addPropertiesListTableCell.register(UINib(nibName: "AllPropertiesListCell", bundle: nil), forCellReuseIdentifier: "AllPropertiesListCell")
         addPropertiesListTableCell.register(UINib(nibName: "FooterCell", bundle: nil), forCellReuseIdentifier: "FooterCell")
     }

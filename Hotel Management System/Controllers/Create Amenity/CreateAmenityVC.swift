@@ -23,7 +23,7 @@ class CreateAmenityVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         txtFieldAmintyType.optionArray = ["HTYHB", "HYJKJKB", "TGDBC"]
         collectionview.register(UINib(nibName: "CreateAmenityCollectionCell", bundle: .main), forCellWithReuseIdentifier: "CreateAmenityCollectionCell")
         viewAnemintyName.layer.borderWidth = 1

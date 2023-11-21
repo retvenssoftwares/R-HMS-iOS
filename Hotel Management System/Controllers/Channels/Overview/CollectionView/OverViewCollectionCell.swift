@@ -9,7 +9,10 @@ import UIKit
 
 class OverViewCollectionCell: UICollectionViewCell {
 
+    // MARK: - outlet
     @IBOutlet weak var viewBG: UIView!
+    
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
       

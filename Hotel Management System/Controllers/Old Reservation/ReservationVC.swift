@@ -71,7 +71,7 @@ class ReservationVC: UIViewController, UITextFieldDelegate {
         
         txtFIeldCheakIn.delegate = self
         
-        
+        hideKeyboardWhenTappedAround()
         
         btnNavigationSave.layer.cornerRadius = 5
         btnRommdetailsSave.layer.cornerRadius = 5
@@ -82,45 +82,6 @@ class ReservationVC: UIViewController, UITextFieldDelegate {
         
            
     }
-    
-//    func showDateTimePicker() {
-//          let datePicker = UIDatePicker()
-//          datePicker.datePickerMode = .dateAndTime
-//          datePicker.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
-//
-//          // Create an alert controller to contain the date picker
-//          let alert = UIAlertController(title: "Select Date and Time", message: "\n\n\n\n\n\n\n", preferredStyle: .actionSheet)
-//
-//          alert.view.addSubview(datePicker)
-//
-//          let doneAction = UIAlertAction(title: "Done", style: .default) { _ in
-//              let formatter = DateFormatter()
-//              formatter.dateStyle = .medium
-//              formatter.timeStyle = .short
-//              self.txtFIeldCheakIn.text = formatter.string(from: datePicker.date)
-//             
-//          }
-//
-//          alert.addAction(doneAction)
-//          present(alert, animated: true, completion: nil)
-//      }
-//    
-//    
-//    @objc func dateChanged(datePicker: UIDatePicker) {
-//            let formatter = DateFormatter()
-//            formatter.dateStyle = .short
-//            formatter.timeStyle = .short
-//        txtFIeldCheakIn.text = formatter.string(from: datePicker.date)
-//        }
-//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-//        if textField == txtFIeldCheakIn  {
-//               showDateTimePicker()
-//               return false
-//           }
-//           return true
-//       }
-//    
-    
     
     func showDateTimePicker() {
           let datePicker = UIDatePicker()
@@ -158,6 +119,10 @@ class ReservationVC: UIViewController, UITextFieldDelegate {
            }
            return true
        }
+    
+    
+    
+    
     
     
     

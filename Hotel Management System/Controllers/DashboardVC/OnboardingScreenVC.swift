@@ -10,14 +10,27 @@ import UIKit
 class OnboardingScreenVC: UIViewController {
 
     @IBOutlet weak var onboardingCollectionCell: UICollectionView!
+    
+    
     var arrHeading = ["Let’s add your properties", "Let’s add rooms in properties", "Nothing to display"]
     var arrImg = ["EmptyChainImage","Emptydashborad","EmpltyTableImg"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         onboardingCollectionCell.register(UINib(nibName: "OnboardingCollectionCell", bundle: .main), forCellWithReuseIdentifier: "OnboardingCollectionCell")
     }
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+
 }
+
 
 extension OnboardingScreenVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,8 +49,7 @@ extension OnboardingScreenVC:UICollectionViewDelegate,UICollectionViewDataSource
 
       }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewAllPropertyVC") as! ViewAllPropertyVC
-        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
 }

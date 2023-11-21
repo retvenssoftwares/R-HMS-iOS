@@ -37,6 +37,7 @@
 		7C100A102AF5230700D28832 /* CreateAmenityCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C100A0E2AF5230700D28832 /* CreateAmenityCollectionCell.swift */; };
 		7C100A112AF5230700D28832 /* CreateAmenityCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C100A0F2AF5230700D28832 /* CreateAmenityCollectionCell.xib */; };
 		7C100A142AF52DAC00D28832 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C100A132AF52DAC00D28832 /* LoginVC.swift */; };
+		7C21AF132AFFBF75001E7308 /* ReservationOP4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C21AF122AFFBF75001E7308 /* ReservationOP4VC.swift */; };
 		7C2D40392AFA2B400051D703 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D40382AFA2B400051D703 /* InventoryVC.swift */; };
 		7C2D403C2AFA2B630051D703 /* ResticationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D403B2AFA2B630051D703 /* ResticationsVC.swift */; };
 		7C2D403F2AFA2B8D0051D703 /* StopSellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D403E2AFA2B8D0051D703 /* StopSellVC.swift */; };
@@ -50,6 +51,12 @@
 		7C2D405A2AFA33220051D703 /* ResticationsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D40582AFA33220051D703 /* ResticationsHeaderCell.xib */; };
 		7C2D40642AFA39C90051D703 /* StopCellTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D40622AFA39C90051D703 /* StopCellTableCell.swift */; };
 		7C2D40652AFA39C90051D703 /* StopCellTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2D40632AFA39C90051D703 /* StopCellTableCell.xib */; };
+		7C2E84832B02792C003CCF2B /* ChargesPlanes1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E84822B02792C003CCF2B /* ChargesPlanes1VC.swift */; };
+		7C2E84852B0309DB003CCF2B /* ChargesAndPlanes2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E84842B0309DB003CCF2B /* ChargesAndPlanes2VC.swift */; };
+		7C2E84872B030A2F003CCF2B /* EditRatePlanes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E84862B030A2F003CCF2B /* EditRatePlanes.swift */; };
+		7C2E848C2B030E00003CCF2B /* EditRatePlaneTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2E848A2B030E00003CCF2B /* EditRatePlaneTableCell.swift */; };
+		7C2E848D2B030E00003CCF2B /* EditRatePlaneTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C2E848B2B030E00003CCF2B /* EditRatePlaneTableCell.xib */; };
+		7C4687142AFF84AF003DC206 /* ReservationOP1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4687132AFF84AF003DC206 /* ReservationOP1VC.swift */; };
 		7C5F3C7F2AFCD49200BB634E /* LogsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F3C7D2AFCD49200BB634E /* LogsTableCell.swift */; };
 		7C5F3C802AFCD49200BB634E /* LogsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5F3C7E2AFCD49200BB634E /* LogsTableCell.xib */; };
 		7C5F3C842AFCD6F100BB634E /* LogsHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F3C822AFCD6F100BB634E /* LogsHeaderTableCell.swift */; };
@@ -106,18 +113,37 @@
 		7C9430152AF66DE50073699C /* CreateRoomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9430132AF66DE50073699C /* CreateRoomHeaderCell.swift */; };
 		7C9430162AF66DE50073699C /* CreateRoomHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9430142AF66DE50073699C /* CreateRoomHeaderCell.xib */; };
 		7C9430182AF67C060073699C /* CreateRatePlaneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9430172AF67C060073699C /* CreateRatePlaneVC.swift */; };
+		7C9A587A2AFF990200AE7CB4 /* ReservationOP2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9A58792AFF990200AE7CB4 /* ReservationOP2VC.swift */; };
+		7C9BEAAF2AFFB9C6009C8DF0 /* ReservationOP3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9BEAAE2AFFB9C6009C8DF0 /* ReservationOP3VC.swift */; };
 		7C9D5B902AF5F906007FC996 /* PropertProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D5B8F2AF5F906007FC996 /* PropertProfileVC.swift */; };
 		7C9D5B922AF60C28007FC996 /* AddressAndContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D5B912AF60C28007FC996 /* AddressAndContactVC.swift */; };
 		7CAEC0702AF63C580064AD7E /* PropertyProfileCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEC06E2AF63C580064AD7E /* PropertyProfileCollectionCell.swift */; };
 		7CAEC0712AF63C580064AD7E /* PropertyProfileCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CAEC06F2AF63C580064AD7E /* PropertyProfileCollectionCell.xib */; };
 		7CAEC0742AF641100064AD7E /* CreateRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAEC0732AF641100064AD7E /* CreateRoomVC.swift */; };
+		7CB18C882B078A94000D064C /* NewPropertyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB18C862B078A94000D064C /* NewPropertyProfileVC.swift */; };
+		7CB18C8B2B078F08000D064C /* NewPropertyProfile2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB18C8A2B078F08000D064C /* NewPropertyProfile2VC.swift */; };
+		7CB9B9152B039ABC008A3484 /* NewRoomTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9B9142B039ABC008A3484 /* NewRoomTypeVC.swift */; };
+		7CB9B9192B039B3A008A3484 /* NewRoomTypeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9B9172B039B3A008A3484 /* NewRoomTypeCollectionCell.swift */; };
+		7CB9B91A2B039B3A008A3484 /* NewRoomTypeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CB9B9182B039B3A008A3484 /* NewRoomTypeCollectionCell.xib */; };
 		7CBA7CE72AF936E3007829F6 /* ReservationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA7CE62AF936E3007829F6 /* ReservationsVC.swift */; };
+		7CC2BC222B0894C40016328A /* PopsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2BC202B0894C40016328A /* PopsVC.swift */; };
+		7CC2BC232B0894C40016328A /* PopsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC2BC212B0894C40016328A /* PopsVC.xib */; };
+		7CC2BC252B0899840016328A /* PopsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC2BC242B0899840016328A /* PopsView.xib */; };
+		7CC2BC272B089CF10016328A /* PopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2BC262B089CF10016328A /* PopsView.swift */; };
+		7CC2BC292B08BD650016328A /* PropertyTypePops.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC2BC282B08BD650016328A /* PropertyTypePops.xib */; };
+		7CC2BC2C2B08BD960016328A /* PropertyTypePops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2BC2B2B08BD960016328A /* PropertyTypePops.swift */; };
 		7CCD11302AF8ED06006AEE66 /* CreateRoomRateCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD112E2AF8ED06006AEE66 /* CreateRoomRateCollectionCell.swift */; };
 		7CCD11312AF8ED06006AEE66 /* CreateRoomRateCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCD112F2AF8ED06006AEE66 /* CreateRoomRateCollectionCell.xib */; };
 		7CD19AC32AF946C100A55ED3 /* ArrivalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD19AC22AF946C100A55ED3 /* ArrivalsVC.swift */; };
 		7CD19AC62AF9472800A55ED3 /* DepartuesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD19AC52AF9472800A55ED3 /* DepartuesVC.swift */; };
 		7CD19AC92AF9475500A55ED3 /* UpcomingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD19AC82AF9475500A55ED3 /* UpcomingVC.swift */; };
 		7CD19ACC2AF9477100A55ED3 /* CancelledVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD19ACB2AF9477100A55ED3 /* CancelledVC.swift */; };
+		7CD5EB362B0741C9005707BB /* OnboardingSingleProperty1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5EB352B0741C9005707BB /* OnboardingSingleProperty1VC.swift */; };
+		7CD5EB392B074F6E005707BB /* CreatePropertyStap3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5EB382B074F6E005707BB /* CreatePropertyStap3VC.swift */; };
+		7CD5EB472B076A28005707BB /* CreatePropertyHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5EB452B076A28005707BB /* CreatePropertyHeaderCell.swift */; };
+		7CD5EB482B076A28005707BB /* CreatePropertyHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5EB462B076A28005707BB /* CreatePropertyHeaderCell.xib */; };
+		7CDC018C2AFF3DF000555169 /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDC018A2AFF3DF000555169 /* SideMenuTableCell.swift */; };
+		7CDC018D2AFF3DF000555169 /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDC018B2AFF3DF000555169 /* SideMenuTableCell.xib */; };
 		7CE1C2C52AFC8E6100C4F9FA /* MappingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1C2C42AFC8E6100C4F9FA /* MappingVC.swift */; };
 		7CE1C2C82AFC905700C4F9FA /* LogsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1C2C72AFC905700C4F9FA /* LogsVC.swift */; };
 		7CE1C2CC2AFC965100C4F9FA /* OverViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE1C2CA2AFC965100C4F9FA /* OverViewCollectionCell.swift */; };
@@ -137,7 +163,14 @@
 		7CF3118F2AF4C76000384599 /* Hotel_Management_SystemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3118E2AF4C76000384599 /* Hotel_Management_SystemUITestsLaunchTests.swift */; };
 		7CFF607E2AF7DCC000F3CC9F /* CreateRoomFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF607C2AF7DCC000F3CC9F /* CreateRoomFooterCell.swift */; };
 		7CFF607F2AF7DCC000F3CC9F /* CreateRoomFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFF607D2AF7DCC000F3CC9F /* CreateRoomFooterCell.xib */; };
-		8E691BA42AFDFEE4001768F1 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E691BA32AFDFEE4001768F1 /* CalendarHelper.swift */; };
+		8E3701262B094A3C004171B0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3701252B094A3C004171B0 /* LoginView.swift */; };
+		8E3701282B094A55004171B0 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3701272B094A55004171B0 /* LoginView.xib */; };
+		8E5DF84C2B0B238E00C297AD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DF8482B0B238E00C297AD /* Model.swift */; };
+		8E5DF84D2B0B238E00C297AD /* ApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DF8492B0B238E00C297AD /* ApiData.swift */; };
+		8E5DF84E2B0B238E00C297AD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DF84A2B0B238E00C297AD /* NetworkManager.swift */; };
+		8E5DF84F2B0B238E00C297AD /* ConstantIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DF84B2B0B238E00C297AD /* ConstantIDs.swift */; };
+		8E5DF8512B0B25E200C297AD /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DF8502B0B25E200C297AD /* GaugeView.swift */; };
+		8E9006B22B0A650000760B8D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9006B12B0A650000760B8D /* SignUpViewController.swift */; };
 		CC9DE4D24F47F110267D69E3 /* Pods_Hotel_Management_System_Hotel_Management_SystemUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E39C32484E515CF55373B8D /* Pods_Hotel_Management_System_Hotel_Management_SystemUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -173,7 +206,7 @@
 		7C0DFC522AFBA3FD0088B215 /* ChannelsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelsTableCell.xib; sourceTree = "<group>"; };
 		7C0DFC562AFBB60D0088B215 /* AddChannelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelsVC.swift; sourceTree = "<group>"; };
 		7C0DFC592AFBCD830088B215 /* OTASVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTASVC.swift; sourceTree = "<group>"; };
-		7C0DFC5D2AFBCE1C0088B215 /* OverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; };
+		7C0DFC5D2AFBCE1C0088B215 /* OverviewVC.swift */ = {isa = PBXFileReference; indentWidth = 1; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; tabWidth = 1; };
 		7C1009DD2AF4E68100D28832 /* AddPropertyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyVC.swift; sourceTree = "<group>"; };
 		7C1009DF2AF4E77C00D28832 /* ViewAllPropertyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllPropertyVC.swift; sourceTree = "<group>"; };
 		7C1009E32AF4F09C00D28832 /* ViewAllPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllPropertyCell.swift; sourceTree = "<group>"; };
@@ -192,6 +225,7 @@
 		7C100A0E2AF5230700D28832 /* CreateAmenityCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAmenityCollectionCell.swift; sourceTree = "<group>"; };
 		7C100A0F2AF5230700D28832 /* CreateAmenityCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAmenityCollectionCell.xib; sourceTree = "<group>"; };
 		7C100A132AF52DAC00D28832 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7C21AF122AFFBF75001E7308 /* ReservationOP4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOP4VC.swift; sourceTree = "<group>"; };
 		7C2D40382AFA2B400051D703 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
 		7C2D403B2AFA2B630051D703 /* ResticationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResticationsVC.swift; sourceTree = "<group>"; };
 		7C2D403E2AFA2B8D0051D703 /* StopSellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopSellVC.swift; sourceTree = "<group>"; };
@@ -205,6 +239,12 @@
 		7C2D40582AFA33220051D703 /* ResticationsHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResticationsHeaderCell.xib; sourceTree = "<group>"; };
 		7C2D40622AFA39C90051D703 /* StopCellTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopCellTableCell.swift; sourceTree = "<group>"; };
 		7C2D40632AFA39C90051D703 /* StopCellTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopCellTableCell.xib; sourceTree = "<group>"; };
+		7C2E84822B02792C003CCF2B /* ChargesPlanes1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargesPlanes1VC.swift; sourceTree = "<group>"; };
+		7C2E84842B0309DB003CCF2B /* ChargesAndPlanes2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargesAndPlanes2VC.swift; sourceTree = "<group>"; };
+		7C2E84862B030A2F003CCF2B /* EditRatePlanes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRatePlanes.swift; sourceTree = "<group>"; };
+		7C2E848A2B030E00003CCF2B /* EditRatePlaneTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRatePlaneTableCell.swift; sourceTree = "<group>"; };
+		7C2E848B2B030E00003CCF2B /* EditRatePlaneTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRatePlaneTableCell.xib; sourceTree = "<group>"; };
+		7C4687132AFF84AF003DC206 /* ReservationOP1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOP1VC.swift; sourceTree = "<group>"; };
 		7C5F3C7D2AFCD49200BB634E /* LogsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsTableCell.swift; sourceTree = "<group>"; };
 		7C5F3C7E2AFCD49200BB634E /* LogsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogsTableCell.xib; sourceTree = "<group>"; };
 		7C5F3C822AFCD6F100BB634E /* LogsHeaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsHeaderTableCell.swift; sourceTree = "<group>"; };
@@ -262,6 +302,8 @@
 		7C9430132AF66DE50073699C /* CreateRoomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomHeaderCell.swift; sourceTree = "<group>"; };
 		7C9430142AF66DE50073699C /* CreateRoomHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRoomHeaderCell.xib; sourceTree = "<group>"; };
 		7C9430172AF67C060073699C /* CreateRatePlaneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRatePlaneVC.swift; sourceTree = "<group>"; };
+		7C9A58792AFF990200AE7CB4 /* ReservationOP2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOP2VC.swift; sourceTree = "<group>"; };
+		7C9BEAAE2AFFB9C6009C8DF0 /* ReservationOP3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOP3VC.swift; sourceTree = "<group>"; };
 		7C9D5B832AF5F49C007FC996 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "../../../../../Downloads/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		7C9D5B842AF5F49C007FC996 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "../../../../../Downloads/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		7C9D5B852AF5F49C007FC996 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
@@ -279,13 +321,30 @@
 		7CAEC06E2AF63C580064AD7E /* PropertyProfileCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyProfileCollectionCell.swift; sourceTree = "<group>"; };
 		7CAEC06F2AF63C580064AD7E /* PropertyProfileCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyProfileCollectionCell.xib; sourceTree = "<group>"; };
 		7CAEC0732AF641100064AD7E /* CreateRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomVC.swift; sourceTree = "<group>"; };
+		7CB18C862B078A94000D064C /* NewPropertyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPropertyProfileVC.swift; sourceTree = "<group>"; };
+		7CB18C8A2B078F08000D064C /* NewPropertyProfile2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPropertyProfile2VC.swift; sourceTree = "<group>"; };
+		7CB9B9142B039ABC008A3484 /* NewRoomTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomTypeVC.swift; sourceTree = "<group>"; };
+		7CB9B9172B039B3A008A3484 /* NewRoomTypeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoomTypeCollectionCell.swift; sourceTree = "<group>"; };
+		7CB9B9182B039B3A008A3484 /* NewRoomTypeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRoomTypeCollectionCell.xib; sourceTree = "<group>"; };
 		7CBA7CE62AF936E3007829F6 /* ReservationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsVC.swift; sourceTree = "<group>"; };
+		7CC2BC202B0894C40016328A /* PopsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopsVC.swift; sourceTree = "<group>"; };
+		7CC2BC212B0894C40016328A /* PopsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopsVC.xib; sourceTree = "<group>"; };
+		7CC2BC242B0899840016328A /* PopsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopsView.xib; sourceTree = "<group>"; };
+		7CC2BC262B089CF10016328A /* PopsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopsView.swift; sourceTree = "<group>"; };
+		7CC2BC282B08BD650016328A /* PropertyTypePops.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyTypePops.xib; sourceTree = "<group>"; };
+		7CC2BC2B2B08BD960016328A /* PropertyTypePops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTypePops.swift; sourceTree = "<group>"; };
 		7CCD112E2AF8ED06006AEE66 /* CreateRoomRateCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomRateCollectionCell.swift; sourceTree = "<group>"; };
 		7CCD112F2AF8ED06006AEE66 /* CreateRoomRateCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRoomRateCollectionCell.xib; sourceTree = "<group>"; };
 		7CD19AC22AF946C100A55ED3 /* ArrivalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalsVC.swift; sourceTree = "<group>"; };
 		7CD19AC52AF9472800A55ED3 /* DepartuesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartuesVC.swift; sourceTree = "<group>"; };
 		7CD19AC82AF9475500A55ED3 /* UpcomingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingVC.swift; sourceTree = "<group>"; };
 		7CD19ACB2AF9477100A55ED3 /* CancelledVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelledVC.swift; sourceTree = "<group>"; };
+		7CD5EB352B0741C9005707BB /* OnboardingSingleProperty1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSingleProperty1VC.swift; sourceTree = "<group>"; };
+		7CD5EB382B074F6E005707BB /* CreatePropertyStap3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyStap3VC.swift; sourceTree = "<group>"; };
+		7CD5EB452B076A28005707BB /* CreatePropertyHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyHeaderCell.swift; sourceTree = "<group>"; };
+		7CD5EB462B076A28005707BB /* CreatePropertyHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePropertyHeaderCell.xib; sourceTree = "<group>"; };
+		7CDC018A2AFF3DF000555169 /* SideMenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableCell.swift; sourceTree = "<group>"; };
+		7CDC018B2AFF3DF000555169 /* SideMenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableCell.xib; sourceTree = "<group>"; };
 		7CE1C2C42AFC8E6100C4F9FA /* MappingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappingVC.swift; sourceTree = "<group>"; };
 		7CE1C2C72AFC905700C4F9FA /* LogsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsVC.swift; sourceTree = "<group>"; };
 		7CE1C2CA2AFC965100C4F9FA /* OverViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewCollectionCell.swift; sourceTree = "<group>"; };
@@ -310,7 +369,14 @@
 		7CFF607C2AF7DCC000F3CC9F /* CreateRoomFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomFooterCell.swift; sourceTree = "<group>"; };
 		7CFF607D2AF7DCC000F3CC9F /* CreateRoomFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRoomFooterCell.xib; sourceTree = "<group>"; };
 		860552F0E80EFA533F0EEB0D /* Pods-Hotel Management System-Hotel Management SystemUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel Management System-Hotel Management SystemUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8E691BA32AFDFEE4001768F1 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		8E3701252B094A3C004171B0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8E3701272B094A55004171B0 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		8E5DF8482B0B238E00C297AD /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8E5DF8492B0B238E00C297AD /* ApiData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiData.swift; sourceTree = "<group>"; };
+		8E5DF84A2B0B238E00C297AD /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8E5DF84B2B0B238E00C297AD /* ConstantIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantIDs.swift; sourceTree = "<group>"; };
+		8E5DF8502B0B25E200C297AD /* GaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		8E9006B12B0A650000760B8D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		964643EB10A8C784FF0671C5 /* Pods-Hotel Management SystemTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel Management SystemTests.debug.xcconfig"; path = "Target Support Files/Pods-Hotel Management SystemTests/Pods-Hotel Management SystemTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A960D0A9DEAF8400C8D47C93 /* Pods-Hotel Management System-Hotel Management SystemUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel Management System-Hotel Management SystemUITests.release.xcconfig"; path = "Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D0DEE8D387B0F19903B0947F /* Pods-Hotel Management System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hotel Management System.debug.xcconfig"; path = "Target Support Files/Pods-Hotel Management System/Pods-Hotel Management System.debug.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +427,7 @@
 				7C0B69722AF74AA7002112A9 /* Verification Panding */,
 				7C6361452AF4DFB200360938 /* OnboardingSingleProperty2VC.swift */,
 				7C6361462AF4DFB200360938 /* OnboardingViewController.swift */,
+				7CD5EB352B0741C9005707BB /* OnboardingSingleProperty1VC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -371,6 +438,10 @@
 				7C6361442AF4DFB200360938 /* WelcomeViewController.swift */,
 				7C100A132AF52DAC00D28832 /* LoginVC.swift */,
 				7C6361472AF4DFB200360938 /* SignUPVC.swift */,
+				8E3701252B094A3C004171B0 /* LoginView.swift */,
+				8E3701272B094A55004171B0 /* LoginView.xib */,
+				8E9006B12B0A650000760B8D /* SignUpViewController.swift */,
+				8E5DF8502B0B25E200C297AD /* GaugeView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -387,6 +458,7 @@
 		7C0B69732AF74ADA002112A9 /* Property Selection */ = {
 			isa = PBXGroup;
 			children = (
+				7CDC018E2AFF459000555169 /* TableCell */,
 				7C04007E2AF72D8D000DA3B7 /* PropertySelectionVC.swift */,
 			);
 			path = "Property Selection";
@@ -529,15 +601,6 @@
 			path = FooterCell;
 			sourceTree = "<group>";
 		};
-		7C1009FA2AF50CCC00D28832 /* Add Amenity */ = {
-			isa = PBXGroup;
-			children = (
-				7C100A052AF50E8800D28832 /* Cell */,
-				7C1009FB2AF50CF500D28832 /* AddAmenityVC.swift */,
-			);
-			path = "Add Amenity";
-			sourceTree = "<group>";
-		};
 		7C100A052AF50E8800D28832 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +724,45 @@
 				7C2D40632AFA39C90051D703 /* StopCellTableCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		7C2E84812B027900003CCF2B /* Charges And Planes */ = {
+			isa = PBXGroup;
+			children = (
+				7C2E84822B02792C003CCF2B /* ChargesPlanes1VC.swift */,
+				7C2E84842B0309DB003CCF2B /* ChargesAndPlanes2VC.swift */,
+				7C2E84882B030DC0003CCF2B /* Edit Rates Plane */,
+			);
+			path = "Charges And Planes";
+			sourceTree = "<group>";
+		};
+		7C2E84882B030DC0003CCF2B /* Edit Rates Plane */ = {
+			isa = PBXGroup;
+			children = (
+				7C2E84892B030DD3003CCF2B /* TableCell */,
+				7C2E84862B030A2F003CCF2B /* EditRatePlanes.swift */,
+			);
+			path = "Edit Rates Plane";
+			sourceTree = "<group>";
+		};
+		7C2E84892B030DD3003CCF2B /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				7C2E848A2B030E00003CCF2B /* EditRatePlaneTableCell.swift */,
+				7C2E848B2B030E00003CCF2B /* EditRatePlaneTableCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		7C4687122AFF8412003DC206 /* Reservation Details */ = {
+			isa = PBXGroup;
+			children = (
+				7C4687132AFF84AF003DC206 /* ReservationOP1VC.swift */,
+				7C9A58792AFF990200AE7CB4 /* ReservationOP2VC.swift */,
+				7C9BEAAE2AFFB9C6009C8DF0 /* ReservationOP3VC.swift */,
+				7C21AF122AFFBF75001E7308 /* ReservationOP4VC.swift */,
+			);
+			path = "Reservation Details";
 			sourceTree = "<group>";
 		};
 		7C5F3C812AFCD6AC00BB634E /* HeaderLogs */ = {
@@ -824,6 +926,33 @@
 			path = "Create Room";
 			sourceTree = "<group>";
 		};
+		7CB18C8C2B0799BD000D064C /* Add Amenity */ = {
+			isa = PBXGroup;
+			children = (
+				7C1009FB2AF50CF500D28832 /* AddAmenityVC.swift */,
+				7C100A052AF50E8800D28832 /* Cell */,
+			);
+			path = "Add Amenity";
+			sourceTree = "<group>";
+		};
+		7CB9B9132B039A8F008A3484 /* New Room Type */ = {
+			isa = PBXGroup;
+			children = (
+				7CB9B9162B039AEE008A3484 /* Cell */,
+				7CB9B9142B039ABC008A3484 /* NewRoomTypeVC.swift */,
+			);
+			path = "New Room Type";
+			sourceTree = "<group>";
+		};
+		7CB9B9162B039AEE008A3484 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CB9B9172B039B3A008A3484 /* NewRoomTypeCollectionCell.swift */,
+				7CB9B9182B039B3A008A3484 /* NewRoomTypeCollectionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		7CBA7CE52AF936BD007829F6 /* Reservations */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +964,27 @@
 				7CBA7CE62AF936E3007829F6 /* ReservationsVC.swift */,
 			);
 			path = Reservations;
+			sourceTree = "<group>";
+		};
+		7CC2BC1B2B08944E0016328A /* Pops */ = {
+			isa = PBXGroup;
+			children = (
+				7CC2BC2A2B08BD750016328A /* Property Type Pops */,
+				7CC2BC202B0894C40016328A /* PopsVC.swift */,
+				7CC2BC212B0894C40016328A /* PopsVC.xib */,
+				7CC2BC242B0899840016328A /* PopsView.xib */,
+				7CC2BC262B089CF10016328A /* PopsView.swift */,
+			);
+			path = Pops;
+			sourceTree = "<group>";
+		};
+		7CC2BC2A2B08BD750016328A /* Property Type Pops */ = {
+			isa = PBXGroup;
+			children = (
+				7CC2BC282B08BD650016328A /* PropertyTypePops.xib */,
+				7CC2BC2B2B08BD960016328A /* PropertyTypePops.swift */,
+			);
+			path = "Property Type Pops";
 			sourceTree = "<group>";
 		};
 		7CCD11282AF8EC80006AEE66 /* Create Rate Plane */ = {
@@ -885,6 +1035,43 @@
 				7CD19ACB2AF9477100A55ED3 /* CancelledVC.swift */,
 			);
 			path = Cancelled;
+			sourceTree = "<group>";
+		};
+		7CD5EB372B074F4F005707BB /* Create Property */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5EB442B076A03005707BB /* Cell */,
+				7CD5EB382B074F6E005707BB /* CreatePropertyStap3VC.swift */,
+			);
+			path = "Create Property";
+			sourceTree = "<group>";
+		};
+		7CD5EB442B076A03005707BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5EB452B076A28005707BB /* CreatePropertyHeaderCell.swift */,
+				7CD5EB462B076A28005707BB /* CreatePropertyHeaderCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7CD5EB492B0777B7005707BB /* Property Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7CB18C8C2B0799BD000D064C /* Add Amenity */,
+				7CB18C862B078A94000D064C /* NewPropertyProfileVC.swift */,
+				7CB18C8A2B078F08000D064C /* NewPropertyProfile2VC.swift */,
+			);
+			path = "Property Profile";
+			sourceTree = "<group>";
+		};
+		7CDC018E2AFF459000555169 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				7CDC018A2AFF3DF000555169 /* SideMenuTableCell.swift */,
+				7CDC018B2AFF3DF000555169 /* SideMenuTableCell.xib */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		7CE1C2C32AFC8E4500C4F9FA /* Mapping */ = {
@@ -965,6 +1152,7 @@
 		7CF3116A2AF4C75F00384599 /* Hotel Management System */ = {
 			isa = PBXGroup;
 			children = (
+				8E5DF8472B0B238E00C297AD /* Api Resources */,
 				7C5F3C912AFD0B8D00BB634E /* Subclasses */,
 				7C5F3C8C2AFD0AAC00BB634E /* UIView+Extensions */,
 				7CF311E52AF4D1AD00384599 /* Cosmos */,
@@ -976,7 +1164,6 @@
 				7CF311742AF4C76000384599 /* Assets.xcassets */,
 				7CF311762AF4C76000384599 /* LaunchScreen.storyboard */,
 				7CF311792AF4C76000384599 /* Info.plist */,
-				8E691BA32AFDFEE4001768F1 /* CalendarHelper.swift */,
 			);
 			path = "Hotel Management System";
 			sourceTree = "<group>";
@@ -1020,14 +1207,19 @@
 		7CF311B62AF4C87F00384599 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7CC2BC1B2B08944E0016328A /* Pops */,
+				7CD5EB492B0777B7005707BB /* Property Profile */,
+				7CD5EB372B074F4F005707BB /* Create Property */,
+				7CB9B9132B039A8F008A3484 /* New Room Type */,
+				7C2E84812B027900003CCF2B /* Charges And Planes */,
 				7C5F3C862AFCE4F800BB634E /* TabBar */,
 				7C0DFC4C2AFBA2D60088B215 /* Channels */,
 				7CE3F2A12AFA66BF002237DC /* Quick Reservations */,
 				7C8326262AFA131D007B9B4C /* Rates And Inventory */,
+				7C4687122AFF8412003DC206 /* Reservation Details */,
 				7CBA7CE52AF936BD007829F6 /* Reservations */,
 				7C63FB642AF8BFB4000C6A5F /* Old Reservation */,
 				7C100A0A2AF515E000D28832 /* Create Amenity */,
-				7C1009FA2AF50CCC00D28832 /* Add Amenity */,
 				7C1009EC2AF4FF3E00D28832 /* Add Properties List */,
 				7C1009DC2AF4E65B00D28832 /* Add Property */,
 				7CF311B92AF4C8AB00384599 /* DashboardVC */,
@@ -1116,6 +1308,17 @@
 			path = FooterCell;
 			sourceTree = "<group>";
 		};
+		8E5DF8472B0B238E00C297AD /* Api Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E5DF8482B0B238E00C297AD /* Model.swift */,
+				8E5DF8492B0B238E00C297AD /* ApiData.swift */,
+				8E5DF84A2B0B238E00C297AD /* NetworkManager.swift */,
+				8E5DF84B2B0B238E00C297AD /* ConstantIDs.swift */,
+			);
+			path = "Api Resources";
+			sourceTree = "<group>";
+		};
 		F2E47342FF92BD5CD730C19A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1141,7 +1344,7 @@
 				7CF311652AF4C75F00384599 /* Frameworks */,
 				7CF311662AF4C75F00384599 /* Resources */,
 				BFE1BAED1F7BBDD39964270C /* [CP] Embed Pods Frameworks */,
-				2EAA50FD1CEF5EA44B8C8715 /* [CP] Copy Pods Resources */,
+				5DFD97098540A01969356A3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1180,7 +1383,7 @@
 				7CF311852AF4C76000384599 /* Frameworks */,
 				7CF311862AF4C76000384599 /* Resources */,
 				0944FBFEB0C70ADCB4F5E4E7 /* [CP] Embed Pods Frameworks */,
-				C6633006480F79D9B993BBAD /* [CP] Copy Pods Resources */,
+				AEAD0A5085F0D1CC8EAD5AB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1242,13 +1445,20 @@
 			files = (
 				7C0DFC542AFBA3FD0088B215 /* ChannelsTableCell.xib in Resources */,
 				7C1009EB2AF4F58800D28832 /* HeaderCell.xib in Resources */,
+				8E3701282B094A55004171B0 /* LoginView.xib in Resources */,
 				7CFF607F2AF7DCC000F3CC9F /* CreateRoomFooterCell.xib in Resources */,
 				7C2D40562AFA32DD0051D703 /* ResticationsTableCell.xib in Resources */,
 				7C5F3C852AFCD6F100BB634E /* LogsHeaderTableCell.xib in Resources */,
 				7CF311782AF4C76000384599 /* LaunchScreen.storyboard in Resources */,
+				7CC2BC232B0894C40016328A /* PopsVC.xib in Resources */,
+				7CD5EB482B076A28005707BB /* CreatePropertyHeaderCell.xib in Resources */,
+				7CC2BC292B08BD650016328A /* PropertyTypePops.xib in Resources */,
 				7C9430102AF652490073699C /* CreateRoomCollectionCell.xib in Resources */,
 				7CE1C2CD2AFC965100C4F9FA /* OverViewCollectionCell.xib in Resources */,
+				7C2E848D2B030E00003CCF2B /* EditRatePlaneTableCell.xib in Resources */,
+				7CDC018D2AFF3DF000555169 /* SideMenuTableCell.xib in Resources */,
 				7CCD11312AF8ED06006AEE66 /* CreateRoomRateCollectionCell.xib in Resources */,
+				7CB9B91A2B039B3A008A3484 /* NewRoomTypeCollectionCell.xib in Resources */,
 				7C8326352AFA1CE5007B9B4C /* RatesAndInventoryTableCell.xib in Resources */,
 				7C100A112AF5230700D28832 /* CreateAmenityCollectionCell.xib in Resources */,
 				7CAEC0712AF63C580064AD7E /* PropertyProfileCollectionCell.xib in Resources */,
@@ -1271,6 +1481,7 @@
 				7C1009F82AF509EF00D28832 /* FooterCell.xib in Resources */,
 				7CF311732AF4C75F00384599 /* Main.storyboard in Resources */,
 				7C2D404B2AFA2DBB0051D703 /* InventoryHeaderCell.xib in Resources */,
+				7CC2BC252B0899840016328A /* PopsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1308,23 +1519,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2EAA50FD1CEF5EA44B8C8715 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System/Pods-Hotel Management System-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System/Pods-Hotel Management System-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System/Pods-Hotel Management System-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		49C184FB4EF4367EFEF3CDC6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1345,6 +1539,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DFD97098540A01969356A3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System/Pods-Hotel Management System-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System/Pods-Hotel Management System-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System/Pods-Hotel Management System-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEAD0A5085F0D1CC8EAD5AB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BFE1BAED1F7BBDD39964270C /* [CP] Embed Pods Frameworks */ = {
@@ -1386,23 +1614,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C6633006480F79D9B993BBAD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hotel Management System-Hotel Management SystemUITests/Pods-Hotel Management System-Hotel Management SystemUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E7357B02A0EE5CD61BBAF7E7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1440,27 +1651,37 @@
 				7C9430182AF67C060073699C /* CreateRatePlaneVC.swift in Sources */,
 				7C8326392AFA22B1007B9B4C /* RateHeaderCell.swift in Sources */,
 				7CF3116C2AF4C75F00384599 /* AppDelegate.swift in Sources */,
+				8E5DF84E2B0B238E00C297AD /* NetworkManager.swift in Sources */,
 				7CAEC0742AF641100064AD7E /* CreateRoomVC.swift in Sources */,
 				7C63614F2AF4E03000360938 /* OnboardingCollectionCell.swift in Sources */,
 				7CFF607E2AF7DCC000F3CC9F /* CreateRoomFooterCell.swift in Sources */,
 				7C6361512AF4E03F00360938 /* OnboardingScreenVC.swift in Sources */,
+				7C4687142AFF84AF003DC206 /* ReservationOP1VC.swift in Sources */,
+				7CD5EB392B074F6E005707BB /* CreatePropertyStap3VC.swift in Sources */,
 				7C5F3C7F2AFCD49200BB634E /* LogsTableCell.swift in Sources */,
 				7CE1C2C82AFC905700C4F9FA /* LogsVC.swift in Sources */,
+				7CC2BC222B0894C40016328A /* PopsVC.swift in Sources */,
 				7C94300F2AF652490073699C /* CreateRoomCollectionCell.swift in Sources */,
 				7C04007F2AF72D8D000DA3B7 /* PropertySelectionVC.swift in Sources */,
 				7CD19AC92AF9475500A55ED3 /* UpcomingVC.swift in Sources */,
+				7CD5EB362B0741C9005707BB /* OnboardingSingleProperty1VC.swift in Sources */,
 				7C5F3C972AFD0C0500BB634E /* CustomButton.swift in Sources */,
 				7CD19ACC2AF9477100A55ED3 /* CancelledVC.swift in Sources */,
+				7CB18C882B078A94000D064C /* NewPropertyProfileVC.swift in Sources */,
 				7CF3116E2AF4C75F00384599 /* SceneDelegate.swift in Sources */,
+				7CDC018C2AFF3DF000555169 /* SideMenuTableCell.swift in Sources */,
 				7C0DFC572AFBB60D0088B215 /* AddChannelsVC.swift in Sources */,
 				7C8E0D3D2AF9ECDD00F21723 /* CosmosTouch.swift in Sources */,
 				7C1009DE2AF4E68100D28832 /* AddPropertyVC.swift in Sources */,
+				8E9006B22B0A650000760B8D /* SignUpViewController.swift in Sources */,
 				7C9430122AF66B840073699C /* CreateRoom2VC.swift in Sources */,
+				7C9A587A2AFF990200AE7CB4 /* ReservationOP2VC.swift in Sources */,
 				7CBA7CE72AF936E3007829F6 /* ReservationsVC.swift in Sources */,
 				7CCD11302AF8ED06006AEE66 /* CreateRoomRateCollectionCell.swift in Sources */,
 				7C8E0D492AF9ECDD00F21723 /* CosmosView.swift in Sources */,
 				7CE1C2D12AFCAB3800C4F9FA /* MapingTableCell.swift in Sources */,
 				7CAEC0702AF63C580064AD7E /* PropertyProfileCollectionCell.swift in Sources */,
+				8E5DF84F2B0B238E00C297AD /* ConstantIDs.swift in Sources */,
 				7C6361402AF4DFA100360938 /* ErrorVC.swift in Sources */,
 				7C5F3C8B2AFD07C300BB634E /* DeluxeAPVC.swift in Sources */,
 				7C8E0D442AF9ECDD00F21723 /* CosmosSettings.swift in Sources */,
@@ -1471,6 +1692,7 @@
 				7C83263D2AFA26B3007B9B4C /* RatesAndInventoryTableVC.swift in Sources */,
 				7C8E0D3E2AF9ECDD00F21723 /* CosmosSize.swift in Sources */,
 				7C5F3C8E2AFD0AE600BB634E /* UIView+Extensions.swift in Sources */,
+				7C21AF132AFFBF75001E7308 /* ReservationOP4VC.swift in Sources */,
 				7C2D40392AFA2B400051D703 /* InventoryVC.swift in Sources */,
 				7C6361422AF4DFA100360938 /* CreatePasswordVC.swift in Sources */,
 				7C0B69752AF74B24002112A9 /* VerificationPandingVC.swift in Sources */,
@@ -1478,29 +1700,37 @@
 				7C5F3C992AFD0C2A00BB634E /* CustomLabel.swift in Sources */,
 				7C9D5B902AF5F906007FC996 /* PropertProfileVC.swift in Sources */,
 				7C6361432AF4DFA100360938 /* ResetPasswordVC.swift in Sources */,
+				8E3701262B094A3C004171B0 /* LoginView.swift in Sources */,
+				7CC2BC272B089CF10016328A /* PopsView.swift in Sources */,
 				7C1009EA2AF4F58800D28832 /* HeaderCell.swift in Sources */,
 				7C1009E02AF4E77C00D28832 /* ViewAllPropertyVC.swift in Sources */,
 				7C6361482AF4DFB200360938 /* WelcomeViewController.swift in Sources */,
 				7C5F3C902AFD0B3600BB634E /* CGFloat+Extensions.swift in Sources */,
 				7C2D40432AFA2C7B0051D703 /* InventoryTableCell.swift in Sources */,
 				7C9430152AF66DE50073699C /* CreateRoomHeaderCell.swift in Sources */,
+				7CB9B9152B039ABC008A3484 /* NewRoomTypeVC.swift in Sources */,
 				7C2D40642AFA39C90051D703 /* StopCellTableCell.swift in Sources */,
 				7C1009E52AF4F09C00D28832 /* ViewAllPropertyCell.swift in Sources */,
 				7CE1C2C52AFC8E6100C4F9FA /* MappingVC.swift in Sources */,
 				7C8E0D482AF9ECDD00F21723 /* CosmosLayerHelper.swift in Sources */,
+				8E5DF8512B0B25E200C297AD /* GaugeView.swift in Sources */,
 				7C2D40592AFA33220051D703 /* ResticationsHeaderCell.swift in Sources */,
 				7C8E0D402AF9ECDD00F21723 /* CosmosLayers.swift in Sources */,
 				7C100A0C2AF5160500D28832 /* CreateAmenityVC.swift in Sources */,
+				7C2E84832B02792C003CCF2B /* ChargesPlanes1VC.swift in Sources */,
 				7C100A082AF50EA300D28832 /* AddAmenityCell.swift in Sources */,
 				7C2D403F2AFA2B8D0051D703 /* StopSellVC.swift in Sources */,
+				8E5DF84D2B0B238E00C297AD /* ApiData.swift in Sources */,
 				7C7C1D5D2AFA52DC006BF96B /* BulkUpdateVC.swift in Sources */,
 				7C100A102AF5230700D28832 /* CreateAmenityCollectionCell.swift in Sources */,
 				7C6361412AF4DFA100360938 /* EnterOTPVC.swift in Sources */,
 				7C8E0D432AF9ECDD00F21723 /* CosmosDefaultSettings.swift in Sources */,
 				7C2D40552AFA32DD0051D703 /* ResticationsTableCell.swift in Sources */,
+				7C2E84852B0309DB003CCF2B /* ChargesAndPlanes2VC.swift in Sources */,
 				7C8E0D4A2AF9ECDD00F21723 /* StarFillMode.swift in Sources */,
 				7C8326342AFA1CE5007B9B4C /* RatesAndInventoryTableCell.swift in Sources */,
 				7C5F3C952AFD0BDE00BB634E /* CustomTextView.swift in Sources */,
+				8E5DF84C2B0B238E00C297AD /* Model.swift in Sources */,
 				7C7C1D612AFA532C006BF96B /* BulkUpdateTableCell.swift in Sources */,
 				7C1009F72AF509EF00D28832 /* FooterCell.swift in Sources */,
 				7C8E0D4B2AF9ECDD00F21723 /* RightToLeft.swift in Sources */,
@@ -1509,15 +1739,20 @@
 				7C8E0D422AF9ECDD00F21723 /* CosmosAccessibility.swift in Sources */,
 				7C83262F2AFA1473007B9B4C /* RatesAndInventoryCollectionCell.swift in Sources */,
 				7C0B69792AF74B6F002112A9 /* VerificationPandingCollectionView.swift in Sources */,
+				7CB18C8B2B078F08000D064C /* NewPropertyProfile2VC.swift in Sources */,
+				7C2E848C2B030E00003CCF2B /* EditRatePlaneTableCell.swift in Sources */,
 				7C1009F22AF500FA00D28832 /* AllPropertiesListCell.swift in Sources */,
 				7C0DFC5A2AFBCD830088B215 /* OTASVC.swift in Sources */,
 				7C0DFC4F2AFBA3090088B215 /* ChannelsVC.swift in Sources */,
 				7C6361492AF4DFB200360938 /* OnboardingSingleProperty2VC.swift in Sources */,
+				7CD5EB472B076A28005707BB /* CreatePropertyHeaderCell.swift in Sources */,
+				7C9BEAAF2AFFB9C6009C8DF0 /* ReservationOP3VC.swift in Sources */,
 				7C100A142AF52DAC00D28832 /* LoginVC.swift in Sources */,
+				7CB9B9192B039B3A008A3484 /* NewRoomTypeCollectionCell.swift in Sources */,
 				7CE1C2CC2AFC965100C4F9FA /* OverViewCollectionCell.swift in Sources */,
 				7CEA73212AF93DBC000548E6 /* ReservationsTableCell.swift in Sources */,
 				7C83262B2AFA13BD007B9B4C /* RatesAndInventoryVC.swift in Sources */,
-				8E691BA42AFDFEE4001768F1 /* CalendarHelper.swift in Sources */,
+				7C2E84872B030A2F003CCF2B /* EditRatePlanes.swift in Sources */,
 				7C8E0D3F2AF9ECDD00F21723 /* StarLayer.swift in Sources */,
 				7C8E0D472AF9ECDD00F21723 /* CosmosLocalizedRating.swift in Sources */,
 				7C8E0D412AF9ECDD00F21723 /* CosmosTouchTarget.swift in Sources */,
@@ -1526,6 +1761,7 @@
 				7C1009FC2AF50CF500D28832 /* AddAmenityVC.swift in Sources */,
 				7C8E0D462AF9ECDD00F21723 /* CosmosRating.swift in Sources */,
 				7C2D403C2AFA2B630051D703 /* ResticationsVC.swift in Sources */,
+				7CC2BC2C2B08BD960016328A /* PropertyTypePops.swift in Sources */,
 				7C1009EE2AF4FF7500D28832 /* AddPropertiesListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1722,7 +1958,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Retvens.com.Hotel-Management-System";
+				PRODUCT_BUNDLE_IDENTIFIER = Retvens.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1754,7 +1990,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Retvens.com.Hotel-Management-System";
+				PRODUCT_BUNDLE_IDENTIFIER = Retvens.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

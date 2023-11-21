@@ -44,7 +44,9 @@ class OnboardingViewController: UIViewController,UIImagePickerControllerDelegate
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         txtDropDown.optionArray = ["gvhacd", "hbjv", "jhbhjbv"]
+        
         txtFieldINR.optionArray = ["gvhacd", "hbjv", "jhbhjbv"]
         viewGroupImg.backgroundColor = .white
         viewGroupImg.layer.cornerRadius = 10.0
@@ -89,6 +91,8 @@ class OnboardingViewController: UIViewController,UIImagePickerControllerDelegate
           picker.allowsEditing = true
           picker.delegate = self
           present(picker, animated: true)
+
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -104,16 +108,12 @@ class OnboardingViewController: UIViewController,UIImagePickerControllerDelegate
       someValue += 1
     }
     @IBAction func removeBtnPressed(_ sender: UIButton) {
-        if someValue > 0 {
-            someValue += -1
-        } else {
-            someValue = 0
-        }
+        someValue += -1
     }
-    
     @IBAction func btnSubmitPressed(_ sender: UIButton) {
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingSingleProperty2VC") as! OnboardingSingleProperty2VC
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+  
 }

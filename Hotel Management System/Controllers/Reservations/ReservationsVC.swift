@@ -25,16 +25,24 @@ class ReservationsVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        hideKeyboardWhenTappedAround()
         addSubView(storyBoard: "Main", controllerName: "ArrivalsVC")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
         viewArrivals.isHidden = false
         viewUpcoming.isHidden = true
         viewDepartues.isHidden = true
         viewCancelled.isHidden = true
-      
-      
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+       
+       
+   
+    
+   
         let color = UIColor.init(named: "SementController")
         btnArrivals.setTitleColor(color, for: .normal)
 //        btnArrivals.setTitleColor(.black, for: .normal)
@@ -86,8 +94,11 @@ class ReservationsVC: UIViewController {
         btnArrivals.setTitleColor(.black, for: .normal)
         btnUpcoming.setTitleColor(.black, for: .normal)
         btnDepartues.setTitleColor(.black, for: .normal)
+       
+        
+        
+
     }
-    
     @IBAction func cancelledBtnPressed(_ sender: UIButton) {
         addSubView(storyBoard: "Main", controllerName: "CancelledVC")
         viewUpcoming.isHidden = true
@@ -103,7 +114,9 @@ class ReservationsVC: UIViewController {
     
 }
 
+
 // MARK: - Extension TableView
+
 extension ReservationsVC{
     func addSubView(storyBoard:String,controllerName:String){
         containerView.subviews.forEach({ $0.removeFromSuperview() })

@@ -23,7 +23,7 @@ class CreatePasswordVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         btnResetPassword.layer.cornerRadius = 10
         viewCreatePassword.layer.borderWidth = 1
         viewCreatePassword.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor

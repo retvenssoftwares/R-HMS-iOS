@@ -12,7 +12,7 @@ class InventoryVC: UIViewController {
     @IBOutlet weak var inventoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
         inventoryTableView.register(UINib(nibName: "InventoryHeaderCell", bundle: nil), forCellReuseIdentifier: "InventoryHeaderCell")
         inventoryTableView.register(UINib(nibName: "InventoryTableCell", bundle: nil), forCellReuseIdentifier: "InventoryTableCell")
     }

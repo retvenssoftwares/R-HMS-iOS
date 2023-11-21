@@ -23,7 +23,7 @@ class ResetPasswordVC: UIViewController {
         viewEmail.layer.borderWidth = 1
         viewEmail.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
         viewEmail.layer.cornerRadius = 10
-        
+        hideKeyboardWhenTappedAround()
         let color = UIColor.init(named: "TextColor")
         txtFieldEmail.attributedPlaceholder = NSAttributedString(string: txtFieldEmail.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
     }

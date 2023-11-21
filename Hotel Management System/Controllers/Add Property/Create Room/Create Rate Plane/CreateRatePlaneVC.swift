@@ -35,27 +35,10 @@ class CreateRatePlaneVC: UIViewController {
         txtFieldRoomType.optionArray = ["ABC", "BCD", "EDG"]
         
         createRateCollectionView.register(UINib(nibName: "CreateRoomRateCollectionCell", bundle: .main), forCellWithReuseIdentifier: "CreateRoomRateCollectionCell")
-    textFieldLine()
+  
     }
     
-    func textFieldLine(){
-        
-        viewEditField1.layer.borderWidth = 1
-        viewEditField1.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewEditField1.layer.cornerRadius = 10
-        
-        viewEditField2.layer.borderWidth = 1
-        viewEditField2.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewEditField2.layer.cornerRadius = 10
-        
-        viewSelectCompany.layer.borderWidth = 1
-        viewSelectCompany.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewSelectCompany.layer.cornerRadius = 10
-        
-        viewSelectRoomType.layer.borderWidth = 1
-        viewSelectRoomType.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-        viewSelectRoomType.layer.cornerRadius = 10
-    }
+  
     
     
     

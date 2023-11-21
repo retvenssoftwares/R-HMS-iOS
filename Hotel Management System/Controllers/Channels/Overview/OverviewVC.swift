@@ -17,7 +17,7 @@ class OverviewVC: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     hideKeyboardWhenTappedAround()
         overViewCollectionView.register(UINib(nibName: "OverViewCollectionCell", bundle: .main), forCellWithReuseIdentifier: "OverViewCollectionCell")
     }
     

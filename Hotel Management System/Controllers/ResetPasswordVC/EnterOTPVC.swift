@@ -19,7 +19,7 @@ class EnterOTPVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
        
         pinView.secureCharacter = "\u{25CF}"
       
