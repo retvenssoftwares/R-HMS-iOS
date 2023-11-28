@@ -20,7 +20,7 @@ class APIManager {
         static let signUpUser = baseURL + "/addUser"
         static let loginUser = baseURL + "/userLogin"
         static let createProperty = baseURL + "/createProperty"
-       
+        
         //MARK: - PATCH
         static let userEdit = baseURL  + "/userEdit"
         static let loginStatus = baseURL  + "/loginStatus"
@@ -109,7 +109,7 @@ class APIManager {
                 return
             }
             if let data = data {
-                completion(.success(data))
+                ////completion(.success(data))
             } else {
                 completion(.failure(NSError(domain: "No data received", code: 0, userInfo: nil)))
             }
@@ -118,37 +118,52 @@ class APIManager {
     }
     
     //MARK: Patch API UserEdit
-    func userUdatePropertySelection(userId: String, ratePercent: String, roomsInProperty: String, taxName: String, registrationNumber: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        let apiUrl = URL(string: APIManager.UsersAuth.userEdit)!
-        var request = URLRequest(url: apiUrl)
-        request.httpMethod = "PATCH"
-        var formData = "userId=\(userId)"
-        formData += "&ratePercent=\(ratePercent)"
-        formData += "&roomsInProperty=\(roomsInProperty)"
-        formData += "&taxName=\(taxName)"
-        formData += "&registrationNumber=\(registrationNumber)"
-        request.httpBody = formData.data(using: .utf8)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-                return
+        func userUdatePropertySelection(userId: String, ratePercent: String, roomsInProperty: String, taxName: String, registrationNumber: String, propertyTypeSOC: String, websiteUrl: String, hotelLogo: String, numberOfProperties: String, baseCurrency: String, propertyAddress1: String, propertyName: String, propertyTypeName: String, postCode: String, state: String, city: String, taxPercent: String , starCategory: String, completion: @escaping (Result<Data, Error>) -> Void) {
+            let apiUrl = URL(string: APIManager.UsersAuth.userEdit)!
+            var request = URLRequest(url: apiUrl)
+            request.httpMethod = "PATCH"
+            var formData = "userId=\(userId)"
+            formData += "&ratePercent=\(ratePercent)"
+            formData += "&roomsInProperty=\(roomsInProperty)"
+            formData += "&taxName=\(taxName)"
+            formData += "&registrationNumber=\(registrationNumber)"
+            formData = "propertyTypeSOC=\(userId)"
+            formData += "&websiteUrl=\(websiteUrl)"
+            formData += "&hotelLogo=\(hotelLogo)"
+            formData += "&numberOfProperties=\(numberOfProperties)"
+            formData += "&baseCurrency=\(baseCurrency)"
+            formData = "propertyAddress1=\(propertyAddress1)"
+            formData += "&propertyName=\(propertyName)"
+            formData += "&propertyTypeName=\(propertyTypeName)"
+            formData += "&postCode=\(postCode)"
+            formData += "&state=\(state)"
+            formData += "&city=\(city)"
+            formData += "&starCategory=\(starCategory)"
+            formData += "&taxName=\(taxName)"
+            formData += "&registrationNumber=\(registrationNumber)"
+            formData += "&taxPercent=\(taxPercent)"
+            request.httpBody = formData.data(using: .utf8)
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let error = error {
+                    completion(.failure(error))
+                    return
+                }
+                guard let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode) else {
+                    completion(.failure(NSError(domain: "Invalid response", code: 0, userInfo: nil)))
+                    return
+                }
+                if let data = data {
+                    print("Status code: \(httpResponse.statusCode)")
+                    let responseString = String(data: data, encoding: .utf8)
+                    print("Response: \(responseString ?? "")")
+                    completion(.success(data))
+                } else {
+                    completion(.failure(NSError(domain: "No data received", code: 0, userInfo: nil)))
+                }
             }
-            guard let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode) else {
-                completion(.failure(NSError(domain: "Invalid response", code: 0, userInfo: nil)))
-                return
-            }
-            if let data = data {
-                print("Status code: \(httpResponse.statusCode)")
-                let responseString = String(data: data, encoding: .utf8)
-                print("Response: \(responseString ?? "")")
-                completion(.success(data))
-            } else {
-                completion(.failure(NSError(domain: "No data received", code: 0, userInfo: nil)))
-            }
+            task.resume()
         }
-        task.resume()
-    }
     
     func userLoginStatus(userId: String, completion: @escaping (Result<Data, Error>) -> Void) {
         let apiUrl = URL(string: APIManager.UsersAuth.loginStatus)!
@@ -221,7 +236,3 @@ class APIManager {
         task.resume()
     }
 }
-
-
-
-

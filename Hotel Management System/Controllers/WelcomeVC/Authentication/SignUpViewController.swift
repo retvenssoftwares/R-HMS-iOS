@@ -30,6 +30,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var viewLastName: UIView!
     @IBOutlet weak var btnCountinueWith: UIButton!
     
+    @IBOutlet weak var termOfServiceLbl: CustomLabel!
+    @IBOutlet weak var signUpHotelRcode: UITextField!
+    
     //login view
     @IBOutlet weak var txtFieldLoginPassword: UITextField!
     @IBOutlet weak var txtFieldHotelRCode: UITextField!
@@ -38,17 +41,20 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var viewLoginPassword: UIView!
     @IBOutlet weak var viewHotelRCode: UIView!
     @IBOutlet weak var viewUserName: UIView!
-    //    @IBOutlet weak var viewLoginBothBtn: UIView!
-    //    @IBOutlet weak var btnBIgLogin: UIButton!
     var activeTextField : UITextField? = nil
     
     var iconClick = true
     var isLoginViewVisible = true
-    var isSignupBlack = true
+    var isSignupViewVisible = true
     var isLoginBlack = false
+    
+    //MARK: designation
+    let designations = ["Manager", "Developer", "Designer", "Tester"]
+    var pickerView = UIPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         loginView.isHidden = true
+        signUpView.isHidden = false
         navigationController?.navigationBar.isHidden = true
         btnCountinueWith.layer.borderWidth = 1
         btnCountinueWith.layer.cornerRadius = 10
@@ -59,8 +65,8 @@ class SignUpViewController: UIViewController {
         
         changeTextFieldBorderLine()
         changeTextFieldPlaceholderTextColor()
-        NotificationCenter.default.addObserver(self, selector: #selector(SignUPVC.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(SignUPVC.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         txtFieldFirstName.delegate =  self
         txtFieldEmail.delegate = self
         txtFIeldLastName.delegate =  self
@@ -84,112 +90,76 @@ class SignUpViewController: UIViewController {
         txtFieldPassword.attributedPlaceholder = NSAttributedString(string: txtFieldPassword.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         txtFieldHotelRCode.attributedPlaceholder = NSAttributedString(string: txtFieldHotelRCode.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         txtFieldUserName.attributedPlaceholder = NSAttributedString(string: txtFieldUserName.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
+        TermsAndCondition()
         
+        designationPickerView()
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard string != "\u{8}" else {
-            return true
-        }
-        let newText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-        if isValidEmail(email: newText) {
-            viewEmail.layer.borderColor = UIColor.green.cgColor
-            viewEmail.layer.borderWidth = 1.0
-        } else {
-            viewEmail.layer.borderColor = UIColor.red.cgColor
-            viewEmail.layer.borderWidth = 1.0
-        }
+    func designationPickerView() {
+        // Set up the pickerView
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
-        if isValidName(name: newText) {
-            viewName.layer.borderColor = UIColor.green.cgColor
-            viewName.layer.borderWidth = 1.0
-        } else {
-            viewName.layer.borderColor = UIColor.red.cgColor
-            viewName.layer.borderWidth = 1.0
-        }
+        // Set the input view of the text field to the pickerView
+        txtFieldDesignation.inputView = pickerView
         
-        if isValidName(name: newText) {
-            viewLastName.layer.borderColor = UIColor.green.cgColor
-            viewLastName.layer.borderWidth = 1.0
-        } else {
-            viewLastName.layer.borderColor = UIColor.red.cgColor
-            viewLastName.layer.borderWidth = 1.0
-        }
+        // Add a toolbar with a "Done" button to dismiss the pickerView
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
+        toolbar.setItems([flexibleSpace, doneButton], animated: false)
         
-        if isValidDesignation(designation: newText) {
-            viewDesignation.layer.borderColor = UIColor.green.cgColor
-            viewDesignation.layer.borderWidth = 1.0
-        } else {
-            viewDesignation.layer.borderColor = UIColor.red.cgColor
-            viewDesignation.layer.borderWidth = 1.0
-        }
-        
-        if isValidPhoneNumber(phoneNumber: newText) {
-            viewPhone.layer.borderColor = UIColor.green.cgColor
-            viewPhone.layer.borderWidth = 1.0
-        } else {
-            viewPhone.layer.borderColor = UIColor.red.cgColor
-            viewPhone.layer.borderWidth = 1.0
-        }
-        
-        if isValidPassword(password: newText) {
-            viewPassword.layer.borderColor = UIColor.green.cgColor
-            viewPassword.layer.borderWidth = 1.0
-        } else {
-            viewPassword.layer.borderColor = UIColor.red.cgColor
-            viewPassword.layer.borderWidth = 1.0
-        }
-        
-        if isValidHotelCode(code: newText) {
-            viewHotelRCode.layer.borderColor = UIColor.green.cgColor
-            viewHotelRCode.layer.borderWidth = 1.0
-        } else {
-            viewHotelRCode.layer.borderColor = UIColor.red.cgColor
-            viewHotelRCode.layer.borderWidth = 1.0
-        }
-        return true
+        // Set the input accessory view of the text field to the toolbar
+        txtFieldDesignation.inputAccessoryView = toolbar
     }
     
-    // MARK: - Email Validation
-    func isValidEmail(email: String) -> Bool {
-        // Simple email validation using regular expression
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailPredicate.evaluate(with: email)
-    }
-    
-    
-    func isValidName(name: String) -> Bool {
-        // Simple name validation: non-empty and contains only letters
-        let nameRegex = "^[a-zA-Z]+$"
-        let namePredicate = NSPredicate(format: "SELF MATCHES %@", nameRegex)
-        return !name.isEmpty && namePredicate.evaluate(with: name)
-    }
-    
-    func isValidLastName(lastName: String) -> Bool {
-        // Simple name validation: non-empty and contains only letters
-        let nameRegex = "^[a-zA-Z]+$"
-        let namePredicate = NSPredicate(format: "SELF MATCHES %@", nameRegex)
-        return !lastName.isEmpty && namePredicate.evaluate(with: lastName)
-    }
-    
-    
-    func isValidUsername(username: String) -> Bool {
-        // Simple username validation: non-empty and contains only alphanumeric characters
-        let usernameRegex = "^[a-zA-Z0-9]+$"
-        let usernamePredicate = NSPredicate(format: "SELF MATCHES %@", usernameRegex)
-        return !username.isEmpty && usernamePredicate.evaluate(with: username)
-    }
-    
-    func isValidHotelCode(code: String) -> Bool {
-        // Simple hotel code validation: non-empty
-        return !code.isEmpty
-    }
-    func isValidPhoneNumber(phoneNumber: String) -> Bool {
-        // Simple phone number validation using regular expression
-        let phoneRegex = "^\\d{10}$"
-        let phonePredicate = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-        return phonePredicate.evaluate(with: phoneNumber)
+    func signUpPostRequest(firstName:String, lastName:String, designation:String, phoneNumber:String, email:String,password:String, completion: @escaping (SignUpModels?, Error?) -> Void) {
+        
+        let parameters = ["firstName":firstName, "lastName":lastName, "designation":designation, "phoneNumber":phoneNumber,"email":email, "password":password ]
+        let url = URL(string: "https://api.hotelratna.com/api/addUser")!
+        let session = URLSession.shared
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+        } catch let error {
+            print(error.localizedDescription)
+            completion(nil, error)
+        }
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        
+        let task = session.dataTask(with: request, completionHandler: { data, response, error in
+            
+            guard error == nil else {
+                completion(nil, error)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil, NSError(domain: "dataNilError", code: -100001, userInfo: nil))
+                
+                return
+            }
+            
+            do {
+                
+                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
+                    completion(nil, NSError(domain: "invalidJSONTypeError", code: -100009, userInfo: nil))
+                    return
+                }
+                let model = try JSONDecoder().decode(SignUpModels.self, from: data)
+                print(json)
+                completion(model, nil)
+            } catch let error {
+                print(error.localizedDescription)
+                print(error)
+                completion(nil, error)
+            }
+        })
+        
+        task.resume()
     }
     
     func toggleViews() {
@@ -203,57 +173,30 @@ class SignUpViewController: UIViewController {
                 self.signUpView.transform = CGAffineTransform(rotationAngle: 0)
             })
         }
-        loginView.isHidden = isLoginViewVisible
-        signUpView.isHidden = !isLoginViewVisible
+        signUpView.isHidden = isLoginViewVisible
+        loginView.isHidden = !isLoginViewVisible
         
         isLoginViewVisible.toggle()
     }
     
-    @IBAction func signUpBtn(_ sender: Any) {
-        //        if isSignupBlack == true {
-        //            isSignupBlack = false
-        //            btnSignUp.backgroundColor = UIColor.black
-        //            btnSignUp.titleLabel?.textColor = UIColor.white
-        //            btnLogin.backgroundColor = UIColor.white
-        //            btnLogin.titleLabel?.textColor = UIColor.black
-        //
-        //            toggleViews()
-        //        } else {
-        //            isSignupBlack = false
-        //            btnSignUp.backgroundColor = UIColor.white
-        //            btnSignUp.titleLabel?.textColor = UIColor.black
-        //            btnLogin.backgroundColor = UIColor.black
-        //            btnLogin.titleLabel?.textColor = UIColor.white
-        //        }
-        btnSignUp.backgroundColor = UIColor.black
-        btnLogin.backgroundColor = UIColor.white
-        btnSignUp.titleLabel?.textColor = UIColor.white
-        btnLogin.titleLabel?.textColor = UIColor.black
+    
+    @IBAction func signUpBigBtn(_ sender: Any) {
+        print("tapp")
+        signUpValidation()
     }
     
-    @IBAction func loginBtn(_ sender: Any) {
-        //        if isSignupBlack == false {
-        //            isSignupBlack = true
-        //            btnSignUp.backgroundColor = UIColor.black
-        //            btnSignUp.titleLabel?.textColor = UIColor.white
-        //            btnLogin.backgroundColor = UIColor.white
-        //            btnLogin.titleLabel?.textColor = UIColor.black
-        //
-        //            toggleViews()
-        //        } else {
-        //            isSignupBlack = false
-        //            btnSignUp.backgroundColor = UIColor.white
-        //            btnSignUp.titleLabel?.textColor = UIColor.black
-        //            btnLogin.backgroundColor = UIColor.black
-        //            btnLogin.titleLabel?.textColor = UIColor.white
-        //        }
+    @IBAction func rownBtn(_ sender: Any) {
+        openURLButtonTapped()
+    }
+    
+    @IBAction func signUpBtn(_ sender: Any) {
+        let color = UIColor(red: 231, green: 236, blue: 244, alpha: 1.0)
+        btnSignUp.backgroundColor = .black
+        btnSignUp.setTitleColor(UIColor(red: 231, green: 236, blue: 244, alpha: 1.0), for: .normal)
         
-        btnLogin.backgroundColor = UIColor.black
-        btnSignUp.backgroundColor = UIColor.white
-        btnLogin.titleLabel?.textColor = UIColor.white
-        btnSignUp.titleLabel?.textColor = UIColor.black
-        
-        
+        btnLogin.backgroundColor = UIColor.textFiledViewLine
+        btnLogin.setTitleColor(.black, for: .normal)
+        toggleViews()
     }
     
     func changeTextFieldBorderLine(){
@@ -278,7 +221,21 @@ class SignUpViewController: UIViewController {
         viewLoginPassword.layer.cornerRadius = 10
         viewLoginPassword.layer.borderWidth = 1
         viewLoginPassword.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
+    }
+    
+    func validatePhoneNumber() {
+        guard let phoneNumber = txtFieldPhone.text else {
+            return
+        }
+        let isValidPhoneNumber = isValidPhoneNumber(phoneNumber: phoneNumber)
         
+        viewPhone.backgroundColor = isValidPhoneNumber ? .black : .red
+        txtFieldPhone.backgroundColor = isValidPhoneNumber ? .black : .red
+    }
+    
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        //validatePhoneNumber()
     }
     
     
@@ -290,98 +247,115 @@ class SignUpViewController: UIViewController {
         txtFieldPhone.attributedPlaceholder = NSAttributedString(string: txtFieldPhone.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         txtFieldEmail.attributedPlaceholder = NSAttributedString(string: txtFieldEmail.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         txtFieldPassword.attributedPlaceholder = NSAttributedString(string: txtFieldPassword.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
+        signUpHotelRcode.attributedPlaceholder = NSAttributedString(string: signUpHotelRcode.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
+        txtFieldLoginPassword.attributedPlaceholder = NSAttributedString(string: txtFieldLoginPassword.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
     }
     
-    func animateView() {
-        //let customView = LoginView(frame: CGRect(x: 0, y: 0, width: 393, height: 100))
-        // authContainerView.addSubview(customView)
-        //let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
-        
-        //        UIView.transition(with: authContainerView, duration: 1.0, options: transitionOptions, animations: {
-        //        self.authContainerView.isHidden = !self.authContainerView.isHidden
-        //    })
-        
-        
-        
-        //        UIView.transition(with: loginView, duration: 1.0, options: transitionOptions, animations: {
-        //            self.loginView.isHidden = !self.loginView.isHidden
-        //        }, completion: nil)
+    func TermsAndCondition() {
+        let attributedText = NSMutableAttributedString(string: termOfServiceLbl.text ?? "")
+        let range = (termOfServiceLbl.text! as NSString).range(of: "Terms of Services")
+        attributedText.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: termOfServiceLbl.font.pointSize), range: range)
+        let boldFont = UIFont.boldSystemFont(ofSize: termOfServiceLbl.font.pointSize)
+        attributedText.addAttributes([.font: boldFont, .foregroundColor: UIColor.black], range: range)
+        termOfServiceLbl.attributedText = attributedText
     }
-    //    func signUpValidation() {
-    //        if txtFieldFirstName.text?.isEmpty == true {
-    //            txtFieldFirstName.attributedPlaceholder = NSAttributedString(
-    //                string: "First Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red]
-    //            )
-    //            viewName.borderColor = UIColor.red
-    //        } else {
-    //            viewName.borderColor = UIColor.textFiledViewLine
-    //        }
-    //
-    //        //MARK: Last name
-    //        if txtFIeldLastName.text?.isEmpty == true {
-    //            viewLastName.borderColor = UIColor.red
-    //            txtFIeldLastName.attributedPlaceholder = NSAttributedString(
-    //                string: "Last Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-    //
-    //        } else {
-    //            viewLastName.borderColor = UIColor.textFiledViewLine
-    //        }
-    //
-    //        //MARK: Designation
-    //        if txtFieldDesignation.text?.isEmpty == true {
-    //            viewDesignation.borderColor = UIColor.red
-    //            txtFieldDesignation.attributedPlaceholder = NSAttributedString(
-    //                string: "Designation", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-    //        } else {
-    //            viewDesignation.borderColor = UIColor.textFiledViewLine
-    //        }
-    //
-    //        //MARK: Phone number
-    //        if txtFieldPhone.text?.isEmpty == true {
-    //            viewPhone.borderColor = UIColor.red
-    //            txtFieldPhone.attributedPlaceholder = NSAttributedString(
-    //                string: "Phone number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-    //        } else {
-    //            viewPhone.borderColor = UIColor.textFiledViewLine
-    //        }
-    //
-    //        //MARK: Email
-    //        if txtFieldEmail.text?.isEmpty == true {
-    //            viewEmail.borderColor = UIColor.red
-    //            txtFieldEmail.attributedPlaceholder = NSAttributedString(
-    //                string: "Email address", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-    //        } else {
-    //            viewEmail.borderColor = UIColor.textFiledViewLine
-    //        }
-    //
-    //        //MARK: Password
-    //        if txtFieldPassword.text?.isEmpty == true {
-    //            viewPassword.borderColor = UIColor.red
-    //            txtFieldPassword.attributedPlaceholder = NSAttributedString(
-    //                string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-    //
-    //        } else {
-    //            viewPassword.borderColor = UIColor.textFiledViewLine
-    //        }
-    //
-    //        if (((txtFieldFirstName.text?.isEmpty) == true) && ((txtFIeldLastName.text?.isEmpty) == true) && ((txtFieldDesignation.text?.isEmpty) == true)) && ((txtFieldEmail.text?.isEmpty == true)) && ((txtFieldPhone.text?.isEmpty == true)) && ((txtFieldPassword.text?.isEmpty == true)) == true {
-    //
-    //        } else {
-    //            if (((txtFieldFirstName.text?.isEmpty) == false) && ((txtFIeldLastName.text?.isEmpty) == false) && ((txtFieldDesignation.text?.isEmpty) == false)) && ((txtFieldEmail.text?.isEmpty == false)) && ((txtFieldPhone.text?.isEmpty == false)) && ((txtFieldPassword.text?.isEmpty == false)) == true {
-    //
-    //                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
-    //                self.navigationController?.pushViewController(vc, animated: true)
-    //                // self.signUPRequest()
-    //            } else {
-    //
-    //            }
-    //
-    //        }
-    //    }
-    // MARK: - Action
     
-    @IBAction func signUpBigBtnPressed(_ sender: UIButton) {
-        //signUpValidation()
+    func signUpValidation() {
+        if isValidName(name: txtFieldFirstName.text!) {
+            //txtFieldFirstName.attributedPlaceholder = NSAttributedString(
+            //string: "First Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red]
+            //)
+            viewName.borderColor = UIColor.textFiledViewLine
+        } else {
+            viewName.borderColor = UIColor.red
+            
+        }
+        
+        //MARK: Last name
+        if isValidLastName(lastName: txtFIeldLastName.text!) {
+            
+            txtFIeldLastName.attributedPlaceholder = NSAttributedString(
+                string: "Last Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            
+            viewLastName.borderColor = UIColor.textFiledViewLine
+        } else {
+            viewLastName.borderColor = UIColor.red
+            
+        }
+        
+        //MARK: Designation
+        if isValidDesignation(designation: signUpHotelRcode.text!) {
+            txtFieldDesignation.attributedPlaceholder = NSAttributedString(
+                string: "Hotel Owner", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            viewDesignation.borderColor = UIColor.textFiledViewLine
+        } else {
+            viewDesignation.borderColor = UIColor.red
+            
+        }
+        
+        //MARK: Phone number
+        if  isValidPhoneNumber(phoneNumber: txtFieldPhone.text!) {
+            txtFieldPhone.attributedPlaceholder = NSAttributedString(
+                string: "Phone number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            viewPhone.borderColor = UIColor.textFiledViewLine
+        } else {
+            viewPhone.borderColor = UIColor.red
+            
+        }
+        
+        //MARK: Email
+        if  isValidEmail(email: txtFieldEmail.text!) {
+            viewEmail.borderColor = UIColor.textFiledViewLine
+            txtFieldEmail.attributedPlaceholder = NSAttributedString(
+                string: "Email address", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+        } else {
+            viewEmail.borderColor = UIColor.red
+        }
+        
+        //MARK: Password
+        if isValidPassword(password: txtFieldPassword.text!) {
+            viewPassword.borderColor = UIColor.textFiledViewLine
+            txtFieldPassword.attributedPlaceholder = NSAttributedString(
+                string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            
+        } else {
+            viewPassword.borderColor = UIColor.red
+        }
+        
+        if (((txtFieldFirstName.text?.isEmpty) == true) && ((txtFIeldLastName.text?.isEmpty) == true) && ((txtFieldDesignation.text?.isEmpty) == true)) && ((txtFieldEmail.text?.isEmpty == true)) && ((txtFieldPhone.text?.isEmpty == true)) && ((txtFieldPassword.text?.isEmpty == true)) == true {
+            
+        } else {
+            if (((txtFieldFirstName.text?.isEmpty) == false) && ((txtFIeldLastName.text?.isEmpty) == false) && ((txtFieldDesignation.text?.isEmpty) == false)) && ((txtFieldEmail.text?.isEmpty == false)) && ((txtFieldPhone.text?.isEmpty == false)) && ((txtFieldPassword.text?.isEmpty == false)) == true {
+                
+                //                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
+                //                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
+                self.signUpPostRequest(firstName: txtFieldFirstName.text!, lastName: txtFIeldLastName.text!, designation: txtFieldDesignation.text!, phoneNumber: txtFieldPhone.text!, email: txtFieldEmail.text!, password: txtFieldPassword.text!) { data, error in
+                    if let statuscode = data?.statuscode {
+                        print(statuscode)
+                    } else {
+                        print(error)
+                    }
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                //                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
+                //                self.signUpPostRequest(firstName: txtFieldFirstName.text!, lastName: txtFIeldLastName.text!, designation: txtFieldDesignation.text!, phoneNumber: txtFieldPhone.text!, email: txtFieldEmail.text!, password: txtFieldPassword.text!) { data, error in
+                //                    if let statuscode = data?.statuscode {
+                //                        print(statuscode)
+                //                    } else {
+                //                        print(error)
+                //                    }
+                //                }
+                //                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
+    func openURLButtonTapped() {
+        if let url = URL(string: "https://www.retvensservices.com/") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     @IBAction func showPasswordBtnPressed(_ sender: UIButton) {
@@ -393,46 +367,46 @@ class SignUpViewController: UIViewController {
         iconClick = !iconClick
     }
     @IBAction func loginBtnPressed(_ sender: UIButton) {
-        //animateView()
-        //        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-        //        self.navigationController?.pushViewController(vc, animated: false)
-        //
+        btnLogin.backgroundColor = .black
+        let color = UIColor(red: 231, green: 236, blue: 244, alpha: 1.0)
+        btnLogin.setTitleColor(color, for: .normal)
+        
+        btnSignUp.backgroundColor = UIColor.textFiledViewLine
+        btnSignUp.setTitleColor(.black, for: .normal)
+        toggleViews()
     }
     
     func loginValidation() {
-        if txtFieldUserName.text?.isEmpty == true {
+        if isValidUsername(username: txtFieldUserName.text!) {
             txtFieldUserName.attributedPlaceholder = NSAttributedString(
                 string: "Username", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red]
             )
-            
-            viewUserName.borderColor = UIColor.red
-        }else {
             viewUserName.borderColor = UIColor.textFiledViewLine
+        }else {
+            viewUserName.borderColor = UIColor.red
+            
         }
-        if txtFieldHotelRCode.text?.isEmpty == true {
-            viewHotelRCode.borderColor = UIColor.red
+        if isValidHotelCode(code: txtFieldHotelRCode.text!) {
+            
             txtFieldHotelRCode.attributedPlaceholder = NSAttributedString(
                 string: "Hotel RCode", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             print("incorrect - try again")
-            
-            //   self.present(alert, animated: true, completion: nil)
-            
-        } else {
             viewHotelRCode.borderColor = UIColor.textFiledViewLine
+        } else {
+            viewHotelRCode.borderColor = UIColor.red
         }
-        if txtFieldPassword.text?.isEmpty == true {
-            viewPassword.borderColor = UIColor.red
-            txtFieldPassword.attributedPlaceholder = NSAttributedString(
+        
+        if isValidPassword(password: txtFieldLoginPassword.text!) {
+            txtFieldLoginPassword.attributedPlaceholder = NSAttributedString(
                 string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             print("incorrect - try again")
-            
+            viewLoginPassword.borderColor = UIColor.textFiledViewLine
         } else {
-            viewPassword.borderColor = UIColor.textFiledViewLine
+            viewLoginPassword.borderColor = UIColor.red
+            
         }
         
         if (((txtFieldUserName.text?.isEmpty) != nil) && ((txtFieldPassword.text?.isEmpty) != nil) && ((txtFieldHotelRCode.text?.isEmpty) != nil)) == true {
-            //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
-            //            self.navigationController?.pushViewController(vc, animated: true)
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
             self.navigationController?.pushViewController(vc, animated: true)
@@ -463,8 +437,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func loginbigBtnPressed(_ sender: UIButton) {
-        
-        //loginValidation()
+        loginValidation()
     }
     
     // MARK: - Phone Number Validation
@@ -476,14 +449,10 @@ class SignUpViewController: UIViewController {
         return designationPredicate.evaluate(with: designation)
     }
     
-    func isValidPassword(password: String) -> Bool {
-        let passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^A-Za-z\\d]).{8,}$"
-        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        return passwordPredicate.evaluate(with: password)
-    }
+    
 }
 
-extension SignUpViewController : UITextFieldDelegate {
+extension SignUpViewController : UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         
@@ -514,12 +483,45 @@ extension SignUpViewController : UITextFieldDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         self.view.frame.origin.y = 0
     }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.activeTextField = textField
-    }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeTextField = nil
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
+        }
+
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return designations.count
+        }
+
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return designations[row]
+        }
+
+        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            txtFieldDesignation.text = designations[row]
+        }
+
+        // MARK: - UITextFieldDelegate method
+
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            self.activeTextField = textField
+            if txtFieldDesignation.text == "" {
+                txtFieldDesignation.text = designations[0]
+            }
+        }
+
+        // MARK: - Custom method to handle "Done" button tap
+
+        @objc func didTapDone() {
+            txtFieldDesignation.resignFirstResponder()
+        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
 }
+

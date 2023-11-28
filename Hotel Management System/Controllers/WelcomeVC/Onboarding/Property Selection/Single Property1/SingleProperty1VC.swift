@@ -51,11 +51,36 @@ class SingleProperty1VC: UIViewController {
         }else if txtFieldState.text == "" {
             showAlert(message: "Invalid State")
         } else {
-            let vc = self.storyboard?.instantiateViewController(identifier: "VerificationPandingVC") as! VerificationPandingVC
+            let vc = self.storyboard?.instantiateViewController(identifier: "SingleProperty2VC") as! SingleProperty2VC
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
+    func patchRequest(name: String, completion: @escaping (Error?) -> Void) {
+        let apiUrl = URL(string: "https://api.hotelratna.com/api/userEdit")!
+        
+        var request = URLRequest(url: apiUrl)
+        request.httpMethod = "PATCH"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let parameters: [String: Any] = ["propertyName": name]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: parameters)
+            request.httpBody = jsonData
+        } catch {
+            completion(error)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            completion(nil)
+        }
+        task.resume()
+    }
     
     // MARK: - Action
     @IBAction func profileChangeBtnPressed(_ sender: UIButton) {
@@ -63,8 +88,16 @@ class SingleProperty1VC: UIViewController {
     }
     
     @IBAction func submitBtnPressed(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(identifier: "SingleProperty2VC") as! SingleProperty2VC
-        self.navigationController?.pushViewController(vc, animated: true)
+        Validation()
+//        patchRequest(name: txtFieldPropertyName.text!) { error in
+//            if let error = error {
+//                print("Error: \(error.localizedDescription)")
+//            } else {
+//                
+//                print("PATCH request successful")
+//            }
+//        }
+        
     }
     
 }

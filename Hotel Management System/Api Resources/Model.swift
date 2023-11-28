@@ -75,3 +75,52 @@ struct createPropertyModel: Codable {
         case userId, amenityIds
     }
 }
+
+struct SignUpModels:Codable{
+    var message, userId:String?
+    var statuscode:Int?
+}
+
+struct userEditModels:Codable{
+    var message, userId:String?
+    var statuscode:Int?
+    var propertyName: String?
+}
+
+struct getDesignation: Decodable {
+    let statusCode: Int
+    let designations: [Designation]
+
+    enum CodingKeys: String, CodingKey {
+        case statusCode
+        case designations = "designation_list"
+    }
+}
+
+enum APIError: Error {
+    case invalidURL
+    case noData
+    case decodingError(Error)
+}
+
+struct CreateProperty:Codable{
+    var message, userId:String?
+    var statuscode:Int?
+}
+
+struct CreatePropertyModel:Codable{
+    var message, userId:String?
+    var statuscode:Int?
+    var propertyName: String?
+}
+
+struct DesignationResponse: Decodable {
+    let data: [Designation]
+    let statusCode: Int
+}
+
+struct Designation: Decodable {
+    let _id: String
+    let designationId: String
+    let designation: String
+}

@@ -11,6 +11,12 @@ target 'Hotel Management System' do
     pod 'DateTimePicker'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'Charts'
+    pod 'SnapKit'
+    pod 'PieCharts'
+    pod 'DGCharts'
+    pod 'DPCharts', '~> 1.2.2'
+    pod 'PhoneNumberKit', '~> 3.7'
 
 
   target 'Hotel Management SystemTests' do

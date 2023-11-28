@@ -7,8 +7,9 @@
 
 import UIKit
 import iOSDropDown
+import PhoneNumberKit
 
-class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     
     
@@ -16,7 +17,8 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var btnContinue: UIButton!
     @IBOutlet weak var viewPropertyName: UIView!
-    @IBOutlet weak var txtFieldPropertName: UITextField!
+ 
+    @IBOutlet weak var txtFieldPropertyName: PhoneNumberTextField!
     @IBOutlet weak var viewPropertyType: UIView!
     @IBOutlet weak var txtFieldPropertyType: DropDown!
     @IBOutlet weak var viewPropertyRating: UIView!
@@ -26,9 +28,22 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
     @IBOutlet weak var propertyTableView: UITableView!
     @IBOutlet weak var propertyCollectionView: UICollectionView!
     
+    let phoneNumberKit = PhoneNumberKit()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtFieldBooking.delegate = self
+        txtFieldBooking.placeholder = "Enter phone number"
+        txtFieldBooking.keyboardType = .phonePad
+//        switchRegionButton.addTarget(self, action: #selector(switchRegion), for: .touchUpInside)
+
+               // Add a gesture recognizer to dismiss the keyboard when tapping outside the text field
+               let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+               view.addGestureRecognizer(tapGesture)
+        txtFieldPropertyName.withExamplePlaceholder = true
+        txtFieldPropertyName.withFlag = true
+        txtFieldPropertyName.delegate = self
         txtFieldPropertyType.optionArray = ["Hotel", "Home", "Resturant"]
         txtFieldPropertyRating.optionArray = ["25%", "35%", "100%"]
         propertyTableView.register(UINib(nibName: "AddAmenityCell", bundle: nil), forCellReuseIdentifier: "AddAmenityCell")
@@ -38,7 +53,8 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
         btnContinue.layer.cornerRadius = 5
         textFieldViewLine()
         textFieldPlaceholederTextColorChange()
-    
+      
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
@@ -48,9 +64,39 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
         self.navigationController?.navigationBar.isHidden = false
     }
     
+    
     // MARK: - Function
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            // Allow backspace
+            guard !string.isEmpty else {
+                return true
+            }
+
+            // Limit the length to a standard phone number length
+            let maxLength = 10
+            let currentLength = textField.text?.count ?? 0
+
+            guard currentLength < maxLength else {
+                return false
+            }
+
+            // Check if the new character is a digit
+            let isDigit = CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: string))
+            guard isDigit else {
+                return false
+            }
+
+            // Format the phone number
+            if currentLength == 3 || currentLength == 7 {
+                textField.text?.append("-")
+            }
+
+            return true
+        }
    
+    
+    
     func textFieldViewLine(){
         viewPropertyName.layer.borderWidth = 1
         viewPropertyName.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
@@ -67,12 +113,13 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
         viewBooking.layer.borderWidth = 1
         viewBooking.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
         viewBooking.layer.cornerRadius = 10
+      
         
     }
     
     func textFieldPlaceholederTextColorChange(){
         let color = UIColor.init(named: "TextColor")
-        txtFieldPropertName.attributedPlaceholder = NSAttributedString(string: txtFieldPropertName.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
+        
         
         txtFieldPropertyType.attributedPlaceholder = NSAttributedString(string: txtFieldPropertyType.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         
@@ -144,4 +191,36 @@ extension PropertProfileVC:UICollectionViewDelegate,UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
             return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         }
+}
+
+
+extension PropertProfileVC: UITextFieldDelegate{
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == txtFieldBooking {
+            if let combinedText = textField.text {
+                // Extract country code and phone number
+                if let (countryCode, phoneNumber) = extractCountryCodeAndNumber(from: combinedText) {
+                    print("Country Code: \(countryCode), Phone Number: \(phoneNumber)")
+                } else {
+                    print("Invalid input format")
+                }
+            }
+        }
+    }
+
+    // MARK: - Helper function to extract country code and phone number
+
+    func extractCountryCodeAndNumber(from input: String) -> (String, String)? {
+        // Split the input into country code and phone number
+        let components = input.components(separatedBy: CharacterSet.decimalDigits.inverted)
+        guard components.count >= 2 else {
+            return nil
+        }
+
+        let countryCode = components[0]
+        let phoneNumber = components[1...].joined()
+
+        return (countryCode, phoneNumber)
+    }
 }

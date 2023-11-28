@@ -19,7 +19,7 @@ class VerificationPandingVC: UIViewController {
 
     
     func gotoDashBoardBtnTapeed(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboradVC") as! DashboradVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
   

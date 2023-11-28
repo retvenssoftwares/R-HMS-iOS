@@ -33,7 +33,14 @@ class ResetPasswordVC: UIViewController {
     // MARK: - Action
 
     @IBAction func resetPasswordBtnPressed(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "EnterOTPVC") as! EnterOTPVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        if isValidEmail(email: txtFieldEmail.text!) {
+            viewEmail.borderColor = UIColor.textFiledViewLine
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "EnterOTPVC") as! EnterOTPVC
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            viewEmail.borderColor = UIColor.red
+            
+        }
+        
     }
 }

@@ -1,5 +1,13 @@
 PODS:
+  - Charts (4.1.0):
+    - Charts/Core (= 4.1.0)
+  - Charts/Core (4.1.0):
+    - SwiftAlgorithms (~> 1.0)
   - DateTimePicker (2.5.3)
+  - DGCharts (5.0.0):
+    - DGCharts/Core (= 5.0.0)
+  - DGCharts/Core (5.0.0)
+  - DPCharts (1.2.2)
   - GoogleMaps (8.2.0):
     - GoogleMaps/Maps (= 8.2.0)
   - GoogleMaps/Base (8.2.0)
@@ -7,30 +15,59 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (8.2.1)
   - iOSDropDown (0.4.0)
+  - PhoneNumberKit (3.7.5):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.7.5)
+    - PhoneNumberKit/UIKit (= 3.7.5)
+  - PhoneNumberKit/PhoneNumberKitCore (3.7.5)
+  - PhoneNumberKit/UIKit (3.7.5):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - PieCharts (0.0.7)
+  - SnapKit (5.6.0)
   - SVPinView (1.0.11)
+  - SwiftAlgorithms (1.0.0)
 
 DEPENDENCIES:
+  - Charts
   - DateTimePicker
+  - DGCharts
+  - DPCharts (~> 1.2.2)
   - GoogleMaps
   - GooglePlaces
   - iOSDropDown
+  - PhoneNumberKit (~> 3.7)
+  - PieCharts
+  - SnapKit
   - SVPinView (~> 1.0)
 
 SPEC REPOS:
   trunk:
+    - Charts
     - DateTimePicker
+    - DGCharts
+    - DPCharts
     - GoogleMaps
     - GooglePlaces
     - iOSDropDown
+    - PhoneNumberKit
+    - PieCharts
+    - SnapKit
     - SVPinView
+    - SwiftAlgorithms
 
 SPEC CHECKSUMS:
+  Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
   DateTimePicker: 52701ddf656a50856d3510955933f767cd2c947c
+  DGCharts: 6e0cf2644e8f81ad13f04caa8bc18502870a1c54
+  DPCharts: b3dee40722a2b34985ec897086a15532b6def1f0
   GoogleMaps: 081f2547b60a1c0870a8f49166a653900e5055d5
   GooglePlaces: 867722fe422f5a4cc19c68bc28f9f74a24470e40
   iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
+  PhoneNumberKit: f3980e01b84615524dd496adee6a1b5ced87d3f4
+  PieCharts: 30e50dfa7dc19e5b84e9878d32089673ef5d0453
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
+  SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: 0ccb323ca07f936c3ef6c4057fd2a0096855de75
+PODFILE CHECKSUM: 0c915b46766d1704f993c7c7c8088e653793294f
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.14.3

@@ -37,7 +37,7 @@ class ErrorVC: UIViewController {
 
     // MARK: - Action
     @IBAction func resetBtnPressed(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AuthenticationVC") as! AuthenticationVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
