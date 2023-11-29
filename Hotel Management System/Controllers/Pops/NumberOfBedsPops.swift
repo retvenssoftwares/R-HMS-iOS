@@ -1,13 +1,13 @@
 //
-//  PopsVC.swift
+//  NumberOfBedsPops.swift
 //  Hotel Management System
 //
-//  Created by Smart Kamina on 18/11/23.
+//  Created by Smart Kamina on 22/11/23.
 //
 
 import UIKit
 
-class PopsVC: UIViewController {
+class NumberOfBedsPops: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

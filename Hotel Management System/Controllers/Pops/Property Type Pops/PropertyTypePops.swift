@@ -2,35 +2,55 @@
 //  PropertyTypePops.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 18/11/23.
+//  Created by Smart Kamina on 22/11/23.
 //
 
-import Foundation
 import UIKit
 
 
-class PropertyTypePops:UIView{
+class PropertyTypePops: UIViewController {
     
     
-    override init(frame: CGRect) {
-     super .init(frame: frame)
-      commonInit()
+    // MARK: - outlet
+    @IBOutlet weak var btnHotel: UIButton!
+    @IBOutlet weak var btnResort: UIButton!
+    @IBOutlet weak var btnVilla: UIButton!
+    @IBOutlet weak var btnLodge: UIButton!
+    @IBOutlet weak var btnHostler: UIButton!
+    @IBOutlet weak var btnAppartments: UIButton!
+    @IBOutlet weak var btnSharedAppartments: UIButton!
+    @IBOutlet weak var btnOther: UIButton!
+    
    
- }
- 
- required init?(coder aDecoder: NSCoder) {
-     super.init(coder: aDecoder)
-     commonInit()
-     
-   
- }
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
 
  
- private func commonInit() {
-     Bundle.main.loadNibNamed("PopsView", owner: self, options: nil)
-//     addSubview(containerView)
-//     containerView.frame = self.bounds
-//     containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
- }
-
+    // MARK: - Action
+    
+    @IBAction func BtnHotelPressed(_ sender: UIButton) {
+    }
+    @IBAction func btnResortPressed(_ sender: UIButton) {
+    }
+    @IBAction func btnVillaPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnLodgePressed(_ sender: UIButton) {
+    }
+    @IBAction func btnHostlerPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnAppartmentsPressed(_ sender: UIButton) {
+    }
+    @IBAction func btnSHaredHostlerPressed(_ sender: UIButton) {
+    }
+    @IBAction func btnOtherPressed(_ sender: UIButton) {
+    }
+    
 }

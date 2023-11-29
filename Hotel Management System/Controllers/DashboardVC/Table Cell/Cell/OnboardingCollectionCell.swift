@@ -2,7 +2,7 @@
 //  OnboardingCollectionCell.swift
 //  Retvent
 //
-//  Created by mayur bobade on 02/11/23.
+//  Created by Smart Kamina on 02/11/23.
 //
 
 import UIKit
