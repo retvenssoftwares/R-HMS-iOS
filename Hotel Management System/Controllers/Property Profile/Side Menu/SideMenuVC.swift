@@ -26,7 +26,7 @@ class SideMenuVC: UIViewController {
 //        isSideViewOpen = false
 
         
-        sideMenuTableView.register(UINib(nibName: "SideMenuTableCell", bundle: nil), forCellReuseIdentifier: "SideMenuTableCell")
+        sideMenuTableView.register(UINib(nibName: "SideMenuTable", bundle: nil), forCellReuseIdentifier: "SideMenuTable")
         viewSideMneu.isHidden = true
 
     }
@@ -45,53 +45,53 @@ class SideMenuVC: UIViewController {
 }
 
 // MARK: - Extension TableView
-extension SideMenuVC:UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuTableCell", for: indexPath) as! SideMenuTableCell
-        cell.setDataSideTable(no: indexPath.row)
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-    
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-        else if indexPath.row == 1 {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RatesAndInventoryVC") as! RatesAndInventoryVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-        else if indexPath.row == 2 {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "QuickReservationsVC") as! QuickReservationsVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-        else if indexPath.row == 3 {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChannelsVC") as! ChannelsVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-        else if indexPath.row == 4 {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewAllPropertyVC") as! ViewAllPropertyVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-        else if indexPath.row == 5 {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReservationsVC") as! ReservationsVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-        else if indexPath.row == 6 {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreateRatePlaneVC") as! CreateRatePlaneVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-        else if indexPath.row == 7 {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LogsVC") as! LogsVC
-        self.navigationController?.pushViewController(vc, animated:true)
-       }
-      
-
-    }
-  
-    
-}
+//extension SideMenuVC:UITableViewDelegate,UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 8
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuTable", for: indexPath) as! SideMenuTable
+//        cell.setDataSideTable(no: indexPath.row)
+//        return cell
+//    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if indexPath.row == 0 {
+//    
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//        else if indexPath.row == 1 {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RatesAndInventoryVC") as! RatesAndInventoryVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//        else if indexPath.row == 2 {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "QuickReservationsVC") as! QuickReservationsVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//        else if indexPath.row == 3 {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChannelsVC") as! ChannelsVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//        else if indexPath.row == 4 {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewAllPropertyVC") as! ViewAllPropertyVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//        else if indexPath.row == 5 {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReservationsVC") as! ReservationsVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//        else if indexPath.row == 6 {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreateRatePlaneVC") as! CreateRatePlaneVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//        else if indexPath.row == 7 {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LogsVC") as! LogsVC
+//        self.navigationController?.pushViewController(vc, animated:true)
+//       }
+//      
+//
+//    }
+//  
+//    
+//}

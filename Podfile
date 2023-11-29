@@ -17,6 +17,7 @@ target 'Hotel Management System' do
     pod 'DGCharts'
     pod 'DPCharts', '~> 1.2.2'
     pod 'PhoneNumberKit', '~> 3.7'
+    pod 'Alamofire'
 
 
   target 'Hotel Management SystemTests' do

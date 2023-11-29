@@ -90,7 +90,7 @@ struct userEditModels:Codable{
 struct getDesignation: Decodable {
     let statusCode: Int
     let designations: [Designation]
-
+    
     enum CodingKeys: String, CodingKey {
         case statusCode
         case designations = "designation_list"
@@ -111,7 +111,7 @@ struct CreateProperty:Codable{
 struct CreatePropertyModel:Codable{
     var message, userId:String?
     var statuscode:Int?
-    var propertyName: String?
+    var propertyTypeSOC: String?
 }
 
 struct DesignationResponse: Decodable {
@@ -123,4 +123,51 @@ struct Designation: Decodable {
     let _id: String
     let designationId: String
     let designation: String
+}
+
+struct propertyUpdate: Codable {
+    let propertyTypeSOC: String
+    var message: String?
+    var statuscode: Int?
+    // Add other properties as needed
+}
+//struct PatchOperation: Codable {
+//    let op: String // Operation (add, remove, replace, etc.)
+//    let path: String // Resource path
+//    let designation: Any? // New value (optional for remove)
+//}
+//
+//struct PatchOperationDa: Decodable {
+//    let _id: String
+//    let designationId: String
+//    let designation: String
+//}
+struct Pr: Codable {
+    var message: String?
+    var statuscode: Int?
+}
+
+
+struct CreateNewPropertyModel: Codable {
+    
+}
+struct CreateNewPropertyDataModel: Codable {
+    let hotelLogo: String
+    let propertyName: String
+    let propertyType: String
+    let propertyRating: String
+    let websiteUrl: String
+    let propertyDescription: String
+    let amenitylds: String
+    let propertyAddress1: String
+    let propertyAddress2: String
+    let city: String
+    let state: String
+    let country: String
+    let phone: String
+    let reservationPhone: String
+    let propertyEmail: String
+    let latitude: String
+    let longitude: String
+    let userId: String
 }

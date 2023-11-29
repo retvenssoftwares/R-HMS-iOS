@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.8.1)
   - Charts (4.1.0):
     - Charts/Core (= 4.1.0)
   - Charts/Core (4.1.0):
@@ -27,6 +28,7 @@ PODS:
   - SwiftAlgorithms (1.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Charts
   - DateTimePicker
   - DGCharts
@@ -41,6 +43,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Charts
     - DateTimePicker
     - DGCharts
@@ -55,6 +58,7 @@ SPEC REPOS:
     - SwiftAlgorithms
 
 SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   Charts: ce0768268078eee0336f122c3c4ca248e4e204c5
   DateTimePicker: 52701ddf656a50856d3510955933f767cd2c947c
   DGCharts: 6e0cf2644e8f81ad13f04caa8bc18502870a1c54
@@ -68,6 +72,6 @@ SPEC CHECKSUMS:
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: 0c915b46766d1704f993c7c7c8088e653793294f
+PODFILE CHECKSUM: 65d423bffc893691ea2954c351cccad83d2a3564
 
 COCOAPODS: 1.14.3

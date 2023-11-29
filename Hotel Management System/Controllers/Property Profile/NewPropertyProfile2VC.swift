@@ -10,7 +10,7 @@ import iOSDropDown
 
 class NewPropertyProfile2VC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var viewPops: PopsView!
+    //@IBOutlet weak var viewPops: PopsView!
     @IBOutlet weak var newPropertyCollectionCell: UICollectionView!
     @IBOutlet weak var txtFieldDescription: UITextField!
     @IBOutlet weak var txtFieldWebsite: UITextField!
@@ -50,7 +50,7 @@ class NewPropertyProfile2VC: UIViewController,UIImagePickerControllerDelegate, U
 
 
     @IBAction func propertyTypePopsBtnPressed(_ sender: UIButton) {
-        viewPops.isHidden = false
+        //viewPops.isHidden = false
     }
     
     @IBAction func profileChangeBtnPressed(_ sender: UIButton) {

@@ -52,6 +52,7 @@ class AuthenticationVC: UIViewController {
     
     //var designations: [Designation] = []
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.countryCodes = getAllCountryCodes()
         print(countrys, countryCodes)
@@ -215,13 +216,13 @@ class AuthenticationVC: UIViewController {
         }
         
         if (((txtFieldFirstName.text?.isEmpty) == true) && ((txtFieldLastName.text?.isEmpty) == true) && ((txtFieldDesignation.text?.isEmpty) == true)) && ((txtFieldEmail.text?.isEmpty == true)) && ((txtFieldPhone.text?.isEmpty == true)) && ((txtFieldPasssword.text?.isEmpty == true)) == true {
-            
+           
         } else {
             if (((txtFieldFirstName.text?.isEmpty) == false) && ((txtFieldLastName.text?.isEmpty) == false) && ((txtFieldDesignation.text?.isEmpty) == false)) && ((txtFieldEmail.text?.isEmpty == false)) && ((txtFieldPhone.text?.isEmpty == false)) && ((txtFieldPasssword.text?.isEmpty == false)) == true {
                 signupCheck()
                 
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
-                self.navigationController?.pushViewController(vc, animated: true)
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
+//                self.navigationController?.pushViewController(vc, animated: true)
             } else {
                 //                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
                 //                self.navigationController?.pushViewController(vc, animated: false)
@@ -272,7 +273,6 @@ class AuthenticationVC: UIViewController {
     }
     
     //MARK: designation data
-    
     func parseJSONResponse() {
         if let responseData = """
         {
@@ -424,6 +424,8 @@ class AuthenticationVC: UIViewController {
         toolbar.sizeToFit()
         txtFieldDesignation.inputAccessoryView = toolbar
         txtFieldCountryCode.inputAccessoryView = toolbar
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+                toolbar.setItems([doneButton], animated: false)
     }
     
     
@@ -452,25 +454,12 @@ class AuthenticationVC: UIViewController {
                 if newdata?.statuscode == 200{
                     if let encoded = try? JSONEncoder().encode(newdata) {
                         // self.userDefaults.set(encoded, forKey: "userData")
-                        let alert = UIAlertController(title: "", message: newdata?.message, preferredStyle: .alert)
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
+                        self.navigationController?.pushViewController(vc, animated: true)
                         
-                        let closeAction = UIAlertAction(title: "Close", style: UIAlertAction.Style.cancel, handler: {action in
-                            print("Close")
-                            //let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
-                            //self.navigationController?.pushViewController(vc, animated: true)
-                        })
-                        alert.addAction(closeAction)
                         //self.present(alert, animated: true, completion: nil)
                         
                     }
-                }else {
-                    let alert = UIAlertController(title: "", message: newdata?.message, preferredStyle: .alert)
-                    let closeAction = UIAlertAction(title: "Close", style: UIAlertAction.Style.cancel, handler: {action in
-                        print("Close")
-                    })
-                    alert.addAction(closeAction)
-                    self.present(alert, animated: true, completion: nil)
-                    
                 }
             }
             print(newdata)
@@ -633,52 +622,35 @@ extension AuthenticationVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if txtFieldCountryCode.isFirstResponder {
-                    return countryCodes.count
-                } else if txtFieldDesignation.isFirstResponder {
                     return designations.count
-                } else {
-                    return 0
-                }
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if txtFieldDesignation.isFirstResponder == true {
+       
             return designations[row]
-        } else {
-            return countryCodes[component][row]
-        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        if txtFieldDesignation.isFirstResponder == true {
-//            txtFieldDesignation.text = designations[row]
-//            txtFieldDesignation.text = designations[pickerView.selectedRow(inComponent: 0)]
-//            txtFieldDesignation.resignFirstResponder()
-//        } else {
-//            txtFieldCountryCode.text = countryCodes[component][row]
-//            txtFieldCountryCode.resignFirstResponder()
-//        }
-        
-        if txtFieldCountryCode.isFirstResponder {
-            txtFieldCountryCode.text = countrys[component][row]
-                } else if txtFieldDesignation.isFirstResponder {
-                    txtFieldDesignation.text = designations[row]
-                }
+            txtFieldDesignation.text = designations[row]
+            //txtFieldDesignation.resignFirstResponder()
     }
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        // Specify the height for each row
-        return 50.0 // Adjust this value according to your preference
+        return 40.0
     }
     
+    @objc func doneButtonTapped() {
+            // Handle done button tap if needed
+            txtFieldDesignation.resignFirstResponder()
+        }
     func presentPickerView() {
         if txtFieldDesignation.isFirstResponder == true {
             pickerViewOne.isHidden = true
-            pickerView.frame = CGRect(x: 0, y: view.frame.height, width: view.frame.width, height: 216)
+            pickerView.frame = CGRect(x: 0, y: 150, width: view.frame.width, height: 120)
             view.addSubview(pickerView)
         }
         
         UIView.animate(withDuration: 0.3) {
-            self.pickerView.frame.origin.y = self.view.frame.height - 216
+            self.pickerView.frame.origin.y = 150
             
         }
     }

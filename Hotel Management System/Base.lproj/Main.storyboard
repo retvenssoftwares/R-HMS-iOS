@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4mA-gc-wAv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SSY-9T-olf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -13,10 +13,10 @@
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
-        <array key="Roboto-Bold.ttf 12-59-15-113.ttf">
+        <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
-        <array key="Roboto-Medium.ttf">
+        <array key="Roboto-Medium.ttf 12-59-15-145.ttf">
             <string>Roboto-Medium</string>
         </array>
         <array key="Roboto-Regular.ttf">
@@ -183,7 +183,7 @@
                                                 <rect key="frame" x="20" y="144" width="353" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvM-yx-ntk">
-                                                        <rect key="frame" x="12" y="0.0" width="85" height="40"/>
+                                                        <rect key="frame" x="12" y="0.0" width="87" height="40"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -297,7 +297,7 @@
                                                 <rect key="frame" x="20" y="294" width="353" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRV-F4-a6C">
-                                                        <rect key="frame" x="12" y="0.0" width="42" height="40"/>
+                                                        <rect key="frame" x="12" y="0.0" width="47" height="40"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -14111,7 +14111,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website (If Available)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-Aj-iS9" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="335" width="84.666666666666671" height="11"/>
+                                                <rect key="frame" x="20" y="335" width="83" height="11"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="9"/>
                                                 <color key="textColor" red="0.18823529410000001" green="0.21960784310000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -14187,7 +14187,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property Amenities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjc-lp-E3F" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                <rect key="frame" x="19.999999999999993" y="565" width="103.33333333333331" height="14"/>
+                                                <rect key="frame" x="20" y="565" width="102" height="14"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -18498,7 +18498,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big Blue Hotel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHv-fV-FoL" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                        <rect key="frame" x="266" y="13" width="75" height="14"/>
+                                                        <rect key="frame" x="264" y="13" width="77" height="14"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -18606,7 +18606,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5O-yn-R47" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="13" width="72.666666666666671" height="14"/>
+                                                        <rect key="frame" x="12" y="13" width="74.666666666666671" height="14"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -18640,12 +18640,12 @@
                                                 <rect key="frame" x="20" y="303" width="353" height="40"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="www.book@hotel.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZq-KL-XGI">
-                                                        <rect key="frame" x="185" y="0.0" width="156" height="40"/>
+                                                        <rect key="frame" x="182.66666666666663" y="0.0" width="158.33333333333337" height="40"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website (If Available)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPG-i5-DH3" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="13" width="113" height="14"/>
+                                                        <rect key="frame" x="12.000000000000007" y="13" width="110.66666666666669" height="14"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <color key="textColor" red="0.18823529410000001" green="0.21960784310000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -18715,7 +18715,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property Amenities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhu-1P-8Jb" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                <rect key="frame" x="19.999999999999993" y="532" width="103.33333333333331" height="14"/>
+                                                <rect key="frame" x="20" y="532" width="102" height="14"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -21276,7 +21276,7 @@
                                                 <rect key="frame" x="20" y="20" width="353" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kg-Hr-cvt" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="0.0" width="85" height="40"/>
+                                                        <rect key="frame" x="12" y="0.0" width="87" height="40"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -22716,6 +22716,20 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
             <point key="canvasLocation" x="6654.1984732824421" y="505.63380281690144"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8od-eJ-32b">
+            <size key="intrinsicContentSize" width="170" height="20"/>
+        </designable>
+        <designable name="DEI-zg-kdn">
+            <size key="intrinsicContentSize" width="170" height="20"/>
+        </designable>
+        <designable name="Xov-kx-umH">
+            <size key="intrinsicContentSize" width="170" height="20"/>
+        </designable>
+        <designable name="yxw-Sm-AnE">
+            <size key="intrinsicContentSize" width="170" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name=" Remove" width="24" height="24"/>
         <image name="Add" width="24" height="24"/>
