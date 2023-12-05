@@ -61,7 +61,6 @@ class DashboradVC: UIViewController, ChartViewDelegate {
     //var designations: [Designation] = []
     var numberOfDownloadsDataEntries = [PieChartDataEntry]()
     fileprivate var currentColorIndex = 0
-    
     var isSideMenuOpen = false
     let sideMenuWidth: CGFloat = 200
     var receivedDate1: String = ""
@@ -83,8 +82,6 @@ class DashboradVC: UIViewController, ChartViewDelegate {
         sideMenuCollectionView.register(UINib(nibName: "SideMenuCollectionCell", bundle: .main), forCellWithReuseIdentifier: "cell")
         dashboardTableView.register(UINib(nibName: "DashboardTableCell", bundle: nil), forCellReuseIdentifier: "DashboardTableCell")
 
-      
-        
         //fetchDataAndUpdateChart()
         barChartView.xAxis.labelPosition = .bottom
         barChartView.xAxis.drawGridLinesEnabled = false
