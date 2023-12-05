@@ -2,13 +2,16 @@
 //  AddAmenityCell.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 03/11/23.
+//  Created by Smart Kamina on 03/11/23.
 //
 
 import UIKit
 
 class AddAmenityCell: UITableViewCell {
 
+    @IBOutlet weak var viewBg: UIView!
+    @IBOutlet weak var lblAmenity: UILabel!
+    @IBOutlet weak var imgAmenity: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

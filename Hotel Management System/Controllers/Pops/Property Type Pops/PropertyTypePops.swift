@@ -2,7 +2,7 @@
 //  PropertyTypePops.swift
 //  Hotel Management System
 //
-//  Created by Smart Kamina on 22/11/23.
+//  Created by Mayur Bobade on 22/11/23.
 //
 
 import UIKit
@@ -12,6 +12,7 @@ class PropertyTypePops: UIViewController {
     
     
     // MARK: - outlet
+    @IBOutlet var viewBg: UIView!
     @IBOutlet weak var btnHotel: UIButton!
     @IBOutlet weak var btnResort: UIButton!
     @IBOutlet weak var btnVilla: UIButton!
@@ -27,7 +28,6 @@ class PropertyTypePops: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 

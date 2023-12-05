@@ -2,7 +2,7 @@
 //  OTASVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 08/11/23.
+//  Created by Mayur Bobade on 08/11/23.
 //
 
 import UIKit
@@ -28,7 +28,6 @@ class OTASVC: UIViewController {
         viewMapping.isHidden = true
         viewReservation.isHidden = true
         viewLogo.isHidden = true
-        hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Action
@@ -49,7 +48,6 @@ class OTASVC: UIViewController {
     }
     @IBAction func reservationBtnPressed(_ sender: UIButton) {
         addSubView(storyBoard: "Main", controllerName: "ArrivalsVC")
-        
         viewReservation.isHidden = false
         viewMapping.isHidden = true
         viewOverview.isHidden = true

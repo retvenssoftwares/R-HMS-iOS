@@ -2,7 +2,7 @@
 //  MappingVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 09/11/23.
+//  Created by Mayur Bobade on 09/11/23.
 //
 
 import UIKit
@@ -16,7 +16,6 @@ class MappingVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         mappingTableView.register(UINib(nibName: "MapingTableCell", bundle: nil), forCellReuseIdentifier: "MapingTableCell")
     }
 

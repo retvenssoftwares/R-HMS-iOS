@@ -2,7 +2,7 @@
 //  ErrorVC.swift
 //  Retvent
 //
-//  Created by mayur bobade on 02/11/23.
+//  Created by Mayur Bobade on 02/11/23.
 //
 
 import UIKit
@@ -21,7 +21,7 @@ class ErrorVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         btnResetPAssword.layer.cornerRadius = 10
         viewCreatePassword.layer.borderWidth = 1
        // viewCreatePassword.layer.borderColor = UIColor.red.cgColor
@@ -37,7 +37,7 @@ class ErrorVC: UIViewController {
 
     // MARK: - Action
     @IBAction func resetBtnPressed(_ sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AuthenticationVC") as! AuthenticationVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

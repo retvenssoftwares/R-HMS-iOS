@@ -2,7 +2,7 @@
 //  OnboardingScreenVC.swift
 //  Retvent
 //
-//  Created by mayur bobade on 02/11/23.
+//  Created by Mayur Bobade on 02/11/23.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ class OnboardingScreenVC: UIViewController {
     var arrImg = ["EmptyChainImage","Emptydashborad","EmpltyTableImg"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         onboardingCollectionCell.register(UINib(nibName: "OnboardingCollectionCell", bundle: .main), forCellWithReuseIdentifier: "OnboardingCollectionCell")
     }
     

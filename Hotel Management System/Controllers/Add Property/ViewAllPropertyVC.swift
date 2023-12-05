@@ -2,7 +2,7 @@
 //  ViewAllPropertyVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 03/11/23.
+//  Created by Mayur Bobade on 03/11/23.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class ViewAllPropertyVC: UIViewController {
     // MARK: - Lufecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+        
         viewAllProperties.register(UINib(nibName: "ViewAllPropertyCell", bundle: nil), forCellReuseIdentifier: "ViewAllPropertyCell")
         viewAllProperties.register(UINib(nibName: "HeaderCell", bundle: nil), forCellReuseIdentifier: "HeaderCell")
     }

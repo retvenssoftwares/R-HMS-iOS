@@ -2,7 +2,7 @@
 //  RatesAndInventoryTableVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class RatesAndInventoryTableVC: UIViewController {
     @IBOutlet weak var RatesAndInventoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         // Do any additional setup after loading the view.
         RatesAndInventoryTableView.register(UINib(nibName: "RatesAndInventoryTableCell", bundle: nil), forCellReuseIdentifier: "RatesAndInventoryTableCell")
         RatesAndInventoryTableView.register(UINib(nibName: "RateHeaderCell", bundle: nil), forCellReuseIdentifier: "RateHeaderCell")

@@ -19,6 +19,9 @@ class PropertySelectionVC: UIViewController {
     let apiUrl = URL(string: "https://api.hotelratna.com/api/userEdit")!
     var singleProperty: String = "Single"
     var multipleProperty: String = "Multiple"
+    var userId: String?
+    
+    var userDefaults = UserDefaults()
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,53 +36,13 @@ class PropertySelectionVC: UIViewController {
         viewSingleProperty.layer.cornerRadius = 10
         viewSingleProperty.layer.borderWidth = 1
         viewSingleProperty.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
-    }
-    
-    func clickBtnResponse(){
-        let parameters = [["key": "userId","value": "value","type": "text"],["key": "propertyName","value": "aHotel","type":"text"],["key": "propertyType","value": "Hotel","type": "text"],["key":"propertyAddress1","value": "abc","type": "text"],["key": "postCode","value": "401204","type": "text"],["key": "country","value":"India","type": "text"],["key": "state","value": "UP","type": "text"],["key": "city","value": "Amroha","type": "text"],["key": "starCatagory","value": "5star","type": "text"],["key": "ratePercent","value": "5","type": "text"],["key": "baseCurrency","value": "INR","type": "text"],["key": "websiteUrl","value": "www.rhotel.com","type": "text"],["key": "roomsInProperty","value": "30","type": "text"],["key": "textName","value": "gst","type": "text"],["key": "registrationNumber","value": "14251","type": "text"],["key": "propertyTypeSOC","value": "Single","type": "text"]] as [[String: Any]]
-        
-        let boundary = "Boundary-\(UUID().uuidString)"
-        var body = ""
-        var error: Error? = nil
-        for param in parameters {
-            if param["disabled"] != nil { continue }
-            let paramName = param["key"]!
-            body += "--\(boundary)\r\n"
-            body += "Content-Disposition:form-data; name=\"\(paramName)\""
-            if param["contentType"] != nil {
-                body += "\r\nContent-Type: \(param["contentType"] as! String)"
-            }
-            let paramType = param["type"] as! String
-            if paramType == "text" {
-                let paramValue = param["value"] as! String
-                body += "\r\n\r\n\(paramValue)\r\n"
-            } else {
-                let paramSrc = param["src"] as! String
-                let fileData = try! NSData(contentsOfFile: paramSrc, options: []) as Data
-                let fileContent = String(data: fileData, encoding: .utf8)!
-                body += "; filename=\"\(paramSrc)\"\r\n"
-                + "Content-Type: \"content-type header\"\r\n\r\n\(fileContent)\r\n"
-            }
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backBarButtonItem
+        navigationItem.backButtonTitle = ""
+        if let userId = userId {
+            print(userId)
+            userDefaults.setValue(userId, forKey: "userId")
         }
-        body += "--\(boundary)--\r\n";
-        let postData = body.data(using: .utf8)
-        
-        var request = URLRequest(url: URL(string: "https://api.hotelratna.com/api/userEdit")!,timeoutInterval: Double.infinity)
-        request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        
-        request.httpMethod = "PATCH"
-        request.httpBody = postData
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                print(String(describing: error))
-                return
-            }
-            print(String(data: data, encoding: .utf8)!)
-        }
-        
-        task.resume()
-        
     }
     
     // MARK: - Action
@@ -97,6 +60,7 @@ class PropertySelectionVC: UIViewController {
             viewPropertyChain.layer.borderColor = UIColor.green.cgColor
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingPropertyChain1VC") as! OnboardingPropertyChain1VC
             multipleProperty = "Multiple"
+            vc.userId = userId
             vc.multipleProperty = multipleProperty
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
@@ -111,6 +75,7 @@ class PropertySelectionVC: UIViewController {
         if singlePropertyBtn.isEnabled == true {
             viewSingleProperty.layer.borderColor = UIColor.green.cgColor
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SingleProperty1VC") as! SingleProperty1VC
+            vc.userId = userId
             vc.property = singleProperty
             //clickBtnResponse()
             

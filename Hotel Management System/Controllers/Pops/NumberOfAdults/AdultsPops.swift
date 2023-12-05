@@ -2,10 +2,11 @@
 //  AdultsPops.swift
 //  Hotel Management System
 //
-//  Created by Smart Kamina on 22/11/23.
+//  Created by Mayur Bobade on 22/11/23.
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class AdultsPops: UIViewController {
 
@@ -17,14 +18,20 @@ class AdultsPops: UIViewController {
     @IBOutlet weak var pickerViewBase: UIPickerView!
     @IBOutlet weak var pickerViewMax: UIPickerView!
     
-    
+    var onPickerSelection: ((String) -> Void)?
+    var selectedValue:String = ""
+    var labelAdults: String?
+    var labelAdultsDescription:String?
     let arrNumbersBase = ["1", "2", "3", "4", "5"]
     let arrNumbersMax = ["1", "2", "3", "4", "5"]
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 300
        
+        lblAdults.text = labelAdults
+        lblAdultsDescription.text = labelAdultsDescription
     }
 
 
@@ -59,11 +66,17 @@ extension AdultsPops:UIPickerViewDelegate, UIPickerViewDataSource{
         }
        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
            if pickerView.tag == 1{
-               let selectedItem = arrNumbersBase[row]
-               print("Selected Item: \(selectedItem)")
+               let selectedValue = arrNumbersBase[row]
+                      onPickerSelection?(selectedValue)
+                      dismiss(animated: true, completion: nil)
+//               let selectedItem = arrNumbersBase[row]
+//               print("Selected Item: \(selectedItem)")
            }
-           let selectedItem = arrNumbersMax[row]
-           print("Selected Item: \(selectedItem)")
+           let selectedValue = arrNumbersMax[row]
+                  onPickerSelection?(selectedValue)
+                  dismiss(animated: true, completion: nil)
+//           let selectedItem = arrNumbersMax[row]
+//           print("Selected Item: \(selectedItem)")
          
        }
     

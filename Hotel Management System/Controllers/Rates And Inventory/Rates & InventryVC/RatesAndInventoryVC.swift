@@ -2,7 +2,7 @@
 //  RatesAndInventoryVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit
@@ -24,7 +24,7 @@ class RatesAndInventoryVC: UIViewController {
     @IBOutlet weak var viewAgodaDropDOwn: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         ratesCollectionView.register(UINib(nibName: "RatesAndInventoryCollectionCell", bundle: .main), forCellWithReuseIdentifier: "RatesAndInventoryCollectionCell")
         
         

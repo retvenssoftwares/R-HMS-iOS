@@ -2,76 +2,76 @@
 //  CreateRoom2VC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 04/11/23.
+//  Created by Mayur Bobade on 04/11/23.
 //
 
 import UIKit
 
 class CreateRoom2VC: UIViewController {
-
+    
     @IBOutlet weak var CreateRoomCollectioCell: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         CreateRoomCollectioCell.register(UINib(nibName: "PropertyProfileCollectionCell", bundle: .main), forCellWithReuseIdentifier: "PropertyProfileCollectionCell")
         CreateRoomCollectioCell.register(UINib(nibName: "CreateRoomHeaderCell", bundle: .main), forCellWithReuseIdentifier: "CreateRoomHeaderCell")
         self.CreateRoomCollectioCell.register(UINib(nibName: "CreateRoomFooterCell", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "CreateRoomFooterCell")
         CreateRoomCollectioCell.collectionViewLayout = createCompositionalLayout()
     }
     
-
     
-
+    
+    
 }
 
 
 extension CreateRoom2VC:UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func createCompositionalLayout() -> UICollectionViewLayout {
-               let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
-                   if sectionIndex == 0{
-                       return self.generateChatModule2()
-                   } else if sectionIndex == 1{
-                       return self.generateChatModule()
-                   }else if sectionIndex == 2 {
-                       return self.generateChatModule2()
-                   }
-                   else if sectionIndex == 3 {
-                       return self.generateChatModule()
-                   }
-                   else if sectionIndex == 4 {
-                       return self.generateChatModule2()
-                   }
-                   else if sectionIndex == 5 {
-                       return self.generateChatModule()
-                   }
-                   return self.generateChatModule()
-               }
-               let config = UICollectionViewCompositionalLayoutConfiguration()
-               layout.configuration = config
-               return layout
-           }
-           func generateChatModule() -> NSCollectionLayoutSection {
-               let itemSize = NSCollectionLayoutSize(
-                 widthDimension: .fractionalWidth(1.0),
-                 heightDimension: .fractionalHeight(1.0))
-               
-               
-               let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
-               let groupSize = NSCollectionLayoutSize(
-                 widthDimension: .fractionalWidth(1.0),
-                 heightDimension: .fractionalWidth(1/3))
-               fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 5,leading: 5,bottom: 5,trailing: 5)
-
-               let group = NSCollectionLayoutGroup.horizontal(
-                 layoutSize: groupSize,
-                 subitem: fullPhotoItem,
-                 count: 3
-               )
-
-               let section = NSCollectionLayoutSection(group: group)
-               section.boundarySupplementaryItems = [createSectionFooter()]
-               return section
-           }
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
+            if sectionIndex == 0{
+                return self.generateChatModule2()
+            } else if sectionIndex == 1{
+                return self.generateChatModule()
+            }else if sectionIndex == 2 {
+                return self.generateChatModule2()
+            }
+            else if sectionIndex == 3 {
+                return self.generateChatModule()
+            }
+            else if sectionIndex == 4 {
+                return self.generateChatModule2()
+            }
+            else if sectionIndex == 5 {
+                return self.generateChatModule()
+            }
+            return self.generateChatModule()
+        }
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        layout.configuration = config
+        return layout
+    }
+    func generateChatModule() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0))
+        
+        
+        let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalWidth(1/3))
+        fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 5,leading: 5,bottom: 5,trailing: 5)
+        
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitem: fullPhotoItem,
+            count: 3
+        )
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.boundarySupplementaryItems = [createSectionFooter()]
+        return section
+    }
     
     
     func generateChatModule2() -> NSCollectionLayoutSection {
@@ -82,29 +82,29 @@ extension CreateRoom2VC:UICollectionViewDelegate,UICollectionViewDataSource, UIC
         return section
     }
     func createSectionFooter() -> NSCollectionLayoutBoundarySupplementaryItem {
-            let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(20))
-            let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
-            return layoutSectionHeader
-        }
+        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(20))
+        let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+        return layoutSectionHeader
+    }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-       
-       switch kind {
-                
+        
+        switch kind {
+            
         case UICollectionView.elementKindSectionFooter:
-                let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CreateRoomFooterCell", for: indexPath) as! CreateRoomFooterCell
-           footerView.setData(section: indexPath.section)
-           
-                return footerView
-                
-         default:
-                assert(false, "Unexpected element kind")
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CreateRoomFooterCell", for: indexPath) as! CreateRoomFooterCell
+            footerView.setData(section: indexPath.section)
+            
+            return footerView
+            
+        default:
+            assert(false, "Unexpected element kind")
         }
     }
     
     
-   
-
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0{
             return 1
@@ -124,7 +124,7 @@ extension CreateRoom2VC:UICollectionViewDelegate,UICollectionViewDataSource, UIC
         return 1
     }
     
-  
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 6
@@ -157,7 +157,7 @@ extension CreateRoom2VC:UICollectionViewDelegate,UICollectionViewDataSource, UIC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PropertyProfileCollectionCell", for: indexPath) as! PropertyProfileCollectionCell
         return cell
     }
-   
-
+    
+    
     
 }

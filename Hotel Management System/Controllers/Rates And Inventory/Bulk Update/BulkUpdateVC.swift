@@ -2,7 +2,7 @@
 //  BulkUpdateVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ class BulkUpdateVC: UIViewController {
     @IBOutlet weak var bulkUpdatTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         bulkUpdatTableView.register(UINib(nibName: "BulkUpdateTableCell", bundle: nil), forCellReuseIdentifier: "BulkUpdateTableCell")
             
         txtFIeldSource.optionArray = ["ABC", "BCD", "EFG"]

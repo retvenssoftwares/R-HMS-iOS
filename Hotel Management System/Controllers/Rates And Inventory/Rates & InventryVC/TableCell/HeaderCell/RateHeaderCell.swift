@@ -2,7 +2,7 @@
 //  RateHeaderCell.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit

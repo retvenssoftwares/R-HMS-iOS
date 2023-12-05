@@ -9,15 +9,19 @@ target 'Hotel Management System' do
     pod 'SVPinView', '~> 1.0'
     pod 'iOSDropDown'
     pod 'DateTimePicker'
-    pod 'GoogleMaps'
-    pod 'GooglePlaces'
+    pod 'FloatingPanel'
     pod 'Charts'
     pod 'SnapKit'
     pod 'PieCharts'
     pod 'DGCharts'
     pod 'DPCharts', '~> 1.2.2'
-    pod 'PhoneNumberKit', '~> 3.7'
+    pod 'FittedSheets'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces' 
+    pod "FlagPhoneNumber"
     pod 'Alamofire'
+    pod 'IQKeyboardManagerSwift', '6.3.0'
+    pod 'MaterialComponents/BottomSheet'
 
 
   target 'Hotel Management SystemTests' do

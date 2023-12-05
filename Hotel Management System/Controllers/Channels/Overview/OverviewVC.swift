@@ -2,7 +2,7 @@
 //  OverviewVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 08/11/23.
+//  Created by Mayur Bobade on 08/11/23.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class OverviewVC: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-     hideKeyboardWhenTappedAround()
+
         overViewCollectionView.register(UINib(nibName: "OverViewCollectionCell", bundle: .main), forCellWithReuseIdentifier: "OverViewCollectionCell")
     }
     

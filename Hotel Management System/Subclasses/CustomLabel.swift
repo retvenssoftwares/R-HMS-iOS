@@ -2,7 +2,7 @@
 //  CustomLabel.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 09/11/23.
+//  Created by Mayur Bobade on 09/11/23.
 //
 
 

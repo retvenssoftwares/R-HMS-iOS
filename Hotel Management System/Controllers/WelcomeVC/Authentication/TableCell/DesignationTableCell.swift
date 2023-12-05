@@ -2,7 +2,7 @@
 //  DesignationTableCell.swift
 //  Hotel Management System
 //
-//  Created by Smart Kamina on 28/11/23.
+//  Created by Mayur Bobade on 28/11/23.
 //
 
 import UIKit

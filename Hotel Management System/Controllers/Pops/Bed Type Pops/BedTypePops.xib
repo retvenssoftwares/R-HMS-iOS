@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BedTypePops" customModule="Hotel_Management_System" customModuleProvider="target">
+            <connections>
+                <outlet property="bedTypePickerView" destination="A5c-gI-tEo" id="S2i-ui-sK5"/>
+                <outlet property="lblBedDes" destination="qnm-ZK-EwE" id="D29-5s-uqo"/>
+                <outlet property="lblFirstBedType" destination="9gW-zy-Ne4" id="nYg-ol-p81"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tox-r9-36K">
+                    <rect key="frame" x="0.0" y="498" width="393" height="320"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gW-zy-Ne4" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="146" y="20" width="101.33333333333331" height="18"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the total number of beds in this room type, ensuring accurate booking for guests." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnm-ZK-EwE" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="20" y="48" width="353" height="26"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                            <color key="textColor" name="TextColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5c-gI-tEo">
+                            <rect key="frame" x="0.0" y="84" width="393" height="216"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="04C-sw-a13"/>
+                                <outlet property="delegate" destination="-1" id="7BD-qm-xZe"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="A5c-gI-tEo" firstAttribute="leading" secondItem="Tox-r9-36K" secondAttribute="leading" id="JiF-hC-RXY"/>
+                        <constraint firstAttribute="trailing" secondItem="A5c-gI-tEo" secondAttribute="trailing" id="LjG-5l-VWC"/>
+                        <constraint firstItem="qnm-ZK-EwE" firstAttribute="leading" secondItem="Tox-r9-36K" secondAttribute="leading" constant="20" id="OsS-fr-aBk"/>
+                        <constraint firstItem="9gW-zy-Ne4" firstAttribute="centerX" secondItem="Tox-r9-36K" secondAttribute="centerX" id="QFz-kR-ljc"/>
+                        <constraint firstAttribute="height" constant="320" id="UNP-e3-doD"/>
+                        <constraint firstAttribute="trailing" secondItem="qnm-ZK-EwE" secondAttribute="trailing" constant="20" id="XOC-6Z-GLu"/>
+                        <constraint firstItem="A5c-gI-tEo" firstAttribute="top" secondItem="qnm-ZK-EwE" secondAttribute="bottom" constant="10" id="dn2-aI-096"/>
+                        <constraint firstItem="qnm-ZK-EwE" firstAttribute="top" secondItem="9gW-zy-Ne4" secondAttribute="bottom" constant="10" id="e3m-Hu-jYj"/>
+                        <constraint firstAttribute="bottom" secondItem="A5c-gI-tEo" secondAttribute="bottom" constant="20" id="jrs-ga-u64"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Tox-r9-36K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b25-Z0-vrK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tox-r9-36K" secondAttribute="trailing" id="mdE-Yh-ZkO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Tox-r9-36K" secondAttribute="bottom" id="qO6-lz-jmn"/>
+            </constraints>
+            <point key="canvasLocation" x="32.824427480916029" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="TextColor">
+            <color red="0.36862745098039218" green="0.40784313725490196" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -2,7 +2,7 @@
 //  ChannelsVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 08/11/23.
+//  Created by Mayur Bobade on 08/11/23.
 //
 
 import UIKit
@@ -16,7 +16,6 @@ class ChannelsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         channelsTableView.register(UINib(nibName: "ChannelsTableCell", bundle: nil), forCellReuseIdentifier: "ChannelsTableCell")
-        hideKeyboardWhenTappedAround()
     }
 
     

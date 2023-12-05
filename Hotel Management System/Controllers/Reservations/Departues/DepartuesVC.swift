@@ -2,7 +2,7 @@
 //  DepartuesVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 06/11/23.
+//  Created by Mayur Bobade on 06/11/23.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class DepartuesVC: UIViewController {
     // MARK: - Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         departuesTableCell.register(UINib(nibName: "ReservationsTableCell", bundle: nil), forCellReuseIdentifier: "ReservationsTableCell")
     }
     

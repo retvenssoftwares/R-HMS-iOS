@@ -2,7 +2,7 @@
 //  ChannelsTableCell.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 08/11/23.
+//  Created by Mayur Bobade on 08/11/23.
 //
 
 import UIKit

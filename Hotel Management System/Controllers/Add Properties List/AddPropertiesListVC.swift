@@ -2,7 +2,7 @@
 //  AddPropertiesListVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 03/11/23.
+//  Created by Mayur Bobade on 03/11/23.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class AddPropertiesListVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         addPropertiesListTableCell.register(UINib(nibName: "AllPropertiesListCell", bundle: nil), forCellReuseIdentifier: "AllPropertiesListCell")
         addPropertiesListTableCell.register(UINib(nibName: "FooterCell", bundle: nil), forCellReuseIdentifier: "FooterCell")
     }

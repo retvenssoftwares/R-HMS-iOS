@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiscountCOllectionHeaderCell" id="gTV-IL-0wX" customClass="DiscountCOllectionHeaderCell" customModule="Hotel_Management_System" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="38"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="38"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balck Out Dates" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLa-DM-BTM">
+                        <rect key="frame" x="12" y="12" width="85.666666666666671" height="14.666666666666664"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                        <color key="textColor" name="BlackTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhZ-Uo-eDF">
+                        <rect key="frame" x="302" y="6.3333333333333321" width="72" height="25.999999999999996"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="EW4-WR-q3B"/>
+                            <constraint firstAttribute="width" constant="72" id="bWl-py-T5a"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="AddBtn 1"/>
+                        <connections>
+                            <action selector="btnAddPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ryp-7Z-NC9"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QhZ-Uo-eDF" secondAttribute="bottom" constant="5.6699999999999999" id="MCr-IK-Rj1"/>
+                <constraint firstItem="lLa-DM-BTM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="bID-rw-ggS"/>
+                <constraint firstItem="QhZ-Uo-eDF" firstAttribute="centerY" secondItem="lLa-DM-BTM" secondAttribute="centerY" id="eVQ-Oj-JYS"/>
+                <constraint firstItem="lLa-DM-BTM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="g2X-ZW-Lqo"/>
+                <constraint firstAttribute="trailing" secondItem="QhZ-Uo-eDF" secondAttribute="trailing" constant="12" id="wpV-0C-NyB"/>
+            </constraints>
+            <size key="customSize" width="386" height="38"/>
+            <connections>
+                <outlet property="btnAdd" destination="QhZ-Uo-eDF" id="LXG-fc-kop"/>
+                <outlet property="lblHeader" destination="lLa-DM-BTM" id="LAE-Ke-Soa"/>
+            </connections>
+            <point key="canvasLocation" x="296.18320610687022" y="15.492957746478874"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AddBtn 1" width="72" height="26"/>
+        <namedColor name="BlackTextColor">
+            <color red="0.062745098039215685" green="0.078431372549019607" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

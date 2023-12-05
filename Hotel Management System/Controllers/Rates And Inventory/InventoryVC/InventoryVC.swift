@@ -2,7 +2,7 @@
 //  InventoryVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class InventoryVC: UIViewController {
     @IBOutlet weak var inventoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         inventoryTableView.register(UINib(nibName: "InventoryHeaderCell", bundle: nil), forCellReuseIdentifier: "InventoryHeaderCell")
         inventoryTableView.register(UINib(nibName: "InventoryTableCell", bundle: nil), forCellReuseIdentifier: "InventoryTableCell")
     }

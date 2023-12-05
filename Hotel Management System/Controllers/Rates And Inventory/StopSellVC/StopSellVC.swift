@@ -2,7 +2,7 @@
 //  StopSellVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ class StopSellVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         stopSellTableView.register(UINib(nibName: "StopCellTableCell", bundle: nil), forCellReuseIdentifier: "StopCellTableCell")
             }
     

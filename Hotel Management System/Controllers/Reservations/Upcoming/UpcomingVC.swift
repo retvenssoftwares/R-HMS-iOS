@@ -2,7 +2,7 @@
 //  UpcomingVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 06/11/23.
+//  Created by Mayur Bobade on 06/11/23.
 //
 
 import UIKit
@@ -18,7 +18,7 @@ class UpcomingVC: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         upcomingTableCell.register(UINib(nibName: "ReservationsTableCell", bundle: nil), forCellReuseIdentifier: "ReservationsTableCell")
     }
     

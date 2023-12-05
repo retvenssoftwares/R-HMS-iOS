@@ -2,7 +2,7 @@
 //  ResticationsVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class ResticationsVC: UIViewController {
     @IBOutlet weak var resticationsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         resticationsTableView.register(UINib(nibName: "ResticationsHeaderCell", bundle: nil), forCellReuseIdentifier: "ResticationsHeaderCell")
         resticationsTableView.register(UINib(nibName: "ResticationsTableCell", bundle: nil), forCellReuseIdentifier: "ResticationsTableCell")
 

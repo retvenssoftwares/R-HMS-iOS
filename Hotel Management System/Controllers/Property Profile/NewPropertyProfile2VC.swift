@@ -2,7 +2,7 @@
 //  NewPropertyProfile2VC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 17/11/23.
+//  Created by Mayur Bobade on 17/11/23.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import iOSDropDown
 
 class NewPropertyProfile2VC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    //@IBOutlet weak var viewPops: PopsView!
+//    @IBOutlet weak var viewPops: PopsView!
     @IBOutlet weak var newPropertyCollectionCell: UICollectionView!
     @IBOutlet weak var txtFieldDescription: UITextField!
     @IBOutlet weak var txtFieldWebsite: UITextField!
@@ -22,7 +22,6 @@ class NewPropertyProfile2VC: UIViewController,UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
 //        viewPops.isHidden = true
-        hideKeyboardWhenTappedAround()
 
         newPropertyCollectionCell.register(UINib(nibName: "NewRoomTypeCollectionCell", bundle: .main), forCellWithReuseIdentifier: "NewRoomTypeCollectionCell")
         let color = UIColor.init(named: "TextColor")
@@ -50,7 +49,7 @@ class NewPropertyProfile2VC: UIViewController,UIImagePickerControllerDelegate, U
 
 
     @IBAction func propertyTypePopsBtnPressed(_ sender: UIButton) {
-        //viewPops.isHidden = false
+//        viewPops.isHidden = false
     }
     
     @IBAction func profileChangeBtnPressed(_ sender: UIButton) {
@@ -77,27 +76,26 @@ extension NewPropertyProfile2VC:UICollectionViewDelegate,UICollectionViewDataSou
     }
     func generateChatModule() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
+            widthDimension: .fractionalWidth(1),
             heightDimension: .fractionalHeight(1.0))
         
         
         let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalWidth(1/3))
-        fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 5,leading: 5,bottom: 5,trailing: 5)
+            widthDimension: .fractionalWidth(0.80),
+            heightDimension: .fractionalHeight(1/2))
+        //fullPhotoItem.contentInsets = NSDirectionalEdgeInsets(top: 5,leading: 5,bottom: 5,trailing: 5)
         
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
             subitem: fullPhotoItem,
-            count: 3
+            count: 2
         )
         
         let section = NSCollectionLayoutSection(group: group)
         
         return section
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10

@@ -29,6 +29,9 @@
                 <constraint firstAttribute="bottom" secondItem="WA3-yg-N4r" secondAttribute="bottom" id="yQT-nL-HI1"/>
             </constraints>
             <size key="customSize" width="195" height="164"/>
+            <connections>
+                <outlet property="imagePhote" destination="WA3-yg-N4r" id="FSJ-bk-esP"/>
+            </connections>
             <point key="canvasLocation" x="127.48091603053435" y="59.859154929577471"/>
         </collectionViewCell>
     </objects>

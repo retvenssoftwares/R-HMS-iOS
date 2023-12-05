@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Hotel Management System/Database/untitled folder/CreateRoomEntity+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Hotel Management System/Database/untitled folder/CreateRoomEntity+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:Hotel Management System.xcodeproj">
    </FileRef>
    <FileRef

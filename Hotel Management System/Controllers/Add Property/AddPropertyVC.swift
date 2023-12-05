@@ -2,7 +2,7 @@
 //  AddPropertyVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 03/11/23.
+//  Created by Mayur Bobade on 03/11/23.
 //
 
 import UIKit
@@ -21,7 +21,7 @@ class AddPropertyVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         addSubView(storyBoard: "Main", controllerName: "PropertProfileVC")
         viewUnderPropertyProfile.isHidden = false
         viewUnderAddressAndCOntact.isHidden = true

@@ -2,7 +2,7 @@
 //  ReservationOP3VC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 11/11/23.
+//  Created by Mayur Bobade on 11/11/23.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ class ReservationOP3VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         // Do any additional setup after loading the view.
     }
     

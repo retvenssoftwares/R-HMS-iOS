@@ -2,7 +2,7 @@
 //  EditRatePlaneTableCell.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 14/11/23.
+//  Created by Mayur Bobade on 14/11/23.
 //
 
 import UIKit

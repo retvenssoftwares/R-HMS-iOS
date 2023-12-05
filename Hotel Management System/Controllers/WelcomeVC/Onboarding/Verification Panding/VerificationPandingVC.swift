@@ -2,7 +2,7 @@
 //  VerificationPandingVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 05/11/23.
+//  Created by Mayur Bobade on 05/11/23.
 //
 
 import UIKit
@@ -12,14 +12,14 @@ class VerificationPandingVC: UIViewController {
     @IBOutlet weak var verifactionPandingCOllectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         verifactionPandingCOllectionView.register(UINib(nibName: "VerificationPandingCollectionView", bundle: .main), forCellWithReuseIdentifier: "VerificationPandingCollectionView")
     }
     
 
     
     func gotoDashBoardBtnTapeed(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DashboradVC") as! DashboradVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingScreenVC") as! OnboardingScreenVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
   

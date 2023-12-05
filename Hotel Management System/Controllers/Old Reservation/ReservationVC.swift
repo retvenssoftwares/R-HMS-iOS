@@ -2,7 +2,7 @@
 //  ReservationVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 06/11/23.
+//  Created by Mayur Bobade on 06/11/23.
 //
 
 import UIKit
@@ -71,7 +71,7 @@ class ReservationVC: UIViewController, UITextFieldDelegate {
         
         txtFIeldCheakIn.delegate = self
         
-        hideKeyboardWhenTappedAround()
+        
         
         btnNavigationSave.layer.cornerRadius = 5
         btnRommdetailsSave.layer.cornerRadius = 5

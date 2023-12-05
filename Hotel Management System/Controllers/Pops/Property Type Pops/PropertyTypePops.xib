@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertyTypePops" customModule="Hotel_Management_System" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetContentView">
             <connections>
                 <outlet property="btnAppartments" destination="gpP-bm-408" id="qC0-JW-DNz"/>
                 <outlet property="btnHostler" destination="uAn-Ax-Hgw" id="RRI-Uj-7yc"/>
@@ -27,6 +27,7 @@
                 <outlet property="btnSharedAppartments" destination="3ls-yn-Nv0" id="294-xF-LzF"/>
                 <outlet property="btnVilla" destination="ehm-wf-Dy3" id="X9c-E5-joc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nca-wG-zXC"/>
+                <outlet property="viewBg" destination="iN0-l3-epB" id="QAA-Od-965"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -466,11 +467,11 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Qud-Hf-z7z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JZD-ZN-9Xe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qud-Hf-z7z" secondAttribute="trailing" id="aCc-4D-ahQ"/>
-                <constraint firstAttribute="bottom" secondItem="Qud-Hf-z7z" secondAttribute="bottom" id="pT3-BK-PR5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qud-Hf-z7z" secondAttribute="bottom" id="pT3-BK-PR5"/>
             </constraints>
             <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>

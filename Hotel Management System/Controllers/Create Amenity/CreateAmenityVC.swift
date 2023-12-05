@@ -2,7 +2,7 @@
 //  CreateAmenityVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 03/11/23.
+//  Created by Mayur Bobade on 03/11/23.
 //
 
 import UIKit
@@ -23,7 +23,7 @@ class CreateAmenityVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
         txtFieldAmintyType.optionArray = ["HTYHB", "HYJKJKB", "TGDBC"]
         collectionview.register(UINib(nibName: "CreateAmenityCollectionCell", bundle: .main), forCellWithReuseIdentifier: "CreateAmenityCollectionCell")
         viewAnemintyName.layer.borderWidth = 1

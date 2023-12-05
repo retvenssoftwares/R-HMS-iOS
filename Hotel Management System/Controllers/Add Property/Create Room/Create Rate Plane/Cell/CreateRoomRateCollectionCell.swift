@@ -2,7 +2,7 @@
 //  CreateRoomRateCollectionCell.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 06/11/23.
+//  Created by Mayur Bobade on 06/11/23.
 //
 
 import UIKit

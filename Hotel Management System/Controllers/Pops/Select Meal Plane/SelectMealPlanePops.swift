@@ -2,12 +2,14 @@
 //  SelectMealPlanePops.swift
 //  Hotel Management System
 //
-//  Created by Smart Kamina on 22/11/23.
+//  Created by Mayur Bobade on 22/11/23.
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class SelectMealPlanePops: UIViewController {
+    
 
     // MARK: - Outlet
     @IBOutlet weak var lblSelectMealPlane: UILabel!
@@ -34,18 +36,27 @@ class SelectMealPlanePops: UIViewController {
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var stackViewSaveCancelBtn: UIStackView!
     
+    var btnEuropeanPlaneClicked:(()->Void)?
+    var btnAmericanaPlaneClicked:((String)->Void)?
+    var btnModifiedAmericanaPlaneClicked:(()->Void)?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 300
     }
     
     // MARK: - Action
     @IBAction func btnEuropeanPlanePressed(_ sender: UIButton) {
+        btnEuropeanPlaneClicked?()
     }
     @IBAction func btnAmericanaPlanePressed(_ sender: UIButton) {
+        btnAmericanaPlaneClicked?("Abc")
     }
     @IBAction func btnContinentalPlane(_ sender: UIButton) {
+        btnModifiedAmericanaPlaneClicked?()
     }
     @IBAction func btnModifiedAmericanaPlanePressed(_ sender: UIButton) {
     }
@@ -54,7 +65,9 @@ class SelectMealPlanePops: UIViewController {
     @IBAction func btnRoomOnlyPressed(_ sender: UIButton) {
     }
     @IBAction func btnSavePressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func btnCancelPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

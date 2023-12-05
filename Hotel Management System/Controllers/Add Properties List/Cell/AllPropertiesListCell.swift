@@ -2,7 +2,7 @@
 //  AllPropertiesListCell.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 03/11/23.
+//  Created by Mayur Bobade on 03/11/23.
 //
 
 import UIKit

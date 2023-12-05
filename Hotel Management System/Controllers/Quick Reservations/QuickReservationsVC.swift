@@ -2,7 +2,7 @@
 //  QuickReservationsVC.swift
 //  Hotel Management System
 //
-//  Created by mayur bobade on 07/11/23.
+//  Created by Mayur Bobade on 07/11/23.
 //
 
 import UIKit
@@ -99,7 +99,7 @@ class QuickReservationsVC: UIViewController {
         
         datePickerCheakOut.addTarget(self, action: #selector(cheakOutDateSelected), for: .valueChanged)
         datePickerCheakOut.addTarget(self, action: #selector(pickerTappedCheakOutDate), for: .primaryActionTriggered)
-        hideKeyboardWhenTappedAround()
+        
         txtFieldPlaceHolderTextColor()
         vieBgSelectReservationType.isHidden = true
         viewSelectRoomType.isHidden = true

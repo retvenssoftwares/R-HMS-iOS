@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -19,9 +18,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberOfBedPops" customModule="Hotel_Management_System" customModuleProvider="target">
             <connections>
-                <outlet property="lblDescriptionBed" destination="p1V-4l-xyL" id="U2a-uK-6C8"/>
-                <outlet property="lblNumberOfBed" destination="ss2-h7-E05" id="m7U-yZ-ecr"/>
-                <outlet property="pickerView" destination="NXY-zY-oa6" id="3d3-rj-5WD"/>
+                <outlet property="lblDescriptionBed" destination="N8y-kT-eGu" id="Mjm-uy-AlB"/>
+                <outlet property="lblNumberOfBed" destination="FZ1-nH-9wK" id="e8B-mu-JPd"/>
+                <outlet property="pickerView" destination="Sl5-Qj-SqI" id="AV5-jH-kSY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,52 +29,66 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss2-h7-E05" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                    <rect key="frame" x="146" y="552" width="101.33333333333331" height="18"/>
-                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the total number of beds in this room type, ensuring accurate booking for guests." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1V-4l-xyL" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                    <rect key="frame" x="20" y="580" width="353" height="26"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
-                    <color key="textColor" name="TextColor"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXY-zY-oa6">
-                    <rect key="frame" x="20" y="616" width="353" height="216"/>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2pX-h4-fXj">
+                    <rect key="frame" x="0.0" y="512" width="393" height="340"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Bed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ1-nH-9wK" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="146" y="40" width="101.33333333333331" height="18"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the total number of beds in this room type, ensuring accurate booking for guests." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8y-kT-eGu" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="20" y="68" width="353" height="26"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                            <color key="textColor" name="TextColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sl5-Qj-SqI">
+                            <rect key="frame" x="20" y="104" width="353" height="216"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="216" id="M62-lt-lhs"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="kqq-za-FLe"/>
+                                <outlet property="delegate" destination="-1" id="XUv-Gd-8Rr"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="0bH-Hl-fU9"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="216" id="FcF-Qe-vrH"/>
+                        <constraint firstAttribute="bottom" secondItem="Sl5-Qj-SqI" secondAttribute="bottom" constant="20" id="Gm8-hg-JlR"/>
+                        <constraint firstItem="Sl5-Qj-SqI" firstAttribute="leading" secondItem="0bH-Hl-fU9" secondAttribute="leading" constant="20" id="QWr-bO-AnD"/>
+                        <constraint firstItem="N8y-kT-eGu" firstAttribute="leading" secondItem="2pX-h4-fXj" secondAttribute="leading" constant="20" id="ZSd-BP-AbI"/>
+                        <constraint firstItem="0bH-Hl-fU9" firstAttribute="trailing" secondItem="Sl5-Qj-SqI" secondAttribute="trailing" constant="20" id="aoW-aY-fqe"/>
+                        <constraint firstItem="N8y-kT-eGu" firstAttribute="top" secondItem="FZ1-nH-9wK" secondAttribute="bottom" constant="10" id="cpK-i1-k69"/>
+                        <constraint firstItem="0bH-Hl-fU9" firstAttribute="trailing" secondItem="N8y-kT-eGu" secondAttribute="trailing" constant="20" id="m3X-2I-XZd"/>
+                        <constraint firstItem="Sl5-Qj-SqI" firstAttribute="top" secondItem="N8y-kT-eGu" secondAttribute="bottom" constant="10" id="uzy-rN-vBO"/>
+                        <constraint firstItem="FZ1-nH-9wK" firstAttribute="centerX" secondItem="0bH-Hl-fU9" secondAttribute="centerX" id="wBS-nC-sU6"/>
                     </constraints>
-                </pickerView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="NXY-zY-oa6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2b3-05-qv5"/>
-                <constraint firstItem="ss2-h7-E05" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="b4C-wI-ypm"/>
-                <constraint firstItem="p1V-4l-xyL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="d0r-d3-YHY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p1V-4l-xyL" secondAttribute="trailing" constant="20" id="hAN-FW-zQH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NXY-zY-oa6" secondAttribute="trailing" constant="20" id="nmh-LL-TzQ"/>
-                <constraint firstItem="NXY-zY-oa6" firstAttribute="top" secondItem="p1V-4l-xyL" secondAttribute="bottom" constant="10" id="tWf-DZ-KTo"/>
-                <constraint firstItem="p1V-4l-xyL" firstAttribute="top" secondItem="ss2-h7-E05" secondAttribute="bottom" constant="10" id="thR-1H-1Sl"/>
-                <constraint firstAttribute="bottom" secondItem="NXY-zY-oa6" secondAttribute="bottom" constant="20" id="zt0-sd-bnE"/>
-            </constraints>
-            <point key="canvasLocation" x="36" y="20"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <namedColor name="TextColor">
             <color red="0.36862745098039218" green="0.40784313725490196" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -9,6 +9,11 @@ PODS:
     - DGCharts/Core (= 5.0.0)
   - DGCharts/Core (5.0.0)
   - DPCharts (1.2.2)
+  - FittedSheets (2.6.1)
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - FloatingPanel (2.8.1)
   - GoogleMaps (8.2.0):
     - GoogleMaps/Maps (= 8.2.0)
   - GoogleMaps/Base (8.2.0)
@@ -16,12 +21,36 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (8.2.1)
   - iOSDropDown (0.4.0)
-  - PhoneNumberKit (3.7.5):
-    - PhoneNumberKit/PhoneNumberKitCore (= 3.7.5)
-    - PhoneNumberKit/UIKit (= 3.7.5)
-  - PhoneNumberKit/PhoneNumberKitCore (3.7.5)
-  - PhoneNumberKit/UIKit (3.7.5):
-    - PhoneNumberKit/PhoneNumberKitCore
+  - IQKeyboardManagerSwift (6.3.0)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/BottomSheet (124.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (124.2.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (124.2.0)
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (124.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - PieCharts (0.0.7)
   - SnapKit (5.6.0)
   - SVPinView (1.0.11)
@@ -33,10 +62,14 @@ DEPENDENCIES:
   - DateTimePicker
   - DGCharts
   - DPCharts (~> 1.2.2)
+  - FittedSheets
+  - FlagPhoneNumber
+  - FloatingPanel
   - GoogleMaps
   - GooglePlaces
   - iOSDropDown
-  - PhoneNumberKit (~> 3.7)
+  - IQKeyboardManagerSwift (= 6.3.0)
+  - MaterialComponents/BottomSheet
   - PieCharts
   - SnapKit
   - SVPinView (~> 1.0)
@@ -48,10 +81,14 @@ SPEC REPOS:
     - DateTimePicker
     - DGCharts
     - DPCharts
+    - FittedSheets
+    - FlagPhoneNumber
+    - FloatingPanel
     - GoogleMaps
     - GooglePlaces
     - iOSDropDown
-    - PhoneNumberKit
+    - IQKeyboardManagerSwift
+    - MaterialComponents
     - PieCharts
     - SnapKit
     - SVPinView
@@ -63,15 +100,19 @@ SPEC CHECKSUMS:
   DateTimePicker: 52701ddf656a50856d3510955933f767cd2c947c
   DGCharts: 6e0cf2644e8f81ad13f04caa8bc18502870a1c54
   DPCharts: b3dee40722a2b34985ec897086a15532b6def1f0
+  FittedSheets: 37e35f105c531f3845075f1788dd8517a35315c4
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  FloatingPanel: 0c32d8c97e52cf6913833af573506f5d86451465
   GoogleMaps: 081f2547b60a1c0870a8f49166a653900e5055d5
   GooglePlaces: 867722fe422f5a4cc19c68bc28f9f74a24470e40
   iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
-  PhoneNumberKit: f3980e01b84615524dd496adee6a1b5ced87d3f4
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   PieCharts: 30e50dfa7dc19e5b84e9878d32089673ef5d0453
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
 
-PODFILE CHECKSUM: 65d423bffc893691ea2954c351cccad83d2a3564
+PODFILE CHECKSUM: cf56f057fd9700e0f8817fc42795a1b30572094b
 
 COCOAPODS: 1.14.3
