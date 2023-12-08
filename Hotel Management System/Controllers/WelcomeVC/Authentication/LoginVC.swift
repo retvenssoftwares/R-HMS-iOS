@@ -86,7 +86,7 @@ class LoginVC: UIViewController {
         }
         
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PropertySelectionVC") as! PropertySelectionVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPropertyProfileVC") as! NewPropertyProfileVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func signUpBtnPressed(_ sender: UIButton) {

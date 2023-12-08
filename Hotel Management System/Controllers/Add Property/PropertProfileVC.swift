@@ -25,6 +25,7 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
     @IBOutlet weak var txtFieldBooking: UITextField!
     @IBOutlet weak var propertyTableView: UITableView!
     @IBOutlet weak var propertyCollectionView: UICollectionView!
+   
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -88,6 +89,7 @@ class PropertProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]){
         guard let image = info[.editedImage] as? UIImage else {return}
         imgProfile.image = image
+        UserDefaults.standard.setValue(imgProfile.image, forKey: "hotelLogo")
         dismiss(animated: true)
     }
 

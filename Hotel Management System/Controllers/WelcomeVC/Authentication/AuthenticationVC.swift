@@ -23,6 +23,7 @@ class AuthenticationVC: UIViewController{
     @IBOutlet weak var viewFirstName: UIView!
     @IBOutlet weak var viewLastName: UIView!
     @IBOutlet weak var heightConstDesignationTableView: NSLayoutConstraint!
+    @IBOutlet weak var termsAndServicesLbl: CustomLabel!
     @IBOutlet weak var designationTableView: UITableView!
     @IBOutlet weak var txtFieldLoginPassword: UITextField!
     @IBOutlet weak var txtFieldHotelRCOde: UITextField!
@@ -51,6 +52,8 @@ class AuthenticationVC: UIViewController{
         designationTableView.isHidden = true
         //heightConstDesignationTableView.constant = 0
         hideKeyboardWhenTappedAround()
+        btnLogin.cornerRadius = 10
+        TermsAndCondition()
         designationTableView.register(UINib(nibName: "DesignationTableCell", bundle: nil),forCellReuseIdentifier: "DesignationTableCell")
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -73,6 +76,15 @@ class AuthenticationVC: UIViewController{
     func signUpAnimation() {
         viewSignUp.frame.origin.x = containerView.frame.width
         viewLogin.frame.origin.x = 0
+    }
+    
+    func TermsAndCondition() {
+        let attributedText = NSMutableAttributedString(string: termsAndServicesLbl.text ?? "")
+        let range = (termsAndServicesLbl.text! as NSString).range(of: "Terms of Services")
+        attributedText.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: termsAndServicesLbl.font.pointSize), range: range)
+        let boldFont = UIFont.boldSystemFont(ofSize: termsAndServicesLbl.font.pointSize)
+        attributedText.addAttributes([.font: boldFont, .foregroundColor: UIColor.black], range: range)
+        termsAndServicesLbl.attributedText = attributedText
     }
     
     func signUpValidation() {
@@ -101,12 +113,23 @@ class AuthenticationVC: UIViewController{
             viewDesignation.borderColor = UIColor.textFiledViewLine
         }
         //MARK: Phone number
-        if txtFieldPhone.text?.isEmpty == true {
+       
+        guard let phoneNumber = txtFieldPhone.text else {
+                   
+                    return
+                }
+        let cleanedPhoneNumber = phoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        
+        if txtFieldPhone.text?.isEmpty == true && cleanedPhoneNumber.count != 10  {
             viewPhone.borderColor = UIColor.red
             txtFieldPhone.attributedPlaceholder = NSAttributedString(
                 string: "Phone number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-        } else {
+        } else if cleanedPhoneNumber.count == 10 {
             viewPhone.borderColor = UIColor.textFiledViewLine
+        } else {
+            viewPhone.borderColor = UIColor.red
+            txtFieldPhone.attributedPlaceholder = NSAttributedString(
+                string: "Phone number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
         }
         //MARK: Email
         if txtFieldEmail.text?.isEmpty == true {
@@ -211,12 +234,15 @@ class AuthenticationVC: UIViewController{
                 LoadingOverlay.shared.hideOverlayView()
                 if let cheak = data{
                     if cheak.statuscode == 200 {
-                        if let encoded = try? JSONEncoder().encode(cheak.data) {
-                            self.userDefaults.set(encoded, forKey: "userData")
+                        let authCode = cheak.data?.token
+                        let userId = cheak.data?.userId
+                        print(authCode, userId)
+                        UserDefaults.standard.setValue(authCode, forKey: "authcode")
+                        UserDefaults.standard.setValue(userId, forKey: "userId")
                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPropertyProfileVC")as! NewPropertyProfileVC
                             self.navigationController?.pushViewController(vc, animated: true)
                             self.showAlert(message: cheak.message!)
-                        }
+                    
                         print("sucesss")
                     } else{
                         self.showAlert(message: cheak.message!)
@@ -277,9 +303,7 @@ class AuthenticationVC: UIViewController{
     }
     @IBAction func loginBigBtnPressed(_ sender: UIButton) {
         //designationTableView.isHidden = true
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewRoomTypeVC") as! NewRoomTypeVC
-        self.navigationController?.pushViewController(vc, animated: true)
-//        loginValidation()
+        loginValidation()
      
     }
     
@@ -367,6 +391,15 @@ extension AuthenticationVC: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeTextField = nil
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Check if the combined text length will exceed 10 characters
+        if textField == txtFieldPhone {
+            let currentText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
+            return currentText.count <= 11
+        }
+        return true
     }
 
     

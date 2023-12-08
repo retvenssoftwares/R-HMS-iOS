@@ -275,3 +275,16 @@ extension UIViewController {
         return passwordPredicate.evaluate(with: password)
     }
 }
+
+extension UIImage {
+    func toData() -> Data? {
+        return self.jpegData(compressionQuality: 1.0)
+    }
+}
+
+// Extension to convert Data to UIImage
+extension Data {
+    func toImage() -> UIImage? {
+        return UIImage(data: self)
+    }
+}

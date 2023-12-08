@@ -8,101 +8,98 @@
 import UIKit
 import PhotosUI
 import FittedSheets
-
-class WelcomeViewController: UIViewController, PHPickerViewControllerDelegate {
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        dismiss(animated: true)
-    }
+import Alamofire
+class WelcomeViewController: UIViewController {
     
-   
-    
-    
-    
-
     // MARK: - Oulet
     @IBOutlet weak var viewBg: UIView!
     @IBOutlet weak var btnNext: UIButton!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-       
+        
     }
     
-    func BottamSheet(){
-        let bottomSheetVC = PropertyNamePop(nibName: "PropertyNamePop", bundle: nil)
-        
-                        // Customize presentation style as needed (e.g., .overCurrentContext, .overFullScreen)
-                        bottomSheetVC.modalPresentationStyle = .overCurrentContext
-                        present(bottomSheetVC, animated: true, completion: nil)
-    }
-  
+    
+    
     // MARK: - Action
-
+    
+//    func getAmenityData() {
+//        var request = URLRequest(url: URL(string: "https://api.hotelratna.com/api/getAmenity?propertyId=")!,timeoutInterval: Double.infinity)
+//        request.httpMethod = "GET"
+//        
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            do {
+//                if let postData = data {
+//                    let decodedData = try JSONDecoder().decode(AmenityCollection.self, from: postData)
+//                    DispatchQueue.main.async {
+//                        self.arryData = decodedData.amenityData
+//                    }
+//                } else {
+//                    print("No data")
+//                }
+//            } catch {
+//                print(error)
+//            }
+//            
+//            //          guard let data = data else {
+//            //
+//            //            print(String(describing: error))
+//            //            return
+//            //          }
+//            
+//            // print(String(data: data, encoding: .utf8)!)
+//        }
+//        
+//        task.resume()
+//        
+//    }
+    
+    //    func getAmenityData() {
+    //        var request = URLRequest(url: URL(string: "")!,timeoutInterval: Double.infinity)
+    //        request.httpMethod = "GET"
+    //
+    //        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+    //
+    //          guard let data = data else {
+    //            print(String(describing: error))
+    //            return
+    //          }
+    //          print(String(data: data, encoding: .utf8)!)
+    //        }
+    //
+    //
+    //
+    //        task.resume()
+    //
+    //    }
+    
+    //    func amenityDataCall() {
+    //        let apiUrl = APIManager.UsersAuth.getAmenity
+    //
+    //        AF.request(apiUrl).responseDecodable(of: ApiResponse.self) { response in
+    //            switch response.result {
+    //            case .success(let apiResponse):
+    //                // Access your data array here
+    //                let amenityDataArray = apiResponse.data
+    //                print("Data: \(amenityDataArray)")
+    //
+    //                // Access status code
+    //                let statusCode = apiResponse.statusCode
+    //                print("Status Code: \(statusCode)")
+    //
+    //            case .failure(let error):
+    //                print("Error: \(error.localizedDescription)")
+    //            }
+    //        }
+    //    }
     @IBAction func nextBtnPressed(_ sender: UIButton) {
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewRoomTypeVC") as! NewRoomTypeVC
-//        self.navigationController?.pushViewController(vc, animated: true)
-        
+        //getAmenityData()
+       
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AuthenticationVC") as! AuthenticationVC
         self.navigationController?.pushViewController(vc, animated: true)
-//        
-        
-//
-//        
-        
-        
-     
-//        let bottomSheetVC = PropertyTypePops(nibName: "PropertyTypePops", bundle: nil)
-//                bottomSheetVC.modalPresentationStyle = .overCurrentContext
-//                present(bottomSheetVC, animated: true, completion: nil)
-//        bottomSheetVC.modalTransitionStyle = .coverVertical
-//        let bottomSheetContent = Bundle.main.loadNibNamed("PropertyTypePops", owner: nil, options: nil)?.first as! PropertyTypePops
-//
-//               // Create a SheetViewController with the loaded content view
-//               let sheetController = SheetViewController(controller: bottomSheetContent)
-//
-//               // Customize sheet appearance if needed
-//               // ...
-//
-//               // Present the bottom sheet
-//               present(sheetController, animated: false)
-        
-        
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPropertyProfileVC") as! NewPropertyProfileVC
-//        self.navigationController?.pushViewController(vc, animated: true)
-        
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewPropertyProfileVC") as! NewPropertyProfileVC
-//               self.navigationController?.pushViewController(vc, animated: true)
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChargesPlanes1VC") as! ChargesPlanes1VC
-//               self.navigationController?.pushViewController(vc, animated: true)
-        
-        
-
-//        var config = PHPickerConfiguration()
-//        config.selectionLimit = 0
-//        
-//        let phPickerVC = PHPickerViewController(configuration: config)
-//        phPickerVC.delegate = self
-//        self.present(phPickerVC, animated: true)
-//
-//        let vc = PropertyTypePops()
-//        if let sheet = vc.sheetPresentationController{
-//            viewBg.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-//            sheet.detents = [.medium()] // Sheet style
-////            sheet.prefersScrollingExpandsWhenScrolledToEdge = false // Inside Scrolling
-////            sheet.prefersGrabberVisible = true // Grabber button
-//            sheet.preferredCornerRadius = 24 //
-////            let pickerHeight: CGFloat = 300
-////            let pickerWidth: CGFloat = viewBg.bounds.width
-////            phPickerVC.view.frame = CGRect(x: 0, y: view.bounds.height - pickerHeight, width: pickerWidth, height: pickerHeight)
-////        
-//            
-//          
-//            sheet.largestUndimmedDetentIdentifier = .medium //Avoid dismiss
-//            self.navigationController?.present(vc, animated: true)
-//        }
-//
-   }
+    }
     
 }
 

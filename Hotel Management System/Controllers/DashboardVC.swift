@@ -81,8 +81,6 @@ class DashboradVC: UIViewController, ChartViewDelegate {
         viewSideMenu.isHidden = true
         sideMenuCollectionView.register(UINib(nibName: "SideMenuCollectionCell", bundle: .main), forCellWithReuseIdentifier: "cell")
         dashboardTableView.register(UINib(nibName: "DashboardTableCell", bundle: nil), forCellReuseIdentifier: "DashboardTableCell")
-
-        //fetchDataAndUpdateChart()
         barChartView.xAxis.labelPosition = .bottom
         barChartView.xAxis.drawGridLinesEnabled = false
         barChartView.rightAxis.enabled = false
@@ -90,10 +88,6 @@ class DashboradVC: UIViewController, ChartViewDelegate {
         barChartView.leftAxis.enabled = true
         animateChartUpdate()
         setupLineChart()
-//        viewSideMneu.isHidden = true
-//        sideMenuTableView.register(UINib(nibName: "SideMenuTableCell", bundle: nil), forCellReuseIdentifier: "SideMenuTableCell")
-//        viewSideMneu.isHidden = true
-        
         months = [receivedDate1, receivedDate2, receivedDate3, receivedDate4, receivedDate5]
         let dominanz1 = [1.0, 2.0, 3.0, 4.0, 5.0]
         let dominanz2 = [5.0, 4.0, 3.0, 2.0, 1.0]
@@ -630,7 +624,6 @@ class DashboradVC: UIViewController, ChartViewDelegate {
         piechartOccupancy.maxAngle = 180.0
         piechartOccupancy.rotationAngle = 180.0
     }
-    
     
     //MARK: monthly bar graph
     func setupBarChartView() {

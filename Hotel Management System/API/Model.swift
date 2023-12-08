@@ -5,6 +5,7 @@
 //  Created by Mayur Bobade on 24/11/23.
 //
 import Foundation
+import UIKit
 
 
 //MARK: - Signup Api POST
@@ -103,9 +104,10 @@ struct UserLoginStatusModel: Codable {
 struct createPropertyModel: Codable {
     var userId: String
     var amenityIds: String
+    var statusCode: String
     
     enum propertyKeys: String, CodingKey {
-        case userId, amenityIds
+        case userId, amenityIds, statusCode
     }
 }
 //MARK: - Create Room Model
@@ -159,9 +161,130 @@ struct PropertyUpdateRequest: Codable {
     var starCategory: String?
 }
 
+struct CreateUserPropertyModel: Codable {
+    let success: Bool
+    let message: String?
+    let statusCode: Int
+    let data: CreateUserPropertyData?
 
-struct CreatePropertyModel:Codable{
-    var message, userId:String?
-    var statuscode:Int?
-    var propertyTypeSOC: String?
+    enum CodingKeys: String, CodingKey {
+        case success
+        case message
+        case data
+        case statusCode
+    }
+}
+
+struct YourResponseType: Codable {
+    let propertyId: String
+    let message: String
+    let statusCode: Int
+}
+
+struct CreateUserPropertyData: Codable {
+    let roomId: String
+    let roomName: String
+    let roomDescription: String?
+    let imageUrl: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case roomId
+        case roomName
+        case roomDescription
+        case imageUrl
+    }
+    
+    struct CreatePropertyModel:Codable{
+        var message, userId:String?
+        var statuscode:Int?
+        var propertyTypeSOC: String?
+    }
+}
+
+
+//MARK: Get - AmenityData
+
+
+struct AmenityData {
+    let amenityId: String
+    let amenityName: String
+}
+//struct AmenityDataModel: Codable {
+//    let data: [AmenityData]
+//}
+//
+//struct AmenityData: Codable {
+//    let amenityId: String
+//    let amenityName: String
+//    let amenityType: String
+//    let amenityIconLink: String
+//   
+//    private enum CodingKeys: String, CodingKey {
+//        case amenityId = "_amenityId"
+//        case amenityName
+//        case amenityType
+//        case amenityIconLink
+//    }
+//    
+//    var amenityIcon: UIImage? {
+//            guard let url = URL(string: amenityIconLink),
+//                  let data = try? Data(contentsOf: url),
+//                  let image = UIImage(data: data) else {
+//                return nil
+//            }
+//            return image
+//        }
+//}
+
+
+struct Property: Codable {
+    let propertyName: String
+    let propertyType: String
+    let propertyRating: String
+    let websiteUrl: String
+    let propertyDescription: String
+    let amenityIds: String
+    let propertyAddress1: String
+    let propertyAddress2: String
+    let city: String
+    let state: String
+    let country: String
+    let phone: String
+    let reservationPhone: String
+    let propertyEmail: String
+    let latitude: String
+    let longitude: String
+    let userId: String
+    let image: String?
+
+    enum CodingKeys: String, CodingKey {
+        case propertyName, propertyType, propertyRating, websiteUrl, propertyDescription
+        case amenityIds, propertyAddress1, propertyAddress2, city, state, country, phone, reservationPhone, propertyEmail
+        case latitude, longitude, userId, image
+    }
+
+    init(image: UIImage?) {
+        self.propertyName = "marriot"
+        self.propertyType = "single"
+        self.propertyRating = "5 rating"
+        self.websiteUrl = "google.com"
+        self.propertyDescription = "dddd"
+        self.amenityIds = "dddd,djkd"
+        self.propertyAddress1 = "indore"
+        self.propertyAddress2 = "vijay nagar"
+        self.city = "indore"
+        self.state = "madhya pradesh"
+        self.country = "india"
+        self.phone = "9898989898"
+        self.reservationPhone = "9898989898"
+        self.propertyEmail = "bmayur742@gmail.com"
+        self.latitude = "5.0344"
+        self.longitude = "44.9893"
+        self.userId = "vV90ewCL"
+        self.image = image?.jpegData(compressionQuality: 0.8)?.base64EncodedString()
+    }
+}
+struct PostResponse: Codable {
+    let success: Bool
+    // Add other properties if needed
 }

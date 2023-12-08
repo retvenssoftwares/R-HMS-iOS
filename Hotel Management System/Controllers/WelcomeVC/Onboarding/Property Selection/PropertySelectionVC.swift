@@ -25,11 +25,11 @@ class PropertySelectionVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem?.isHidden = true
+        //self.navigationItem.backBarButtonItem?.isHidden = false
         hideKeyboardWhenTappedAround()
         //sideMenuTableView.register(UINib(nibName: "SideMenuTableCell", bundle: nil), forCellReuseIdentifier: "SideMenuTableCell")
         self.navigationItem.backButtonTitle = ""
-        navigationController?.navigationBar.isHidden = false
+        //navigationController?.navigationBar.isHidden = false
         viewPropertyChain.layer.cornerRadius = 10
         viewPropertyChain.layer.borderWidth = 1
         viewPropertyChain.layer.borderColor = UIColor.init(named: "TextFiledViewLine")?.cgColor
@@ -44,6 +44,8 @@ class PropertySelectionVC: UIViewController {
             userDefaults.setValue(userId, forKey: "userId")
         }
     }
+    
+    
     
     // MARK: - Action
     override func viewWillAppear(_ animated: Bool) {

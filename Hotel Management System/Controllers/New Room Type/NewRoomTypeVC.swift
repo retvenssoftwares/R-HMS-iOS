@@ -230,6 +230,9 @@ class NewRoomTypeVC: UIViewController {
         }
     }
 
+    @IBAction func navigationBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     // MARK: - Action
     @IBAction func propertyAmenityAddBtnPresssed(_ sender: UIButton) {
         descriptionBottamSheet()

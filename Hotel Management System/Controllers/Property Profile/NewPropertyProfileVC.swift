@@ -9,7 +9,7 @@ import UIKit
 import iOSDropDown
 
 class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-
+    
     // MARK: - Oulet
     @IBOutlet weak var viewProfile: UIView!
     @IBOutlet weak var viewDescription: UIView!
@@ -25,6 +25,12 @@ class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UI
     @IBOutlet weak var txtFieldEnterProperty: UITextField!
     @IBOutlet weak var imgprofile: UIImageView!
     
+    var descriptionData: String = ""
+    var website: String = ""
+    var hotel:String = ""
+    var enterProperty:String = ""
+    var hotelLogo = UIImage()
+
     var arrDate = ["12 Mar, 2023", "13 Mar, 2023", "14 Mar, 2023", "15 Mar, 2023", "17 Mar, 2023", "18 Mar, 2023"]
     
     var userDefaults = UserDefaults.standard
@@ -43,75 +49,75 @@ class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UI
         DispatchQueue.main.async {
             self.newpropertyCollectionCell.reloadData()
         }
-
+        
         newpropertyCollectionCell.register(UINib(nibName: "NewRoomTypeCollectionCell", bundle: .main), forCellWithReuseIdentifier: "NewRoomTypeCollectionCell")
         let color = UIColor.init(named: "TextColor")
         txtFieldEnterProperty.attributedPlaceholder = NSAttributedString(string: txtFieldEnterProperty.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         txtFieldHotel.attributedPlaceholder = NSAttributedString(string: txtFieldHotel.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
-
+        
         txtFieldWebsite.attributedPlaceholder = NSAttributedString(string: txtFieldWebsite.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
-
+        
         txtFieldDescraption.attributedPlaceholder = NSAttributedString(string: txtFieldDescraption.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         newpropertyCollectionCell.collectionViewLayout = createCompositionalLayout()
     }
     
-
-    // MARK: - Function
-//    func patchAPINewPropertyProfile(propertyName:String,propertyType:String, starCatagory:String, websiteUrl:String, description:String){
-//        let url = URL(string: "https://api.hotelratna.com/api/userEdit")!
-//        let userData = MultipartFormDataRequest(url: url)
-//        userData.addTextField(named: "propertyName", value: propertyName)
-//        userData.addTextField(named: "propertyType", value: propertyType)
-//        userData.addTextField(named: "starCatagory", value: starCatagory)
-//        userData.addTextField(named: "websiteUrl", value: websiteUrl)
-//        userData.addTextField(named: "description", value: description)
-//        
-//        if let dData = imgprofile.image, let imgData = dData.jpegData(compressionQuality: 0.5){
-//           userData.addDataField(named: "pic", data: imgData,mimeType: "img/jpeg")
-//        }
-//       
-//        if let data = userDefaults.object(forKey: "userData"){
-////            do{
-//                let encode = try JSONDecoder().decode(sig.self, from: Data)
-//                userData.addTextField(named: "login_token", value:encode.token )
-//                userData.addTextField(named: "username", value: encode.username)
-//                userData.addTextField(named: "phone_code", value: "+91")
-//                userData.addTextField(named: "is_push", value: encode.is_push)
-//                userData.addTextField(named: "language", value: "en")
-////            }catch{
-////            }
-//        }
-//        
-//        URLSession.shared.dataTask(with: userData, completionHandler: { data, response, error in
-//            guard error == nil else {
-//                print(error!)
-//              return
-//            }
-//            guard let data = data else {
-//               return
-//            }
-//            do {
-//                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
-//                    
-//                    return
-//                }
-//                let model = try JSONDecoder().decode(ResponseModel.self, from: data)
-//                print(json)
-//                if model.error_code == "200"{
-//                    if let encoded = try? JSONEncoder().encode(model.data) {
-//                        self.userDefaults.set(encoded, forKey: "userData")
-//                    }
-//                    print("Success")
-//                }
-//            } catch let error {
-//                print(error.localizedDescription)
-//                print(error)
-//               
-//            }
-//        }).resume()
-//    }
     
-
+    // MARK: - Function
+    //    func patchAPINewPropertyProfile(propertyName:String,propertyType:String, starCatagory:String, websiteUrl:String, description:String){
+    //        let url = URL(string: "https://api.hotelratna.com/api/userEdit")!
+    //        let userData = MultipartFormDataRequest(url: url)
+    //        userData.addTextField(named: "propertyName", value: propertyName)
+    //        userData.addTextField(named: "propertyType", value: propertyType)
+    //        userData.addTextField(named: "starCatagory", value: starCatagory)
+    //        userData.addTextField(named: "websiteUrl", value: websiteUrl)
+    //        userData.addTextField(named: "description", value: description)
+    //
+    //        if let dData = imgprofile.image, let imgData = dData.jpegData(compressionQuality: 0.5){
+    //           userData.addDataField(named: "pic", data: imgData,mimeType: "img/jpeg")
+    //        }
+    //
+    //        if let data = userDefaults.object(forKey: "userData"){
+    ////            do{
+    //                let encode = try JSONDecoder().decode(sig.self, from: Data)
+    //                userData.addTextField(named: "login_token", value:encode.token )
+    //                userData.addTextField(named: "username", value: encode.username)
+    //                userData.addTextField(named: "phone_code", value: "+91")
+    //                userData.addTextField(named: "is_push", value: encode.is_push)
+    //                userData.addTextField(named: "language", value: "en")
+    ////            }catch{
+    ////            }
+    //        }
+    //
+    //        URLSession.shared.dataTask(with: userData, completionHandler: { data, response, error in
+    //            guard error == nil else {
+    //                print(error!)
+    //              return
+    //            }
+    //            guard let data = data else {
+    //               return
+    //            }
+    //            do {
+    //                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
+    //
+    //                    return
+    //                }
+    //                let model = try JSONDecoder().decode(ResponseModel.self, from: data)
+    //                print(json)
+    //                if model.error_code == "200"{
+    //                    if let encoded = try? JSONEncoder().encode(model.data) {
+    //                        self.userDefaults.set(encoded, forKey: "userData")
+    //                    }
+    //                    print("Success")
+    //                }
+    //            } catch let error {
+    //                print(error.localizedDescription)
+    //                print(error)
+    //
+    //            }
+    //        }).resume()
+    //    }
+    
+    
     
     func deleteItem(at indexPath: IndexPath) {
         if arrDate.count > 0 {
@@ -126,8 +132,12 @@ class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UI
         picker.dismiss(animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]){
+        
         guard let image = info[.editedImage] as? UIImage else {return}
         imgprofile.image = image
+        var hotelLogo = image
+        saveImageToUserDefaults(image: hotelLogo, key: "hotelLogo")
+        loadImageFromUserDefaults(key: "hotelLogo")
         dismiss(animated: true)
     }
     func onUserAction(data: [String]) {
@@ -162,10 +172,10 @@ class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UI
         } else {
             viewPropertyType.borderColor = UIColor.textFiledViewLine
         }
-//        MARK: star catogary
+        //        MARK: star catogary
         if viewStar.rating == 0 {
             viewStarCategory.borderColor = UIColor.red
-
+            
         } else {
             viewStarCategory.borderColor = UIColor.textFiledViewLine
         }
@@ -174,7 +184,7 @@ class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UI
             txtFieldWebsite.attributedPlaceholder = NSAttributedString(
                 string: "www.book@hotel.com", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             viewWebsite.borderColor = UIColor.red
-
+            
         } else {
             viewWebsite.borderColor = UIColor.textFiledViewLine
         }
@@ -183,7 +193,7 @@ class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UI
             txtFieldDescraption.attributedPlaceholder = NSAttributedString(
                 string: "Enter Description", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             viewDescription.borderColor = UIColor.red
-
+            
         } else {
             viewDescription.borderColor = UIColor.textFiledViewLine
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddressAndContactVC") as! AddressAndContactVC
@@ -192,47 +202,71 @@ class NewPropertyProfileVC: UIViewController,UIImagePickerControllerDelegate, UI
     }
     
     private func profileImageIsEmpty() -> Bool {
-           return imgprofile.image == nil
-       }
+        return imgprofile.image == nil
+    }
     
     private func showValidationAlert(message: String) {
-           let alert = UIAlertController(
-               title: "Validation Error",
-               message: message,
-               preferredStyle: .alert
-           )
-
-           let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-           alert.addAction(okAction)
-
-           present(alert, animated: true, completion: nil)
-       }
-
+        let alert = UIAlertController(
+            title: "Validation Error",
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - Action
     @IBAction func profileChangeBtnPressed(_ sender: UIButton) {
         if profileImageIsEmpty() {
-                    showValidationAlert(message: "Please select a profile image.")
-                } else {
-                    let picker = UIImagePickerController()
-                      picker.allowsEditing = true
-                      picker.delegate = self
-                      present(picker, animated: true)
-                }
-       
+            showValidationAlert(message: "Please select a profile image.")
+        } else {
+            let picker = UIImagePickerController()
+            picker.allowsEditing = true
+            picker.delegate = self
+            present(picker, animated: true)
+        }
+        
         
     }
     @IBAction func btnAddPropertyAmenityPressed(_ sender: UIButton) {
-       
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAmenityVC") as! AddAmenityVC
         vc.previousVC = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func btnNavigationNextPressed(_ sender: UIButton) {
+//        txtFieldHotel.didSelect { (selectedItem, index, id) in
+//            // Store the selected value in UserDefaults
+//            self.userDefaults.set(selectedItem, forKey: "propertyType")
+//        }
+        userDefaults.setValue(txtFieldWebsite.text, forKey: "website")
+        userDefaults.setValue(txtFieldDescraption.text, forKey: "descriptionData")
+        userDefaults.setValue(txtFieldEnterProperty.text, forKey: "enterProperty")
+        userDefaults.setValue(viewStar.rating, forKey: "rating")
+        userDefaults.setValue(txtFieldHotel.text, forKey: "propertyType")
         
         createPropertyValidation()
     }
+    
+    
+    
+    func saveImageToUserDefaults(image: UIImage, key: String) {
+        if let imageData = image.toData() {
+            UserDefaults.standard.set(imageData, forKey: key)
+        }
+    }
+    
+    func loadImageFromUserDefaults(key: String) -> UIImage? {
+        if let imageData = UserDefaults.standard.data(forKey: key) {
+            return imageData.toImage()
+        }
+        return nil
+    }
     @IBAction func btnNavigationBackPressed(_ sender: Any) {
-     self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -268,21 +302,21 @@ extension NewPropertyProfileVC:UICollectionViewDelegate,UICollectionViewDataSour
         )
         
         let section = NSCollectionLayoutSection(group: group)
-       
+        
         return section
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrDate.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewRoomTypeCollectionCell", for: indexPath) as! NewRoomTypeCollectionCell
-               cell.childLbl.text = arrDate[indexPath.row]
+        cell.childLbl.text = arrDate[indexPath.row]
         cell.btnDeleteClicked = { [weak self] in
             self?.deleteItem(at: indexPath)
         }
-                return cell
+        return cell
     }
 }
 

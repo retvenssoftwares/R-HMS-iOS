@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skB-MR-lE6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SSY-9T-olf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -183,7 +183,7 @@
                                                 <rect key="frame" x="20" y="144" width="353" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvM-yx-ntk">
-                                                        <rect key="frame" x="12" y="0.0" width="87" height="40"/>
+                                                        <rect key="frame" x="12" y="0.0" width="85" height="40"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -297,7 +297,7 @@
                                                 <rect key="frame" x="20" y="294" width="353" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRV-F4-a6C">
-                                                        <rect key="frame" x="12" y="0.0" width="47" height="40"/>
+                                                        <rect key="frame" x="12" y="0.0" width="42" height="40"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" name="TextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -13850,7 +13850,7 @@
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <textField contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Indore" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SeM-kv-yz8" customClass="JRDropDown">
+                                                    <textField contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="right" contentVerticalAlignment="center" placeholder="Indore" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SeM-kv-yz8" customClass="JRDropDown">
                                                         <rect key="frame" x="48.333333333333343" y="0.0" width="308.66666666666663" height="40"/>
                                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
@@ -13910,7 +13910,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-4B-iCf" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-4B-iCf" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="507" width="369" height="14"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -16335,7 +16335,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="Back"/>
                                         <connections>
-                                            <action selector="btnNavigationBackPressed:" destination="Zcg-KS-vam" eventType="touchUpInside" id="a8Q-x5-gia"/>
+                                            <action selector="navigationBackButton:" destination="Zcg-KS-vam" eventType="touchUpInside" id="Vae-qM-xfu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dm5-1u-1WJ">
@@ -17065,7 +17065,6 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="txtFieldRoomDescription:" destination="Zcg-KS-vam" eventType="editingDidEnd" id="CWX-Xi-r8T"/>
                                                             <outlet property="delegate" destination="Zcg-KS-vam" id="nLP-82-nVQ"/>
                                                         </connections>
                                                     </textField>
@@ -17180,7 +17179,6 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="txtFIeldInventoryOpen:" destination="Zcg-KS-vam" eventType="editingDidEnd" id="OOQ-zT-H0J"/>
                                                             <outlet property="delegate" destination="Zcg-KS-vam" id="LwT-Mt-IIp"/>
                                                         </connections>
                                                     </textField>
@@ -21651,6 +21649,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                         <outlet property="containerView" destination="5If-jM-zed" id="cqK-bq-N9V"/>
                         <outlet property="designationTableView" destination="1Jz-yn-lc7" id="QSB-c9-f6y"/>
                         <outlet property="heightConstDesignationTableView" destination="iUF-nP-OBn" id="yuW-3m-8a5"/>
+                        <outlet property="termsAndServicesLbl" destination="zYe-yT-ks9" id="rsu-3p-riE"/>
                         <outlet property="txtFIeldUserName" destination="tKM-4k-JlQ" id="qCa-WY-qlG"/>
                         <outlet property="txtFieldDesignation" destination="xyv-Jc-zyN" id="ZvW-oB-fzP"/>
                         <outlet property="txtFieldEmail" destination="goU-NK-KKZ" id="2Kt-mP-VpB"/>
@@ -25522,7 +25521,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
             </objects>
             <point key="canvasLocation" x="-1538" y="-499"/>
         </scene>
-        <!--Tell us about your property-->
+        <!--Property SelectionVC-->
         <scene sceneID="egW-6U-rf3">
             <objects>
                 <viewController storyboardIdentifier="PropertySelectionVC" id="5GV-Wd-F9e" customClass="PropertySelectionVC" customModule="Hotel_Management_System" customModuleProvider="target" sceneMemberID="viewController">
@@ -25531,7 +25530,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDR-4l-rYM">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="137" width="393" height="681"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMt-RK-q68">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
@@ -25647,29 +25646,63 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="TMt-RK-q68" secondAttribute="bottom" id="4kz-On-2jZ"/>
+                                    <constraint firstItem="TMt-RK-q68" firstAttribute="top" secondItem="JvM-FT-mpl" secondAttribute="top" id="7yD-6P-OXr"/>
                                     <constraint firstAttribute="trailing" secondItem="TMt-RK-q68" secondAttribute="trailing" id="Fd7-CY-Erc"/>
                                     <constraint firstItem="TMt-RK-q68" firstAttribute="width" secondItem="WDR-4l-rYM" secondAttribute="width" id="O0l-tU-xxA"/>
                                     <constraint firstItem="TMt-RK-q68" firstAttribute="leading" secondItem="WDR-4l-rYM" secondAttribute="leading" id="R3N-Bk-AI8"/>
-                                    <constraint firstItem="TMt-RK-q68" firstAttribute="top" secondItem="WDR-4l-rYM" secondAttribute="top" id="uGV-6y-7o6"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="TSp-3j-Pfn"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="JvM-FT-mpl"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oj2-Rk-xLt">
+                                <rect key="frame" x="0.0" y="48" width="393" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about your property" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-FP-9Qw">
+                                        <rect key="frame" x="93" y="2" width="276" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ScQ-vw-co7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5k-k0-MWn">
+                                        <rect key="frame" x="24" y="2" width="45" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="uVw-Df-nuD"/>
+                                            <constraint firstAttribute="width" constant="45" id="woo-2T-Swg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Back"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="faQ-FP-9Qw" firstAttribute="leading" secondItem="c5k-k0-MWn" secondAttribute="trailing" constant="24" id="0hq-fP-uT1"/>
+                                    <constraint firstAttribute="height" constant="40" id="2Vj-mr-hTL"/>
+                                    <constraint firstAttribute="trailing" secondItem="faQ-FP-9Qw" secondAttribute="trailing" constant="24" id="8h0-n0-F2e"/>
+                                    <constraint firstItem="c5k-k0-MWn" firstAttribute="top" secondItem="oj2-Rk-xLt" secondAttribute="top" constant="2" id="954-I9-iyh"/>
+                                    <constraint firstAttribute="bottom" secondItem="c5k-k0-MWn" secondAttribute="bottom" constant="3" id="nck-zV-jsP"/>
+                                    <constraint firstItem="c5k-k0-MWn" firstAttribute="leading" secondItem="oj2-Rk-xLt" secondAttribute="leading" constant="24" id="tO7-Hz-1RH"/>
+                                    <constraint firstItem="faQ-FP-9Qw" firstAttribute="top" secondItem="oj2-Rk-xLt" secondAttribute="top" constant="2" id="ths-KR-DoP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xW8-Ri-kt8"/>
                         <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="WDR-4l-rYM" firstAttribute="trailing" secondItem="xW8-Ri-kt8" secondAttribute="trailing" id="4me-ls-Z5J"/>
                             <constraint firstItem="xW8-Ri-kt8" firstAttribute="bottom" secondItem="WDR-4l-rYM" secondAttribute="bottom" id="BOb-1C-xwk"/>
-                            <constraint firstItem="WDR-4l-rYM" firstAttribute="top" secondItem="xW8-Ri-kt8" secondAttribute="top" id="CNK-hk-YMg"/>
                             <constraint firstItem="WDR-4l-rYM" firstAttribute="leading" secondItem="xW8-Ri-kt8" secondAttribute="leading" id="RLY-Zr-W3x"/>
+                            <constraint firstItem="WDR-4l-rYM" firstAttribute="top" secondItem="xW8-Ri-kt8" secondAttribute="top" constant="34" id="lVm-r2-jvZ"/>
+                            <constraint firstItem="xW8-Ri-kt8" firstAttribute="trailing" secondItem="oj2-Rk-xLt" secondAttribute="trailing" id="qLS-zS-wgs"/>
+                            <constraint firstItem="oj2-Rk-xLt" firstAttribute="top" secondItem="03S-dz-BBS" secondAttribute="top" constant="48" id="rYu-V3-WTT"/>
+                            <constraint firstItem="oj2-Rk-xLt" firstAttribute="leading" secondItem="xW8-Ri-kt8" secondAttribute="leading" id="u4D-hh-rOt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tell us about your property" id="ngo-K8-4JS">
-                        <barButtonItem key="backBarButtonItem" title="   " id="u0G-hq-8eL"/>
-                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="navigationView" destination="oj2-Rk-xLt" id="HXc-tD-DCC"/>
                         <outlet property="propertyChainBtn" destination="fLp-Bd-kbo" id="N2S-ZL-ehR"/>
                         <outlet property="singlePropertyBtn" destination="L3D-eB-W3E" id="K0A-dH-Nf8"/>
                         <outlet property="viewPropertyChain" destination="uhf-VR-FJ5" id="gIB-9d-6mj"/>
@@ -25678,7 +25711,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEm-o4-kSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3440" y="-239"/>
+            <point key="canvasLocation" x="3438.9312977099235" y="-239.43661971830988"/>
         </scene>
         <!--Let's create your property  chain's profile-->
         <scene sceneID="7r9-2B-g8O">
@@ -26079,7 +26112,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="116" height="116"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <connections>
-                                                            <action selector="submitBtnPressed:" destination="ZVt-Ow-Tlb" eventType="touchUpInside" id="8UX-MC-6D1"/>
+                                                            <action selector="profileChangeBtnPressed:" destination="ZVt-Ow-Tlb" eventType="touchUpInside" id="cnh-8Y-cvg"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -26097,7 +26130,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                                                     <constraint firstAttribute="height" constant="116" id="xky-kO-AQj"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Property Chain Logo or Image" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-Un-yJd" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about your property" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaS-Un-yJd" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
                                                 <rect key="frame" x="156" y="70.333333333333343" width="217" height="15.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                 <color key="textColor" name="TextColor"/>
@@ -26527,6 +26560,8 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <size key="freeformSize" width="393" height="1000"/>
                     <connections>
+                        <outlet property="btnChangeProfile" destination="TOM-S5-WNQ" id="xfl-lZ-O3c"/>
+                        <outlet property="imgProfile" destination="AAD-YL-1FH" id="xD1-sB-dYx"/>
                         <outlet property="txtFieldAddress" destination="fxY-gz-wHs" id="6DQ-Mk-cPz"/>
                         <outlet property="txtFieldCity" destination="Tkk-p6-uDY" id="XOq-xK-8Q8"/>
                         <outlet property="txtFieldCountry" destination="o2Q-AO-L7X" id="1Ix-4Y-CfK"/>
@@ -26541,7 +26576,7 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
             </objects>
             <point key="canvasLocation" x="5100" y="-210.56338028169014"/>
         </scene>
-        <!--Single Property2VC-->
+        <!--Lets create your hotel profile-->
         <scene sceneID="5Dc-tO-SeN">
             <objects>
                 <viewController storyboardIdentifier="SingleProperty2VC" id="1Bx-i0-GdM" customClass="SingleProperty2VC" customModule="Hotel_Management_System" customModuleProvider="target" sceneMemberID="viewController">
@@ -26550,16 +26585,16 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFt-az-fSR">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-FP-nmn">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="715"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hw1-cs-RXv">
                                                 <rect key="frame" x="20" y="20" width="353" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8z-G2-Ye4" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
-                                                        <rect key="frame" x="12" y="0.0" width="87" height="40"/>
+                                                        <rect key="frame" x="12" y="0.0" width="85" height="40"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -26868,6 +26903,10 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                             <constraint firstItem="tFt-az-fSR" firstAttribute="trailing" secondItem="d5I-Ww-ZkP" secondAttribute="trailing" id="hip-La-Lf4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Lets create your hotel profile" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="pvj-Yj-sEh">
+                        <barButtonItem key="backBarButtonItem" title="Item" width="57" id="PWk-BA-D8B"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="starRateView" destination="DZS-wm-roC" id="rA8-dr-KmQ"/>
                         <outlet property="txtFieldNumberOfProperty" destination="CbQ-Ql-EPY" id="VIz-LN-QyA"/>
@@ -26877,6 +26916,9 @@ You have successfully registered your Hotel Chain [chain_Name] with us.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJT-dY-a0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Let's create your property  chain's profile" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="jro-c4-Dww">
+                    <barButtonItem key="backBarButtonItem" title="Item" width="57" id="ZOd-IJ-IPq"/>
+                </navigationItem>
             </objects>
             <point key="canvasLocation" x="5847" y="-239"/>
         </scene>

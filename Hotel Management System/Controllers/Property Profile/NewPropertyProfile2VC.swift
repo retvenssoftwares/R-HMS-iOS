@@ -9,29 +9,47 @@ import UIKit
 import iOSDropDown
 
 class NewPropertyProfile2VC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-//    @IBOutlet weak var viewPops: PopsView!
+    
+    //    @IBOutlet weak var viewPops: PopsView!
     @IBOutlet weak var newPropertyCollectionCell: UICollectionView!
     @IBOutlet weak var txtFieldDescription: UITextField!
     @IBOutlet weak var txtFieldWebsite: UITextField!
     @IBOutlet weak var txtFieldHotel: DropDown!
     @IBOutlet weak var imgProfileChange: UIImageView!
-    
+    var hotelData: String = ""
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewPops.isHidden = true
-
+        //        viewPops.isHidden = true
+        if let storedOption = UserDefaults.standard.string(forKey: "hotel") {
+            hotelData = storedOption
+            print("hotelData: \(hotelData)")
+        }
+        
+        if let enterProperty = UserDefaults.standard.string(forKey: "enterProperty") {
+            print("enterProperty: \(enterProperty)")
+        }
+        
+        if let descriptionData = UserDefaults.standard.string(forKey: "descriptionData") {
+            
+            print("descriptionData: \(descriptionData)")
+        }
+        if let website = UserDefaults.standard.string(forKey: "website") {
+            
+            print("website: \(website)")
+        }
+        
+        
         newPropertyCollectionCell.register(UINib(nibName: "NewRoomTypeCollectionCell", bundle: .main), forCellWithReuseIdentifier: "NewRoomTypeCollectionCell")
         let color = UIColor.init(named: "TextColor")
         txtFieldHotel.attributedPlaceholder = NSAttributedString(string: txtFieldHotel.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         txtFieldWebsite.attributedPlaceholder = NSAttributedString(string: txtFieldWebsite.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
         txtFieldDescription.attributedPlaceholder = NSAttributedString(string: txtFieldDescription.placeholder!, attributes: [NSAttributedString.Key.foregroundColor : color!])
-       
+        
     }
     
-
+    
     // MARK: - Function
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
@@ -41,22 +59,22 @@ class NewPropertyProfile2VC: UIViewController,UIImagePickerControllerDelegate, U
         imgProfileChange.image = image
         dismiss(animated: true)
     }
-
     
-
+    
+    
     // MARK: - Action
-  
-
-
+    
+    
+    
     @IBAction func propertyTypePopsBtnPressed(_ sender: UIButton) {
-//        viewPops.isHidden = false
+        //        viewPops.isHidden = false
     }
     
     @IBAction func profileChangeBtnPressed(_ sender: UIButton) {
         let picker = UIImagePickerController()
-          picker.allowsEditing = true
-          picker.delegate = self
-          present(picker, animated: true)
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
     }
     
 }

@@ -10,9 +10,7 @@ import iOSDropDown
 import GoogleMaps
 import GooglePlaces
 
-
 class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
-    
     
     // MARK: - Outlet
     @IBOutlet weak var viewAddressTableView: UIView!
@@ -31,13 +29,12 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
     @IBOutlet weak var txtFieldAddress: UITextField!
     @IBOutlet weak var txtFieldCOuntry: UITextField!
     @IBOutlet weak var txtFieldState: UITextField!
-
     @IBOutlet weak var txtFIeldZipCode: UITextField!
     @IBOutlet weak var txtFiledPhone: UITextField!
     @IBOutlet weak var txtFieldReservationPhone: UITextField!
     @IBOutlet weak var txtFieldEmail: UITextField!
-    
-    
+    var userDefaults = UserDefaults.standard
+    var hotelData:String = ""
     var placesClient: GMSPlacesClient!
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
@@ -64,34 +61,34 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
         resultsTableView.delegate = self
         resultsTableView.dataSource = self
         resultsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.resultsTableView.reloadData()
-        //viewAddressTableView.isHidden = true
-//        resultTableView.isHidden = true
+        //self.resultsTableView.reloadData()
+        viewAddressTableView.isHidden = true
+        resultTableView.isHidden = true
         appearViewHide()
     }
     
     func appearView() {
-         self.viewAddressTableView.alpha = 0
-         self.viewAddressTableView.isHidden = false
-
-         UIView.animate(withDuration: 0.6, animations: {
-             self.viewAddressTableView.alpha = 1
-         }, completion: {
-             finished in
-             self.viewAddressTableView.isHidden = false
-         })
+        self.viewAddressTableView.alpha = 0
+        self.viewAddressTableView.isHidden = false
+        
+        UIView.animate(withDuration: 0.6, animations: {
+            self.viewAddressTableView.alpha = 1
+        }, completion: {
+            finished in
+            self.viewAddressTableView.isHidden = false
+        })
     }
     
     func appearViewHide() {
-         self.viewAddressTableView.alpha = 0
-         self.viewAddressTableView.isHidden = true
-
-         UIView.animate(withDuration: 0.6, animations: {
-             self.viewAddressTableView.alpha = 1
-         }, completion: {
-             finished in
-             self.viewAddressTableView.isHidden = true
-         })
+        self.viewAddressTableView.alpha = 0
+        self.viewAddressTableView.isHidden = true
+        
+        UIView.animate(withDuration: 0.6, animations: {
+            self.viewAddressTableView.alpha = 1
+        }, completion: {
+            finished in
+            self.viewAddressTableView.isHidden = true
+        })
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -101,8 +98,8 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
         
     }
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-           reverseGeocodeCoordinate(coordinate)
-       }
+        reverseGeocodeCoordinate(coordinate)
+    }
     func getAutocompleteResults(for query: String) {
         let placesClient = GMSPlacesClient.shared()
         placesClient.lookUpPlaceID("ChIJge5RwV7A1TsR1u4-JssV7bw") { (place, error) in
@@ -112,15 +109,37 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
                 let coordinate = place.coordinate
                 print("Place coordinate: \(coordinate.latitude), \(coordinate.longitude)")
             }
-            
-           // self.resultsTableView.reloadData()
+            DispatchQueue.main.async {
+                self.resultsTableView.reloadData()
+            }
         }
     }
     
-    
-    
     // MARK: - Additional Functions
     
+    func saveToUserDefaults() {
+        userDefaults.setValue(txtfieldCity.text, forKey: "city")
+        userDefaults.setValue(txtFieldState.text, forKey: "state")
+        userDefaults.setValue(txtFieldCOuntry.text, forKey: "country")
+        userDefaults.setValue(txtFieldAddress.text, forKey: "address")
+        userDefaults.setValue(txtFIeldZipCode.text, forKey: "zipCode")
+        userDefaults.setValue(txtFieldReservationPhone.text, forKey: "reservationPhone")
+        userDefaults.setValue(txtFiledPhone.text, forKey: "phone")
+        userDefaults.setValue(txtFieldEmail.text, forKey: "email")
+        if let email = userDefaults.string(forKey: "email") {
+            print(email)
+        }
+        if let address = userDefaults.string(forKey: "address") {
+            print(address)
+        }
+        if let reservationPhone = userDefaults.string(forKey: "reservationPhone") {
+            print(reservationPhone)
+        }
+        
+        if let phone = userDefaults.string(forKey: "phone") {
+            print(phone)
+        }
+    }
     
     
     // MARK: - Function
@@ -219,8 +238,15 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
             } else if let coordinate = place?.coordinate {
                 // Update the map with the new location
                 self.updateMap(coordinate)
-                //self.resultsTableView.reloadData()
+                self.resultsTableView.reloadData()
             }
+        }
+        
+        if place.isEmpty {
+            
+        } else {
+            let firstResult = place[0]
+            print("First result: \(firstResult.attributedFullText.string)")
         }
     }
     
@@ -247,7 +273,7 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         txtFieldAddress.resignFirstResponder()
-        resultTableView.reloadData()
+        //resultTableView.reloadData()
         return true
     }
     
@@ -274,6 +300,8 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
         let marker = GMSMarker(position: coordinate)
         marker.map = mapView
         let initialCamera = GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 12.0)
+        userDefaults.setValue(coordinate.latitude, forKey: "latitude")
+        userDefaults.setValue(coordinate.longitude, forKey: "longitude")
         mapView.camera = initialCamera
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
         marker.map = mapView
@@ -290,7 +318,11 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let address = textField.text {
             geocodeAddress(address)
+            
         }
+        viewAddressTableView.isHidden = true
+        resultTableView.isHidden = true
+        
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == txtFieldAddress {
@@ -299,48 +331,58 @@ class AddressAndContactVC: UIViewController,GMSMapViewDelegate {
             //resultTableView.isHidden = false
             if let address = txtFieldAddress.text {
                 geocodeAddress(address)
-            
+                
                 self.resultsTableView.reloadData()
             }
         }
-       
+        
     }
     func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
-         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-         
-         geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
-             if let address = response?.firstResult() {
-                 let lines = address.lines ?? []
-                 
-                 // Extracting city, address, and state from the address lines
-                 var city: String?
-                 var country: String?
-                 var state: String?
-                 
-                 for line in lines {
-                     if line.range(of: "locality") != nil {
-                         city = line
-                     } else if line.range(of: "administrative_area_level_1") != nil {
-                         state = line
-                     }
-                 }
-                 
-             
-                 
-                 
-                 // Update your UI elements with the extracted information
-                 DispatchQueue.main.async {
-                     self.txtfieldCity.text = country
-                     self.txtFieldState.text = city
-                     self.txtFieldState.text = state
-                 }
-             }
-         }
-     }
-
-  
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+            if let address = response?.firstResult() {
+                let lines = address.lines ?? []
+                var city: String?
+                var country: String?
+                var state: String?
+                
+                for line in lines {
+                    if line.range(of: "locality") != nil {
+                        city = line
+                    } else if line.range(of: "administrative_area_level_1") != nil {
+                        state = line
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.txtfieldCity.text = country
+                    self.txtFieldState.text = city
+                    self.txtFieldState.text = state
+                }
+            }
+        }
+    }
+    
+    
     
     @IBAction func btnNextPressed(_ sender: UIButton) {
+        //        if let storedOption = UserDefaults.standard.string(forKey: "hotel") {
+        //            hotelData = storedOption
+        //            print("hotelData: \(hotelData)")
+        //        }
+        
+        if let enterProperty = UserDefaults.standard.string(forKey: "enterProperty") {
+            print("enterProperty: \(enterProperty)")
+        }
+        
+        if let descriptionData = UserDefaults.standard.string(forKey: "descriptionData") {
+            
+            print("descriptionData: \(descriptionData)")
+        }
+        if let website = UserDefaults.standard.string(forKey: "website") {
+            
+            print("website: \(website)")
+        }
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreatePropertyStap3VC") as! CreatePropertyStap3VC
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -366,13 +408,70 @@ extension AddressAndContactVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = resultTableView.dequeueReusableCell(withIdentifier: "MapTableViewCell", for: indexPath) as! MapTableViewCell
-        let prediction = place[indexPath.row]
-        cell.lblSearchName.text = prediction.attributedFullText.string
+        //        var count = place.count
+        //        if indexPath.row < place.count {
+        //            let dataItem = place[indexPath.row]
+        //
+        //            cell.lblSearchName.text = dataItem.attributedFullText.string
+        //        } else {
+        //            cell.lblSearchName.text = ""
+        //        }
+        
+        if indexPath.row < place.count {
+            let prediction = place[indexPath.row]
+            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+            cell.detailTextLabel?.text = prediction.attributedSecondaryText?.string
+        } else {
+            cell.lblSearchName?.text = ""
+            cell.detailTextLabel?.text = ""
+        }
+        
+        if place.count > 1 {
+            let prediction = place[1]
+            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+        }
+        if place.count > 2 {
+            let prediction = place[2]
+            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+        }
+        if place.count > 3 {
+            let prediction = place[3]
+            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+        }
+        if place.count > 4 {
+            let prediction = place[4]
+            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+        }
+        if place.count > 5 {
+            let prediction = place[5]
+            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+        }
+        if place.count > 6 {
+            let prediction = place[6]
+            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+        }
+        
         return cell
+        
+        //        if place.indices.contains(count) {
+        //            //let value = place[indexPath.row] // Access the element only if the index is within bounds
+        //            //    print(value)
+        //            let prediction = place[indexPath.row]
+        //            cell.lblSearchName.text = prediction.attributedFullText.string
+        //        }
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let view  = UIView()
+        view.backgroundColor = .clear
+        cell.selectedBackgroundView = view
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let selectedPrediction = place[indexPath.row]
+        print(selectedPrediction)
         txtFieldAddress.text = selectedPrediction.attributedPrimaryText.string
         placesClient.lookUpPlaceID(selectedPrediction.placeID) { (place, error) in
             if let error = error {
@@ -382,24 +481,48 @@ extension AddressAndContactVC: UITableViewDelegate, UITableViewDataSource {
                 let camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 15.0)
                 self.mapView.camera = camera
             }
+            
+            if let place = place {
+                if let stateComponent = place.addressComponents?.first(where: { $0.type == "administrative_area_level_1" }) {
+                    let state = stateComponent.name
+                    self.txtFieldState.text = state
+                    print("State: \(state)")
+                    self.userDefaults.setValue(self.txtFieldState.text, forKey: "state")
+                }
+                
+                if let cityComponent = place.addressComponents?.first(where: { $0.type == "locality" }) {
+                    let city = cityComponent.name
+                    print("City: \(city)")
+                    self.txtfieldCity.text = city
+                    self.userDefaults.setValue(self.txtfieldCity.text, forKey: "city")
+                }
+                
+                if let cityComponent = place.addressComponents?.first(where: { $0.type == "postal_code" }) {
+                    let postal_code = cityComponent.name
+                    print("postal_code: \(postal_code)")
+                    self.txtFIeldZipCode.text = postal_code
+                    self.userDefaults.setValue(self.txtFIeldZipCode.text, forKey: "postalCode")
+                }
+                
+                print("Country: \(place.addressComponents?.first(where: { $0.type == "country" })?.name ?? "")")
+                self.txtFieldCOuntry.text = place.addressComponents?.first(where: { $0.type == "country" })?.name ?? ""
+                self.userDefaults.setValue(self.txtFieldCOuntry.text, forKey: "country")
+            }
         }
         UIView.animate(withDuration: 0.5, animations: {
-                self.viewAddressTableView.alpha = 0.0
-            }) { (finished) in
-                if finished {
-                    self.viewAddressTableView.isHidden = true
-                }
+            self.viewAddressTableView.alpha = 0.0
+        }) { (finished) in
+            if finished {
+                self.viewAddressTableView.isHidden = true
             }
-      
-        //resultTableView.isHidden = true
-//        appearViewHide()
-        //viewAddressTableView.isHidden  = true
-        
+        }
     }
 }
 
 extension AddressAndContactVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        viewAddressTableView.isHidden = false
+        resultTableView.isHidden = false
         let currentText = (textField.text ?? "") as NSString
         let newText = currentText.replacingCharacters(in: range, with: string)
         performAutocompleteSearch(query: newText)
@@ -408,6 +531,7 @@ extension AddressAndContactVC: UITextFieldDelegate {
     func performAutocompleteSearch(query: String) {
         let filter = GMSAutocompleteFilter()
         filter.type = .noFilter
+        
         let autocompleteRequest = GMSAutocompleteSessionToken()
         placesClient.findAutocompletePredictions(
             fromQuery: query,
@@ -419,7 +543,7 @@ extension AddressAndContactVC: UITextFieldDelegate {
             } else if let results = results {
                 self.place = results
                 self.resultsTableView.reloadData()
-//                self.resultsTableView.isHidden = false
+                //                self.resultsTableView.isHidden = false
             }
         }
     }
@@ -427,81 +551,3 @@ extension AddressAndContactVC: UITextFieldDelegate {
 }
 
 
-//
-//extension AddressAndContactVC: GMSAutocompleteViewControllerDelegate {
-//    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-//        print("Place name: \(place.name ?? "N/A")")
-//              print("Place address: \(place.formattedAddress ?? "N/A")")
-//              print("Place ID: \(place.placeID ?? "N/A")")
-//
-//              // You can extract other details like coordinates, types, etc. from the 'place' object.
-//
-//              // Dismiss the autocomplete view controller
-//              dismiss(animated: true, completion: nil)
-//    }
-//    
-//    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-//        print("Error: \(error.localizedDescription)")
-//    }
-//
-//    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-//        dismiss(animated: true, completion: nil)
-//    }
-//    
-//    
-//    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-//        reverseGeocodeCoordinate(coordinate)
-//    }
-//    
-//    func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
-//        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-//        
-//        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
-//            if let address = response?.firstResult() {
-//                let lines = address.lines ?? []
-//                
-//                // Extracting city, address, and state from the address lines
-//                var city: String?
-//                var country: String?
-//                var state: String?
-//                
-//                for line in lines {
-//                    if line.range(of: "locality") != nil {
-//                        city = line
-//                    } else if line.range(of: "administrative_area_level_1") != nil {
-//                        state = line
-//                    }
-//                }
-//                DispatchQueue.main.async {
-//                                   self.txtfieldCity.text = city
-//                                   self.txtFieldState.text = state
-//                                   self.txtFieldCOuntry.text = country
-//                               }
-//                //    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-//                //        // Get full address details
-//                //        let addressComponents = place.addressComponents
-//                //
-//                //        // Process address components
-//                //        for component in addressComponents! {
-//                //            if let value = component.name {
-//                //
-//                //
-//                //                    txtFieldCOuntry.text = value
-//                //
-//                //                    txtFieldState.text = value
-//                //
-//                //                    txtfieldCity.text = value
-//                //
-//                //
-//                //                }
-//                //            }
-//                //        }
-//                //
-//                ////        dismiss(animated: true, completion: nil)
-//               
-//            }
-//            
-//        }
-//    }
-//}
-// 
