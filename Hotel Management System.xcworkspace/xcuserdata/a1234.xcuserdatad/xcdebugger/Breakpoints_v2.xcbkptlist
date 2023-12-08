@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7B14A929-7166-4ACF-BEA0-CC156F39CC0F"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E580C313-AFC8-493C-89D7-4B0D16330384"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Create Property/CreatePropertyStap3VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "picker(_:didFinishPicking:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E580C313-AFC8-493C-89D7-4B0D16330384 - beef2655d4e2531f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;__C.NSItemProviderReading&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hotel_Management_System.CreatePropertyStap3VC.picker(_: __C.PHPickerViewController, didFinishPicking: Swift.Array&lt;PhotosUI.PHPickerResult&gt;) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Create%20Property/CreatePropertyStap3VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "728">
+               </Location>
+               <Location
+                  uuid = "E580C313-AFC8-493C-89D7-4B0D16330384 - beef2655d4e2531f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;__C.NSItemProviderReading&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hotel_Management_System.CreatePropertyStap3VC.picker(_: __C.PHPickerViewController, didFinishPicking: Swift.Array&lt;PhotosUI.PHPickerResult&gt;) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Create%20Property/CreatePropertyStap3VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "584">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1ABC48C4-52D7-4D78-A0AA-6C95B073BDC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Create Property/CreatePropertyStap3VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "picker(_:didFinishPicking:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1ABC48C4-52D7-4D78-A0AA-6C95B073BDC0 - beef2655d4e250d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;__C.NSItemProviderReading&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hotel_Management_System.CreatePropertyStap3VC.picker(_: __C.PHPickerViewController, didFinishPicking: Swift.Array&lt;PhotosUI.PHPickerResult&gt;) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Create%20Property/CreatePropertyStap3VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "1056">
+               </Location>
+               <Location
+                  uuid = "1ABC48C4-52D7-4D78-A0AA-6C95B073BDC0 - beef2655d4e250d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;__C.NSItemProviderReading&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Hotel_Management_System.CreatePropertyStap3VC.picker(_: __C.PHPickerViewController, didFinishPicking: Swift.Array&lt;PhotosUI.PHPickerResult&gt;) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Create%20Property/CreatePropertyStap3VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "864">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D555F7C-F315-462A-991A-17FFD336588B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Property Profile/Add Amenity/AddAmenityVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "AddAmenityVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14A12467-885C-495D-931A-C7CF31C9C436"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Property Profile/Add Amenity/AddAmenityVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "btnNavigationDonePressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "14A12467-885C-495D-931A-C7CF31C9C436 - d6da40579c9e38cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationBackPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "14A12467-885C-495D-931A-C7CF31C9C436 - cc6c72fbe8e8dcf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2C5FF5C-692C-471A-9606-D3CEE95E44CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Property Profile/NewPropertyProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "NewPropertyProfileVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "926366F6-3CDA-46B9-A3B9-5830C4F5072F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Property Profile/NewPropertyProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "onUserAction(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4630113-95F0-4B49-A9C0-2E962BF6C15B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Property Profile/NewPropertyProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "onUserAction(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Property Profile/Add Amenity/AddAmenityVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "btnNavigationDonePressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7 - cc6c72fbe8e8dcb0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7 - cc6c72fbe8e8dc93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7 - cc6c72fbe8e8dc93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7 - 503842ea7bf70526"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/untitled%20folder%203/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7 - 47e0f955d71079d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7 - 7d54808f5a4f5d0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/HMS/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "449AB3A8-F2D1-47EB-8A52-3ECB360C9CB7 - 2344468c98970b5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddAmenityVC.btnNavigationDonePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/Property%20Profile/Add%20Amenity/AddAmenityVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A5490F2-23F0-4803-BBE6-511B52EFD23E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Rate Plane/Rate Plane Bar/RatePlaneBarVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A5490F2-23F0-4803-BBE6-511B52EFD23E - 3ac6abdbab909262"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.RatePlaneBarVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Rate%20Plane/Rate%20Plane%20Bar/RatePlaneBarVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "824">
+               </Location>
+               <Location
+                  uuid = "1A5490F2-23F0-4803-BBE6-511B52EFD23E - 3ac6abdbab909262"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.RatePlaneBarVC.viewDidLoad() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Documents/Development/Main/Hotel%20Management%20System/Hotel%20Management%20System/Controllers/Rate%20Plane/Rate%20Plane%20Bar/RatePlaneBarVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60A9E333-A463-4BC5-A6FB-9CEEBE37736F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "60A9E333-A463-4BC5-A6FB-9CEEBE37736F - 29a3c159b7cc9044"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddressAndContactVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/HMS/Hotel%20Management%20System/Controllers/Add%20Property/AddressAndContactVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "422"
+                  endingLineNumber = "422"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "60A9E333-A463-4BC5-A6FB-9CEEBE37736F - 29a3c159b7cc9044"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddressAndContactVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/HMS/Hotel%20Management%20System/Controllers/Add%20Property/AddressAndContactVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "422"
+                  endingLineNumber = "422"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3CDE847-C703-498D-B2F3-DD2BB36BE89C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C27D8ADB-17A5-4F3F-A25A-128AE4D6E72E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "getAutocompleteResults(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C27D8ADB-17A5-4F3F-A25A-128AE4D6E72E - 5b09ab29d4445014"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddressAndContactVC.getAutocompleteResults(for: Swift.String) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/HMS/Hotel%20Management%20System/Controllers/Add%20Property/AddressAndContactVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "C27D8ADB-17A5-4F3F-A25A-128AE4D6E72E - 5b09ab29d4445fc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddressAndContactVC.getAutocompleteResults(for: Swift.String) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/HMS/Hotel%20Management%20System/Controllers/Add%20Property/AddressAndContactVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5A84528-9A54-4119-B4D3-E108EF38EB96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "textFieldDidChange(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F36BC355-0BCB-45AD-8BBC-42470030FC52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "textFieldDidChange(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F36BC355-0BCB-45AD-8BBC-42470030FC52 - 752fff311502ea94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddressAndContactVC.textFieldDidChange(__C.UITextField) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/HMS/Hotel%20Management%20System/Controllers/Add%20Property/AddressAndContactVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "F36BC355-0BCB-45AD-8BBC-42470030FC52 - 752fff311502e400"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.AddressAndContactVC.textFieldDidChange(__C.UITextField) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/HMS/Hotel%20Management%20System/Controllers/Add%20Property/AddressAndContactVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "981DC83D-04D8-4098-9BB5-648FA75C6DFB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "432"
+            endingLineNumber = "432"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91B3CD6B-92AB-4067-8ADD-0F1B2C6216F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
+            landmarkName = "textFieldDidBeginEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "173029ED-7F56-484C-949B-9DDE5FA8CA29"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Add Property/AddressAndContactVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "reverseGeocodeCoordinate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF560426-1CDA-4CEC-B7B1-F44998BE5318"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/Property Selection/PropertySelectionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AF560426-1CDA-4CEC-B7B1-F44998BE5318 - 31bc1b209f496053"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.PropertySelectionVC.singlePropertyBtnPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/WelcomeVC/Onboarding/Property%20Selection/PropertySelectionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "AF560426-1CDA-4CEC-B7B1-F44998BE5318 - 31bc1b209f4962c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.PropertySelectionVC.singlePropertyBtnPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/WelcomeVC/Onboarding/Property%20Selection/PropertySelectionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD4BB3AC-9E29-4C2F-A8CA-D7502FEBB1AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/Property Selection/PropertySelectionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FD4BB3AC-9E29-4C2F-A8CA-D7502FEBB1AE - 7d115a67f559c0f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.PropertySelectionVC.viewWillDisappear(Swift.Bool) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/WelcomeVC/Onboarding/Property%20Selection/PropertySelectionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "FD4BB3AC-9E29-4C2F-A8CA-D7502FEBB1AE - e2fdb31500ecce4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.PropertySelectionVC.propertyChainBtnPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/WelcomeVC/Onboarding/Property%20Selection/PropertySelectionVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24C7D3DF-B7B1-4A7D-9407-158BFCF557EB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/Property Selection/PropertySelectionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74A49A0C-E682-43F9-8C1E-775630C16597"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/Property Selection/PropertySelectionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4A74896-B97F-4482-AF3B-1922AE006B48"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/New Room Type/NewRoomTypeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "maxOccupancyBottamSheet()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D4A74896-B97F-4482-AF3B-1922AE006B48 - 65be2fa584a0e302"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.NewRoomTypeVC.maxOccupancyBottamSheet() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/New%20Room%20Type/NewRoomTypeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "D4A74896-B97F-4482-AF3B-1922AE006B48 - 65be2fa584a0e302"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.NewRoomTypeVC.maxOccupancyBottamSheet() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/New%20Room%20Type/NewRoomTypeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  uuid = "D4A74896-B97F-4482-AF3B-1922AE006B48 - 65be2fa584a0e486"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.NewRoomTypeVC.maxOccupancyBottamSheet() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/New%20Room%20Type/NewRoomTypeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F213BDE-982F-4BD7-95C4-90DD4630DB00"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Pops/Number Of Bed/NumberOfBedPops.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C497288-737E-49EE-B272-A48C5D0A9572"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/SIngle Property 2/SingleProperty2VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "submitBtnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3096104C-C1B1-4484-8542-EDE486CDA62C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/Single Property 1/SingleProperty1VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85414696-6D0E-4871-9077-5EA9378C993C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/Single Property 1/SingleProperty1VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0148EBF-47FA-4916-BF0D-ECF897CD518C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/WelcomeVC/Onboarding/Single Property 1/SingleProperty1VC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "Validation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F0148EBF-47FA-4916-BF0D-ECF897CD518C - fb57749b22e54274"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.SingleProperty1VC.Validation() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/WelcomeVC/Onboarding/Single%20Property%201/SingleProperty1VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "5456">
+               </Location>
+               <Location
+                  uuid = "F0148EBF-47FA-4916-BF0D-ECF897CD518C - fb57749b22e54274"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.SingleProperty1VC.Validation() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/WelcomeVC/Onboarding/Single%20Property%201/SingleProperty1VC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "5472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B99180E-C406-4708-A7F9-01C8D3475B30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Charges And Planes/Edit Rates Plane/EditRatePlanes.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "fetchCoreDataData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B99180E-C406-4708-A7F9-01C8D3475B30 - f8eeded35571de7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.EditRatePlanes.fetchData() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/Charges%20And%20Planes/Edit%20Rates%20Plane/EditRatePlanes.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "4B99180E-C406-4708-A7F9-01C8D3475B30 - de351356385e0068"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.EditRatePlanes.fetchCoreDataData() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/Charges%20And%20Planes/Edit%20Rates%20Plane/EditRatePlanes.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C981098C-7780-4B27-A213-93B346E83BB6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hotel Management System/Controllers/Charges And Planes/Edit Rates Plane/EditRatePlanes.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "fetchCoreDataData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C981098C-7780-4B27-A213-93B346E83BB6 - 710066f452bfd604"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.EditRatePlanes.btnEditMealPlanePressed(__C.UIButton) -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/Charges%20And%20Planes/Edit%20Rates%20Plane/EditRatePlanes.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "C981098C-7780-4B27-A213-93B346E83BB6 - de351356385e0723"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hotel_Management_System.EditRatePlanes.fetchCoreDataData() -&gt; ()"
+                  moduleName = "Hotel Management System"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1234/Desktop/Development/R-HMS-iOS-AnkitKumarDev/Hotel%20Management%20System/Controllers/Charges%20And%20Planes/Edit%20Rates%20Plane/EditRatePlanes.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "4240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
