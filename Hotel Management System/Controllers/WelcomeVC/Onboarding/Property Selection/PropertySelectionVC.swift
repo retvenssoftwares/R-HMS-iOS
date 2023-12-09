@@ -21,6 +21,7 @@ class PropertySelectionVC: UIViewController {
     var multipleProperty: String = "Multiple"
     var userId: String?
     
+    @IBOutlet weak var navigationView: UIView!
     var userDefaults = UserDefaults()
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -71,6 +72,9 @@ class PropertySelectionVC: UIViewController {
     }
     
    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func singlePropertyBtnPressed(_ sender: UIButton) {
         //updatePropertyTypeSOC(for: "single")

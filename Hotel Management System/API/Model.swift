@@ -288,3 +288,9 @@ struct PostResponse: Codable {
     let success: Bool
     // Add other properties if needed
 }
+
+struct CreatePropertyResponse: Decodable {
+    let success: Bool
+    let message: String
+    // Add more properties based on your actual response
+}

@@ -417,25 +417,25 @@ extension AddressAndContactVC: UITableViewDelegate, UITableViewDataSource {
         //            cell.lblSearchName.text = ""
         //        }
         
-        if indexPath.row < place.count {
-            let prediction = place[indexPath.row]
-            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
-            cell.detailTextLabel?.text = prediction.attributedSecondaryText?.string
-        } else {
-            cell.lblSearchName?.text = ""
-            cell.detailTextLabel?.text = ""
-        }
+//        if indexPath.row < place.count {
+//            let prediction = place[indexPath.row]
+//            cell.lblSearchName?.text = prediction.attributedPrimaryText.string
+//            cell.detailTextLabel?.text = prediction.attributedSecondaryText?.string
+//        } else {
+//            cell.lblSearchName?.text = ""
+//            cell.detailTextLabel?.text = ""
+//        }
         
         if place.count > 1 {
             let prediction = place[1]
             cell.lblSearchName?.text = prediction.attributedPrimaryText.string
         }
         if place.count > 2 {
-            let prediction = place[2]
+            let prediction = place[indexPath.row]
             cell.lblSearchName?.text = prediction.attributedPrimaryText.string
         }
         if place.count > 3 {
-            let prediction = place[3]
+            let prediction = place[indexPath.row]
             cell.lblSearchName?.text = prediction.attributedPrimaryText.string
         }
         if place.count > 4 {
