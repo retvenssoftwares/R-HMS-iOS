@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CreateRoomEntity" representedClassName="CreateRoomEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="adults" optional="YES" attributeType="String"/>
+        <attribute name="baseRate" optional="YES" attributeType="String"/>
+        <attribute name="child" optional="YES" attributeType="String"/>
+        <attribute name="extraAdultRate" optional="YES" attributeType="String"/>
+        <attribute name="extraChildRate" optional="YES" attributeType="String"/>
+        <attribute name="firstBed" optional="YES" attributeType="String"/>
+        <attribute name="maxOccupancy" optional="YES" attributeType="String"/>
+        <attribute name="maxThershold" optional="YES" attributeType="String"/>
+        <attribute name="minThershold" optional="YES" attributeType="String"/>
+        <attribute name="noOfBed" optional="YES" attributeType="String"/>
+        <attribute name="roomDescription" optional="YES" attributeType="String"/>
+        <attribute name="roomTypeInventory" optional="YES" attributeType="String"/>
+        <attribute name="roomTypeName" optional="YES" attributeType="String"/>
+        <attribute name="secondBed" optional="YES" attributeType="String"/>
+        <attribute name="shortCode" optional="YES" attributeType="String"/>
+        <attribute name="thirdBed" optional="YES" attributeType="String"/>
+    </entity>
+</model>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectMealTableCell" rowHeight="79" id="KGk-i7-Jjw" customClass="SelectMealTableCell" customModule="Hotel_Management_System" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wur-XI-7FB">
+                        <rect key="frame" x="12" y="3" width="337" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O2-DV-1NM" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                <rect key="frame" x="12" y="12" width="313" height="20"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <color key="textColor" red="0.25882352941176467" green="0.30588235294117649" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4O2-DV-1NM" secondAttribute="bottom" constant="12" id="3Ra-Ju-2x5"/>
+                            <constraint firstItem="4O2-DV-1NM" firstAttribute="leading" secondItem="wur-XI-7FB" secondAttribute="leading" constant="12" id="CPL-uG-RzW"/>
+                            <constraint firstItem="4O2-DV-1NM" firstAttribute="top" secondItem="wur-XI-7FB" secondAttribute="top" constant="12" id="ayx-3y-j1b"/>
+                            <constraint firstAttribute="trailing" secondItem="4O2-DV-1NM" secondAttribute="trailing" constant="12" id="haO-N0-HNN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                <constraints>
+                    <constraint firstItem="wur-XI-7FB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="3Je-za-3Vj"/>
+                    <constraint firstItem="wur-XI-7FB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="JJz-5c-ZCf"/>
+                    <constraint firstAttribute="trailing" secondItem="wur-XI-7FB" secondAttribute="trailing" constant="12" id="Ktr-l0-cv0"/>
+                    <constraint firstAttribute="bottom" secondItem="wur-XI-7FB" secondAttribute="bottom" constant="3" id="gY8-8e-jfL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblName" destination="4O2-DV-1NM" id="wQy-xj-miK"/>
+            </connections>
+            <point key="canvasLocation" x="70.992366412213741" y="32.04225352112676"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

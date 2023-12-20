@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="SideMenuCollectionCell" customModule="Hotel_Management_System" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhR-Mj-29t">
+                        <rect key="frame" x="10" y="0.0" width="380" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DashboardImg" translatesAutoresizingMaskIntoConstraints="NO" id="a2L-Ae-ERP">
+                                <rect key="frame" x="10" y="15" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="7EV-d4-qPk"/>
+                                    <constraint firstAttribute="width" secondItem="a2L-Ae-ERP" secondAttribute="height" multiplier="1:1" id="8tJ-qz-daC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9F-mL-Nrx" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                <rect key="frame" x="40" y="16" width="330" height="18"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T9F-mL-Nrx" firstAttribute="centerY" secondItem="a2L-Ae-ERP" secondAttribute="centerY" id="72c-Vn-iVa"/>
+                            <constraint firstAttribute="trailing" secondItem="T9F-mL-Nrx" secondAttribute="trailing" constant="10" id="7sY-4a-tn7"/>
+                            <constraint firstItem="T9F-mL-Nrx" firstAttribute="leading" secondItem="a2L-Ae-ERP" secondAttribute="trailing" constant="10" id="8xd-9E-tDS"/>
+                            <constraint firstItem="a2L-Ae-ERP" firstAttribute="leading" secondItem="BhR-Mj-29t" secondAttribute="leading" constant="10" id="PeL-5u-y9n"/>
+                            <constraint firstItem="a2L-Ae-ERP" firstAttribute="top" secondItem="BhR-Mj-29t" secondAttribute="top" constant="15" id="tN7-Kg-RDD"/>
+                            <constraint firstAttribute="bottom" secondItem="a2L-Ae-ERP" secondAttribute="bottom" constant="15" id="w5O-BP-5DO"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="BhR-Mj-29t" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="BeS-Z9-Exo"/>
+                <constraint firstItem="BhR-Mj-29t" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ITa-DF-vcM"/>
+                <constraint firstAttribute="trailing" secondItem="BhR-Mj-29t" secondAttribute="trailing" constant="10" id="Jit-5g-vNb"/>
+                <constraint firstAttribute="bottom" secondItem="BhR-Mj-29t" secondAttribute="bottom" id="lrV-cw-Ogj"/>
+            </constraints>
+            <size key="customSize" width="429" height="59"/>
+            <connections>
+                <outlet property="imgDashBoard" destination="a2L-Ae-ERP" id="dYa-Sc-LA5"/>
+                <outlet property="lblDashBoard" destination="T9F-mL-Nrx" id="gm5-6h-7VA"/>
+            </connections>
+            <point key="canvasLocation" x="269.46564885496184" y="22.887323943661972"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="DashboardImg" width="20" height="20"/>
+    </resources>
+</document>

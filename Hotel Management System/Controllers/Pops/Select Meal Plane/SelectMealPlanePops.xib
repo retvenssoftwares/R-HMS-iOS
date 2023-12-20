@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectMealPlanePops" customModule="Hotel_Management_System" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAmericanaPlan" destination="h5T-WJ-2C0" id="VRE-OB-cu3"/>
+                <outlet property="btnCancel" destination="BNL-lJ-Au2" id="O1b-VY-lcG"/>
+                <outlet property="btnContinentalPlane" destination="2ig-VR-55V" id="RFs-Az-mcM"/>
+                <outlet property="btnEuropeanPlan" destination="4eZ-fb-yfM" id="Hjx-iX-Pjy"/>
+                <outlet property="btnFullboard" destination="bWj-jE-bCB" id="zh3-cf-8T6"/>
+                <outlet property="btnModifiedAmericanaPlane" destination="fFb-X2-1BD" id="clj-y5-246"/>
+                <outlet property="btnRoomOnly" destination="009-4A-C9c" id="zbx-gw-aNu"/>
+                <outlet property="btnSave" destination="pJk-ef-4TQ" id="yqu-AP-hPN"/>
+                <outlet property="lblAmericanaPlane" destination="pWe-eG-vg6" id="wvi-IP-zG6"/>
+                <outlet property="lblContinentalPlane" destination="4VC-l4-RbU" id="cYH-Nc-Bda"/>
+                <outlet property="lblEuropeanPlane" destination="gHN-l8-ZrB" id="qpl-wj-zXF"/>
+                <outlet property="lblFullBoard" destination="QAx-Rn-dmw" id="HsQ-pF-B8D"/>
+                <outlet property="lblModifiedAmericanaPlane" destination="YvI-NZ-7x0" id="OP7-fL-FmQ"/>
+                <outlet property="lblRoomOnly" destination="anG-5U-Q8L" id="RfB-KG-Ke7"/>
+                <outlet property="lblSelectMealPlane" destination="h37-wP-rEF" id="usb-lK-nQf"/>
+                <outlet property="lblSelectMealPlaneDescription" destination="E6q-00-sw1" id="GTu-MQ-BeM"/>
+                <outlet property="stackViewSaveCancelBtn" destination="fDC-sc-a7X" id="29g-0H-jYO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAmericanPlane" destination="WHy-hH-jQl" id="PEp-Ug-ISZ"/>
+                <outlet property="viewContinentalPlane" destination="uwx-Lj-4fz" id="DOm-GZ-01u"/>
+                <outlet property="viewEuropeanPlane" destination="nbn-d7-VQf" id="cBQ-gJ-x9b"/>
+                <outlet property="viewFullBoard" destination="gri-nE-7gk" id="SSK-rQ-AHj"/>
+                <outlet property="viewModifiedAmericanaPlane" destination="F0z-Ga-S5N" id="oDM-FO-e2v"/>
+                <outlet property="viewRoomOnly" destination="F3K-L5-FtL" id="5rD-bX-pAo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Meal Plans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h37-wP-rEF" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                    <rect key="frame" x="136.33333333333334" y="412.33333333333331" width="120.33333333333334" height="17.666666666666686"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Meal Plans to make rate plans with." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6q-00-sw1" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                    <rect key="frame" x="20" y="435" width="353" height="13"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbn-d7-VQf">
+                    <rect key="frame" x="20" y="468" width="353" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="European Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-l8-ZrB" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="12" y="13" width="77" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-fb-yfM">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnEuropeanPlanePressed:" destination="-1" eventType="touchUpInside" id="J8E-iT-Jec"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4eZ-fb-yfM" secondAttribute="bottom" id="6zG-aX-St0"/>
+                        <constraint firstItem="gHN-l8-ZrB" firstAttribute="leading" secondItem="nbn-d7-VQf" secondAttribute="leading" constant="12" id="Im8-hv-nnb"/>
+                        <constraint firstAttribute="trailing" secondItem="4eZ-fb-yfM" secondAttribute="trailing" id="OBG-YG-gCU"/>
+                        <constraint firstItem="4eZ-fb-yfM" firstAttribute="leading" secondItem="nbn-d7-VQf" secondAttribute="leading" id="u9z-Ft-lli"/>
+                        <constraint firstItem="4eZ-fb-yfM" firstAttribute="top" secondItem="nbn-d7-VQf" secondAttribute="top" id="xmU-Pf-seJ"/>
+                        <constraint firstAttribute="height" constant="40" id="yKB-Ek-si9"/>
+                        <constraint firstItem="gHN-l8-ZrB" firstAttribute="centerY" secondItem="nbn-d7-VQf" secondAttribute="centerY" id="yhh-La-7eU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHy-hH-jQl">
+                    <rect key="frame" x="20" y="518" width="353" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americana Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWe-eG-vg6" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="12" y="13" width="84.333333333333329" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5T-WJ-2C0">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnAmericanaPlanePressed:" destination="-1" eventType="touchUpInside" id="b9Q-Ne-iD9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="pWe-eG-vg6" firstAttribute="centerY" secondItem="WHy-hH-jQl" secondAttribute="centerY" id="BQ6-1A-0KW"/>
+                        <constraint firstItem="h5T-WJ-2C0" firstAttribute="leading" secondItem="WHy-hH-jQl" secondAttribute="leading" id="Pye-bN-zdB"/>
+                        <constraint firstAttribute="bottom" secondItem="h5T-WJ-2C0" secondAttribute="bottom" id="RvC-hg-vcA"/>
+                        <constraint firstItem="pWe-eG-vg6" firstAttribute="leading" secondItem="WHy-hH-jQl" secondAttribute="leading" constant="12" id="TcE-Zc-zLl"/>
+                        <constraint firstAttribute="trailing" secondItem="h5T-WJ-2C0" secondAttribute="trailing" id="VjD-x5-ytl"/>
+                        <constraint firstAttribute="height" constant="40" id="fkS-gJ-QPh"/>
+                        <constraint firstItem="h5T-WJ-2C0" firstAttribute="top" secondItem="WHy-hH-jQl" secondAttribute="top" id="wJx-l7-OBg"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwx-Lj-4fz">
+                    <rect key="frame" x="20" y="568" width="353" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continental Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VC-l4-RbU" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="12" y="13" width="88" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ig-VR-55V">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnContinentalPlane:" destination="-1" eventType="touchUpInside" id="dCx-5v-Al5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="2ig-VR-55V" firstAttribute="leading" secondItem="uwx-Lj-4fz" secondAttribute="leading" id="FL8-Po-Q7j"/>
+                        <constraint firstItem="4VC-l4-RbU" firstAttribute="leading" secondItem="uwx-Lj-4fz" secondAttribute="leading" constant="12" id="JLd-Vf-QvP"/>
+                        <constraint firstAttribute="trailing" secondItem="2ig-VR-55V" secondAttribute="trailing" id="WIH-cb-gmU"/>
+                        <constraint firstItem="2ig-VR-55V" firstAttribute="top" secondItem="uwx-Lj-4fz" secondAttribute="top" id="YJM-Q9-yRA"/>
+                        <constraint firstAttribute="bottom" secondItem="2ig-VR-55V" secondAttribute="bottom" id="r5u-N3-9Tc"/>
+                        <constraint firstItem="4VC-l4-RbU" firstAttribute="centerY" secondItem="uwx-Lj-4fz" secondAttribute="centerY" id="rFf-Gq-JMV"/>
+                        <constraint firstAttribute="height" constant="40" id="x0s-GW-KXC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0z-Ga-S5N">
+                    <rect key="frame" x="20" y="618" width="353" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modified Americana Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvI-NZ-7x0" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="12" y="13" width="134" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFb-X2-1BD">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnModifiedAmericanaPlanePressed:" destination="-1" eventType="touchUpInside" id="Kzo-AH-TG7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="fFb-X2-1BD" secondAttribute="bottom" id="R4x-Jp-Ve5"/>
+                        <constraint firstItem="fFb-X2-1BD" firstAttribute="top" secondItem="F0z-Ga-S5N" secondAttribute="top" id="d7A-AP-P26"/>
+                        <constraint firstAttribute="trailing" secondItem="fFb-X2-1BD" secondAttribute="trailing" id="dZp-Ap-Vg8"/>
+                        <constraint firstItem="fFb-X2-1BD" firstAttribute="leading" secondItem="F0z-Ga-S5N" secondAttribute="leading" id="gTI-Jy-ww5"/>
+                        <constraint firstItem="YvI-NZ-7x0" firstAttribute="centerY" secondItem="F0z-Ga-S5N" secondAttribute="centerY" id="kDY-nx-3Wb"/>
+                        <constraint firstAttribute="height" constant="40" id="s6a-ea-zWR"/>
+                        <constraint firstItem="YvI-NZ-7x0" firstAttribute="leading" secondItem="F0z-Ga-S5N" secondAttribute="leading" constant="12" id="wCx-ue-LvZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gri-nE-7gk">
+                    <rect key="frame" x="20" y="668" width="353" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-Rn-dmw" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="11.999999999999996" y="13" width="53.666666666666657" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWj-jE-bCB">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnFullBoardPressed:" destination="-1" eventType="touchUpInside" id="mkl-dJ-tds"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bWj-jE-bCB" secondAttribute="trailing" id="GOm-Dc-mdx"/>
+                        <constraint firstItem="QAx-Rn-dmw" firstAttribute="leading" secondItem="gri-nE-7gk" secondAttribute="leading" constant="12" id="NQC-yh-6dn"/>
+                        <constraint firstItem="bWj-jE-bCB" firstAttribute="top" secondItem="gri-nE-7gk" secondAttribute="top" id="Tvn-32-iVA"/>
+                        <constraint firstItem="QAx-Rn-dmw" firstAttribute="centerY" secondItem="gri-nE-7gk" secondAttribute="centerY" id="azU-6d-l8b"/>
+                        <constraint firstAttribute="bottom" secondItem="bWj-jE-bCB" secondAttribute="bottom" id="cfg-NQ-bDX"/>
+                        <constraint firstItem="bWj-jE-bCB" firstAttribute="leading" secondItem="gri-nE-7gk" secondAttribute="leading" id="jkE-v4-Dxd"/>
+                        <constraint firstAttribute="height" constant="40" id="yLt-fY-k3p"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-L5-FtL">
+                    <rect key="frame" x="20" y="718" width="353" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anG-5U-Q8L" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="12.000000000000004" y="13" width="58.333333333333343" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="009-4A-C9c">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="btnRoomOnlyPressed:" destination="-1" eventType="touchUpInside" id="tda-AT-VSh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="009-4A-C9c" firstAttribute="top" secondItem="F3K-L5-FtL" secondAttribute="top" id="4yX-31-hfB"/>
+                        <constraint firstItem="anG-5U-Q8L" firstAttribute="centerY" secondItem="F3K-L5-FtL" secondAttribute="centerY" id="Uc2-AA-C4d"/>
+                        <constraint firstAttribute="height" constant="40" id="WRo-u3-Ud2"/>
+                        <constraint firstItem="009-4A-C9c" firstAttribute="leading" secondItem="F3K-L5-FtL" secondAttribute="leading" id="Zvc-pb-zCg"/>
+                        <constraint firstItem="anG-5U-Q8L" firstAttribute="leading" secondItem="F3K-L5-FtL" secondAttribute="leading" constant="12" id="df1-lS-BOh"/>
+                        <constraint firstAttribute="bottom" secondItem="009-4A-C9c" secondAttribute="bottom" id="qKx-jw-FzB"/>
+                        <constraint firstAttribute="trailing" secondItem="009-4A-C9c" secondAttribute="trailing" id="tmE-46-o0W"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-sc-a7X">
+                    <rect key="frame" x="20" y="768" width="353" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNL-lJ-Au2">
+                            <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="40"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCancelPressed:" destination="-1" eventType="touchUpInside" id="MaY-Bq-4D4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJk-ef-4TQ">
+                            <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="40"/>
+                            <color key="backgroundColor" red="0.4039215686" green="0.31372549020000001" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Save">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnSavePressed:" destination="-1" eventType="touchUpInside" id="18Y-6S-C0N"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="NG3-cI-Jt5"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="F3K-L5-FtL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="26X-57-BdU"/>
+                <constraint firstItem="gri-nE-7gk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="3dc-mX-blS"/>
+                <constraint firstItem="fDC-sc-a7X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="AbG-bf-8r3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E6q-00-sw1" secondAttribute="trailing" constant="20" id="FnF-YR-AX4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uwx-Lj-4fz" secondAttribute="trailing" constant="20" id="HIt-gu-lRK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WHy-hH-jQl" secondAttribute="trailing" constant="20" id="J2N-5K-4AT"/>
+                <constraint firstItem="gri-nE-7gk" firstAttribute="top" secondItem="F0z-Ga-S5N" secondAttribute="bottom" constant="10" id="JUo-nu-7lQ"/>
+                <constraint firstItem="nbn-d7-VQf" firstAttribute="top" secondItem="E6q-00-sw1" secondAttribute="bottom" constant="20" id="PDV-3q-7Jn"/>
+                <constraint firstItem="WHy-hH-jQl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QaX-0l-xNt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fDC-sc-a7X" secondAttribute="trailing" constant="20" id="Ta1-Na-evz"/>
+                <constraint firstItem="uwx-Lj-4fz" firstAttribute="top" secondItem="WHy-hH-jQl" secondAttribute="bottom" constant="10" id="YTb-Ta-gbS"/>
+                <constraint firstItem="E6q-00-sw1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aUs-58-Lyc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fDC-sc-a7X" secondAttribute="bottom" constant="10" id="ba3-6h-Yes"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gri-nE-7gk" secondAttribute="trailing" constant="20" id="czw-IA-T1g"/>
+                <constraint firstItem="F3K-L5-FtL" firstAttribute="top" secondItem="gri-nE-7gk" secondAttribute="bottom" constant="10" id="fEF-6J-TRs"/>
+                <constraint firstItem="uwx-Lj-4fz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ff7-IG-NAR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nbn-d7-VQf" secondAttribute="trailing" constant="20" id="ftV-cf-X3o"/>
+                <constraint firstItem="WHy-hH-jQl" firstAttribute="top" secondItem="nbn-d7-VQf" secondAttribute="bottom" constant="10" id="gKZ-wL-7KF"/>
+                <constraint firstItem="E6q-00-sw1" firstAttribute="top" secondItem="h37-wP-rEF" secondAttribute="bottom" constant="5" id="hUG-0A-gM0"/>
+                <constraint firstItem="nbn-d7-VQf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nZW-Ra-bhZ"/>
+                <constraint firstItem="F0z-Ga-S5N" firstAttribute="top" secondItem="uwx-Lj-4fz" secondAttribute="bottom" constant="10" id="nfB-8r-nIr"/>
+                <constraint firstItem="h37-wP-rEF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="o1a-34-hqQ"/>
+                <constraint firstItem="F0z-Ga-S5N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="p5d-CX-EKy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F0z-Ga-S5N" secondAttribute="trailing" constant="20" id="raN-O4-0qS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F3K-L5-FtL" secondAttribute="trailing" constant="20" id="tAM-ul-fb1"/>
+                <constraint firstItem="fDC-sc-a7X" firstAttribute="top" secondItem="F3K-L5-FtL" secondAttribute="bottom" constant="10" id="z7N-Vr-QKg"/>
+            </constraints>
+            <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

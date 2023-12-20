@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetContentView">
+            <connections>
+                <outlet property="btnAppartments" destination="gpP-bm-408" id="qC0-JW-DNz"/>
+                <outlet property="btnHostler" destination="uAn-Ax-Hgw" id="RRI-Uj-7yc"/>
+                <outlet property="btnHotel" destination="jR8-0t-8ZM" id="oQu-dX-G3a"/>
+                <outlet property="btnLodge" destination="tE4-pA-H2R" id="sIS-yZ-bXC"/>
+                <outlet property="btnOther" destination="Ms5-Zw-sTw" id="RUr-MR-DTy"/>
+                <outlet property="btnResort" destination="K9k-Jl-Asa" id="XKs-5g-PKC"/>
+                <outlet property="btnSharedAppartments" destination="3ls-yn-Nv0" id="294-xF-LzF"/>
+                <outlet property="btnVilla" destination="ehm-wf-Dy3" id="X9c-E5-joc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="nca-wG-zXC"/>
+                <outlet property="viewBg" destination="iN0-l3-epB" id="QAA-Od-965"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qud-Hf-z7z">
+                    <rect key="frame" x="0.0" y="537" width="393" height="305"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucZ-x3-OnD" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="146" y="10.000000000000002" width="101.33333333333331" height="17.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="This is the category that best describes the type of property you're managing." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUb-H1-Mmk" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="20" y="37.666666666666629" width="353" height="26"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xwb-n6-5QO">
+                            <rect key="frame" x="20" y="73.666666666666629" width="353" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSy-81-ni9">
+                                    <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hotel" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-cM-Phw">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="aFo-cM-Phw" secondAttribute="height" multiplier="1:1" id="1SS-ph-UGF"/>
+                                                <constraint firstAttribute="width" constant="30" id="1dh-RG-vDi"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRj-OC-Jv4" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60" y="15.666666666666744" width="33.666666666666657" height="16.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR8-0t-8ZM">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="BtnHotelPressed:" destination="-1" eventType="touchUpInside" id="e8E-zb-oNN"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="jR8-0t-8ZM" firstAttribute="leading" secondItem="pSy-81-ni9" secondAttribute="leading" id="ZOF-Hv-FQc"/>
+                                        <constraint firstItem="aFo-cM-Phw" firstAttribute="centerY" secondItem="pSy-81-ni9" secondAttribute="centerY" id="aEG-Mo-drZ"/>
+                                        <constraint firstItem="zRj-OC-Jv4" firstAttribute="centerY" secondItem="aFo-cM-Phw" secondAttribute="centerY" id="cQH-eL-8aE"/>
+                                        <constraint firstItem="aFo-cM-Phw" firstAttribute="leading" secondItem="pSy-81-ni9" secondAttribute="leading" constant="10" id="cTe-xx-2Z2"/>
+                                        <constraint firstItem="zRj-OC-Jv4" firstAttribute="leading" secondItem="aFo-cM-Phw" secondAttribute="trailing" constant="20" id="oYf-cZ-l3K"/>
+                                        <constraint firstAttribute="trailing" secondItem="jR8-0t-8ZM" secondAttribute="trailing" id="v2g-7p-6bC"/>
+                                        <constraint firstAttribute="bottom" secondItem="jR8-0t-8ZM" secondAttribute="bottom" id="wGL-iP-jF1"/>
+                                        <constraint firstItem="jR8-0t-8ZM" firstAttribute="top" secondItem="pSy-81-ni9" secondAttribute="top" id="zj4-mW-hUN"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtT-x0-HYK">
+                                    <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Resort" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-5d-ua9">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="hJk-5d-ua9" secondAttribute="height" multiplier="1:1" id="Lvo-UX-NP3"/>
+                                                <constraint firstAttribute="width" constant="30" id="WhJ-IN-4ND"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twc-yG-lrK" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60.000000000000028" y="15.666666666666744" width="41" height="16.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9k-Jl-Asa">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnResortPressed:" destination="-1" eventType="touchUpInside" id="3e0-RH-0HM"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="twc-yG-lrK" firstAttribute="centerY" secondItem="hJk-5d-ua9" secondAttribute="centerY" id="9FO-qw-1MF"/>
+                                        <constraint firstItem="hJk-5d-ua9" firstAttribute="centerY" secondItem="QtT-x0-HYK" secondAttribute="centerY" id="DF3-RN-eUY"/>
+                                        <constraint firstItem="twc-yG-lrK" firstAttribute="leading" secondItem="hJk-5d-ua9" secondAttribute="trailing" constant="20" id="MGg-cF-e4l"/>
+                                        <constraint firstItem="K9k-Jl-Asa" firstAttribute="leading" secondItem="QtT-x0-HYK" secondAttribute="leading" id="YgD-Ps-SmG"/>
+                                        <constraint firstItem="hJk-5d-ua9" firstAttribute="leading" secondItem="QtT-x0-HYK" secondAttribute="leading" constant="10" id="d4N-YE-Dwz"/>
+                                        <constraint firstAttribute="trailing" secondItem="K9k-Jl-Asa" secondAttribute="trailing" id="sCV-n0-6Mg"/>
+                                        <constraint firstAttribute="bottom" secondItem="K9k-Jl-Asa" secondAttribute="bottom" id="u2q-kF-CwC"/>
+                                        <constraint firstItem="K9k-Jl-Asa" firstAttribute="top" secondItem="QtT-x0-HYK" secondAttribute="top" id="xsk-tA-OYZ"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="auz-uz-WQK"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yWi-Av-xXL">
+                            <rect key="frame" x="20" y="131.66666666666663" width="353" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3G-by-0ky">
+                                    <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Villa" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-mb-qMM">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="1IP-CT-JJX"/>
+                                                <constraint firstAttribute="width" secondItem="5GU-mb-qMM" secondAttribute="height" multiplier="1:1" id="mCR-aK-FN1"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Villa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNF-6v-X4g" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60" y="15.666666666666744" width="27" height="16.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-wf-Dy3">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnVillaPressed:" destination="-1" eventType="touchUpInside" id="l2F-Xb-NUd"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ehm-wf-Dy3" secondAttribute="bottom" id="04c-ZY-H09"/>
+                                        <constraint firstAttribute="trailing" secondItem="ehm-wf-Dy3" secondAttribute="trailing" id="3bl-BT-868"/>
+                                        <constraint firstItem="ehm-wf-Dy3" firstAttribute="top" secondItem="l3G-by-0ky" secondAttribute="top" id="K9N-h0-vfo"/>
+                                        <constraint firstItem="5GU-mb-qMM" firstAttribute="leading" secondItem="l3G-by-0ky" secondAttribute="leading" constant="10" id="Lnf-Lg-wGA"/>
+                                        <constraint firstItem="5GU-mb-qMM" firstAttribute="centerY" secondItem="l3G-by-0ky" secondAttribute="centerY" id="ZtC-G4-WUM"/>
+                                        <constraint firstItem="wNF-6v-X4g" firstAttribute="leading" secondItem="5GU-mb-qMM" secondAttribute="trailing" constant="20" id="c2B-3g-o1s"/>
+                                        <constraint firstItem="ehm-wf-Dy3" firstAttribute="leading" secondItem="l3G-by-0ky" secondAttribute="leading" id="ybP-ju-Ste"/>
+                                        <constraint firstItem="wNF-6v-X4g" firstAttribute="centerY" secondItem="5GU-mb-qMM" secondAttribute="centerY" id="z5Q-hn-t8f"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ekk-Gt-aaN">
+                                    <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE4-pA-H2R">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnLodgePressed:" destination="-1" eventType="touchUpInside" id="OOT-Vf-fRM"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lodge" translatesAutoresizingMaskIntoConstraints="NO" id="0H4-Fi-ofz">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="0H4-Fi-ofz" secondAttribute="height" multiplier="1:1" id="fRB-oO-vcf"/>
+                                                <constraint firstAttribute="width" constant="30" id="n3n-Oh-v8b"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lodge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BT-Kf-O1s" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60.000000000000028" y="15.666666666666744" width="39" height="16.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="tE4-pA-H2R" firstAttribute="leading" secondItem="Ekk-Gt-aaN" secondAttribute="leading" id="Cga-99-Ukg"/>
+                                        <constraint firstItem="7BT-Kf-O1s" firstAttribute="leading" secondItem="0H4-Fi-ofz" secondAttribute="trailing" constant="20" id="PkZ-Sq-sa6"/>
+                                        <constraint firstAttribute="trailing" secondItem="tE4-pA-H2R" secondAttribute="trailing" id="QtN-YQ-nmP"/>
+                                        <constraint firstItem="0H4-Fi-ofz" firstAttribute="leading" secondItem="Ekk-Gt-aaN" secondAttribute="leading" constant="10" id="TQt-6v-jlw"/>
+                                        <constraint firstItem="7BT-Kf-O1s" firstAttribute="centerY" secondItem="0H4-Fi-ofz" secondAttribute="centerY" id="Z5b-nv-Uob"/>
+                                        <constraint firstItem="tE4-pA-H2R" firstAttribute="top" secondItem="Ekk-Gt-aaN" secondAttribute="top" id="hcm-Ma-HfY"/>
+                                        <constraint firstItem="0H4-Fi-ofz" firstAttribute="centerY" secondItem="Ekk-Gt-aaN" secondAttribute="centerY" id="pb4-7s-k9f"/>
+                                        <constraint firstAttribute="bottom" secondItem="tE4-pA-H2R" secondAttribute="bottom" id="sFL-pe-GKG"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="5Ao-w2-TxY"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cRJ-GR-SRF">
+                            <rect key="frame" x="20" y="189.66666666666663" width="353" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yk-Mh-K7y">
+                                    <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAn-Ax-Hgw">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnHostlerPressed:" destination="-1" eventType="touchUpInside" id="jgh-cd-vMc"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hotel" translatesAutoresizingMaskIntoConstraints="NO" id="fWR-9u-Yqh">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="XEG-Xc-7Kn"/>
+                                                <constraint firstAttribute="width" secondItem="fWR-9u-Yqh" secondAttribute="height" multiplier="1:1" id="gXb-ib-MGk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hostel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eH1-qF-Top" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60" y="15.666666666666744" width="40.666666666666657" height="16.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="uAn-Ax-Hgw" firstAttribute="top" secondItem="4Yk-Mh-K7y" secondAttribute="top" id="3uZ-uR-YW1"/>
+                                        <constraint firstItem="fWR-9u-Yqh" firstAttribute="leading" secondItem="4Yk-Mh-K7y" secondAttribute="leading" constant="10" id="Azx-ha-Whc"/>
+                                        <constraint firstItem="eH1-qF-Top" firstAttribute="leading" secondItem="fWR-9u-Yqh" secondAttribute="trailing" constant="20" id="JNC-fC-Dqq"/>
+                                        <constraint firstItem="uAn-Ax-Hgw" firstAttribute="leading" secondItem="4Yk-Mh-K7y" secondAttribute="leading" id="Mhx-lR-acY"/>
+                                        <constraint firstItem="fWR-9u-Yqh" firstAttribute="centerY" secondItem="4Yk-Mh-K7y" secondAttribute="centerY" id="jdN-xF-waf"/>
+                                        <constraint firstItem="eH1-qF-Top" firstAttribute="centerY" secondItem="fWR-9u-Yqh" secondAttribute="centerY" id="mhX-B6-h5K"/>
+                                        <constraint firstAttribute="trailing" secondItem="uAn-Ax-Hgw" secondAttribute="trailing" id="xm5-gb-JyC"/>
+                                        <constraint firstAttribute="bottom" secondItem="uAn-Ax-Hgw" secondAttribute="bottom" id="yY3-Pq-jkX"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gU5-Ag-rpY">
+                                    <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpP-bm-408">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnAppartmentsPressed:" destination="-1" eventType="touchUpInside" id="NKf-i7-hIo"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Appartments" translatesAutoresizingMaskIntoConstraints="NO" id="asl-Po-0P4">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="asl-Po-0P4" secondAttribute="height" multiplier="1:1" id="lUG-XA-BKj"/>
+                                                <constraint firstAttribute="width" constant="30" id="sx8-ex-Epk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appartments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-Fq-SNn" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60.000000000000021" y="15.666666666666744" width="81.333333333333314" height="16.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="gpP-bm-408" firstAttribute="top" secondItem="gU5-Ag-rpY" secondAttribute="top" id="5S3-EB-gAr"/>
+                                        <constraint firstAttribute="bottom" secondItem="gpP-bm-408" secondAttribute="bottom" id="6XQ-3H-bix"/>
+                                        <constraint firstItem="NI0-Fq-SNn" firstAttribute="leading" secondItem="asl-Po-0P4" secondAttribute="trailing" constant="20" id="B9J-zg-0nZ"/>
+                                        <constraint firstItem="asl-Po-0P4" firstAttribute="centerY" secondItem="gU5-Ag-rpY" secondAttribute="centerY" id="Jq7-UE-Rqm"/>
+                                        <constraint firstItem="gpP-bm-408" firstAttribute="leading" secondItem="gU5-Ag-rpY" secondAttribute="leading" id="M0P-IX-GIL"/>
+                                        <constraint firstItem="NI0-Fq-SNn" firstAttribute="centerY" secondItem="asl-Po-0P4" secondAttribute="centerY" id="iJW-mO-3Lw"/>
+                                        <constraint firstItem="asl-Po-0P4" firstAttribute="leading" secondItem="gU5-Ag-rpY" secondAttribute="leading" constant="10" id="meP-ln-oo2"/>
+                                        <constraint firstAttribute="trailing" secondItem="gpP-bm-408" secondAttribute="trailing" id="xln-NI-cS3"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="vqx-bu-Sdg"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Axj-ey-zn0">
+                            <rect key="frame" x="20" y="247.66666666666663" width="353" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8y7-2a-rbd">
+                                    <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hotel" translatesAutoresizingMaskIntoConstraints="NO" id="ODk-nU-UFO">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="bE7-dX-HrI"/>
+                                                <constraint firstAttribute="width" secondItem="ODk-nU-UFO" secondAttribute="height" multiplier="1:1" id="gNd-bz-jeW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ls-yn-Nv0">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnSHaredHostlerPressed:" destination="-1" eventType="touchUpInside" id="Uve-yI-Nl6"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shared Appartments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-PA-FF2" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60.000000000000007" y="7.6666666666667425" width="101.66666666666669" height="33"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="ODk-nU-UFO" firstAttribute="leading" secondItem="8y7-2a-rbd" secondAttribute="leading" constant="10" id="7nM-Kb-QnS"/>
+                                        <constraint firstAttribute="trailing" secondItem="e9S-PA-FF2" secondAttribute="trailing" constant="10" id="KFp-2E-tY3"/>
+                                        <constraint firstItem="ODk-nU-UFO" firstAttribute="centerY" secondItem="8y7-2a-rbd" secondAttribute="centerY" id="Sq8-xI-76r"/>
+                                        <constraint firstAttribute="bottom" secondItem="3ls-yn-Nv0" secondAttribute="bottom" id="efp-2X-3kH"/>
+                                        <constraint firstItem="e9S-PA-FF2" firstAttribute="centerY" secondItem="ODk-nU-UFO" secondAttribute="centerY" id="ht5-ie-3pq"/>
+                                        <constraint firstItem="e9S-PA-FF2" firstAttribute="leading" secondItem="ODk-nU-UFO" secondAttribute="trailing" constant="20" id="iHH-Sz-vLg"/>
+                                        <constraint firstItem="3ls-yn-Nv0" firstAttribute="leading" secondItem="8y7-2a-rbd" secondAttribute="leading" id="keW-sP-p4y"/>
+                                        <constraint firstItem="3ls-yn-Nv0" firstAttribute="top" secondItem="8y7-2a-rbd" secondAttribute="top" id="qA7-RJ-Ey8"/>
+                                        <constraint firstAttribute="trailing" secondItem="3ls-yn-Nv0" secondAttribute="trailing" id="zOb-rV-Gg4"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYy-Dr-mC7">
+                                    <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Other" translatesAutoresizingMaskIntoConstraints="NO" id="4T6-Ch-ftj">
+                                            <rect key="frame" x="10" y="9" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="4T6-Ch-ftj" secondAttribute="height" multiplier="1:1" id="PC5-lN-hTZ"/>
+                                                <constraint firstAttribute="width" constant="30" id="qse-sO-l1L"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms5-Zw-sTw">
+                                            <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="48"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="btnOtherPressed:" destination="-1" eventType="touchUpInside" id="Rxl-Z5-Lt9"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCS-kM-0ct" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                                            <rect key="frame" x="60.000000000000028" y="15.666666666666744" width="34.333333333333343" height="16.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Ms5-Zw-sTw" secondAttribute="trailing" id="0sk-gs-PUL"/>
+                                        <constraint firstItem="4T6-Ch-ftj" firstAttribute="leading" secondItem="nYy-Dr-mC7" secondAttribute="leading" constant="10" id="Few-6B-dfI"/>
+                                        <constraint firstItem="4T6-Ch-ftj" firstAttribute="centerY" secondItem="nYy-Dr-mC7" secondAttribute="centerY" id="Ymf-uu-8Ah"/>
+                                        <constraint firstItem="GCS-kM-0ct" firstAttribute="leading" secondItem="4T6-Ch-ftj" secondAttribute="trailing" constant="20" id="guq-sE-El4"/>
+                                        <constraint firstItem="Ms5-Zw-sTw" firstAttribute="leading" secondItem="nYy-Dr-mC7" secondAttribute="leading" id="hIy-SX-aPx"/>
+                                        <constraint firstItem="GCS-kM-0ct" firstAttribute="centerY" secondItem="4T6-Ch-ftj" secondAttribute="centerY" id="iZu-uT-XVw"/>
+                                        <constraint firstItem="Ms5-Zw-sTw" firstAttribute="top" secondItem="nYy-Dr-mC7" secondAttribute="top" id="lso-1x-RBz"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ms5-Zw-sTw" secondAttribute="bottom" id="sTk-3Y-SMv"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="EsO-GC-gyK"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="ucZ-x3-OnD" firstAttribute="centerX" secondItem="Qud-Hf-z7z" secondAttribute="centerX" id="BlZ-EI-Fbd"/>
+                        <constraint firstItem="aUb-H1-Mmk" firstAttribute="top" secondItem="ucZ-x3-OnD" secondAttribute="bottom" constant="10" id="EDH-UI-tQH"/>
+                        <constraint firstAttribute="bottom" secondItem="Axj-ey-zn0" secondAttribute="bottom" constant="9.3300000000000001" id="Kfm-Lr-oLh"/>
+                        <constraint firstItem="Axj-ey-zn0" firstAttribute="top" secondItem="cRJ-GR-SRF" secondAttribute="bottom" constant="10" id="MaN-nL-8L7"/>
+                        <constraint firstItem="yWi-Av-xXL" firstAttribute="leading" secondItem="Qud-Hf-z7z" secondAttribute="leading" constant="20" id="MrE-P2-kcC"/>
+                        <constraint firstItem="Xwb-n6-5QO" firstAttribute="top" secondItem="aUb-H1-Mmk" secondAttribute="bottom" constant="10" id="YAc-XA-7nG"/>
+                        <constraint firstAttribute="trailing" secondItem="aUb-H1-Mmk" secondAttribute="trailing" constant="20" id="cqR-6z-3VE"/>
+                        <constraint firstAttribute="height" constant="305" id="d7N-Pb-nWC"/>
+                        <constraint firstAttribute="trailing" secondItem="yWi-Av-xXL" secondAttribute="trailing" constant="20" id="e62-3f-ekf"/>
+                        <constraint firstItem="yWi-Av-xXL" firstAttribute="top" secondItem="Xwb-n6-5QO" secondAttribute="bottom" constant="10" id="ec3-nV-F1c"/>
+                        <constraint firstAttribute="trailing" secondItem="Xwb-n6-5QO" secondAttribute="trailing" constant="20" id="htE-9P-c1w"/>
+                        <constraint firstAttribute="trailing" secondItem="Axj-ey-zn0" secondAttribute="trailing" constant="20" id="lxv-pJ-Uho"/>
+                        <constraint firstItem="cRJ-GR-SRF" firstAttribute="top" secondItem="yWi-Av-xXL" secondAttribute="bottom" constant="10" id="m8q-2i-Ab8"/>
+                        <constraint firstItem="cRJ-GR-SRF" firstAttribute="leading" secondItem="Qud-Hf-z7z" secondAttribute="leading" constant="20" id="qeQ-j3-EZg"/>
+                        <constraint firstItem="ucZ-x3-OnD" firstAttribute="top" secondItem="Qud-Hf-z7z" secondAttribute="top" constant="10" id="sZN-MJ-pcd"/>
+                        <constraint firstAttribute="trailing" secondItem="cRJ-GR-SRF" secondAttribute="trailing" constant="20" id="sbS-dd-9rv"/>
+                        <constraint firstItem="Xwb-n6-5QO" firstAttribute="leading" secondItem="Qud-Hf-z7z" secondAttribute="leading" constant="20" id="sdZ-bP-oSb"/>
+                        <constraint firstItem="aUb-H1-Mmk" firstAttribute="leading" secondItem="Qud-Hf-z7z" secondAttribute="leading" constant="20" id="wDM-6i-vOw"/>
+                        <constraint firstItem="Axj-ey-zn0" firstAttribute="leading" secondItem="Qud-Hf-z7z" secondAttribute="leading" constant="20" id="wFI-2j-v0w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Qud-Hf-z7z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JZD-ZN-9Xe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qud-Hf-z7z" secondAttribute="trailing" id="aCc-4D-ahQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qud-Hf-z7z" secondAttribute="bottom" id="pT3-BK-PR5"/>
+            </constraints>
+            <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>
+        </view>
+        <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kSv-Zi-Ouh">
+            <point key="canvasLocation" x="790" y="75"/>
+        </pageViewController>
+    </objects>
+    <resources>
+        <image name="Appartments" width="28.666666030883789" height="30"/>
+        <image name="Hotel" width="31" height="30"/>
+        <image name="Lodge" width="29.333333969116211" height="30"/>
+        <image name="Other" width="48" height="48"/>
+        <image name="Resort" width="48" height="48"/>
+        <image name="Villa" width="34" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

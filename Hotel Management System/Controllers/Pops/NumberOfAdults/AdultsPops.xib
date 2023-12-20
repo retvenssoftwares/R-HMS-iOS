@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdultsPops" customModule="Hotel_Management_System" customModuleProvider="target">
+            <connections>
+                <outlet property="lblAdults" destination="VmE-Fc-FM4" id="7Q6-bv-H15"/>
+                <outlet property="lblAdultsDescription" destination="lWt-im-BVD" id="di9-jV-PGh"/>
+                <outlet property="lblBase" destination="v6K-Bz-Ayy" id="E6i-l7-dkf"/>
+                <outlet property="lblMax" destination="CKW-Rj-dkF" id="nT0-4z-5fK"/>
+                <outlet property="pickerViewBase" destination="IMA-zJ-hkY" id="cbF-DF-9Va"/>
+                <outlet property="pickerViewMax" destination="dpU-zq-wOb" id="zaw-qB-e4J"/>
+                <outlet property="view" destination="1Vx-yV-KIR" id="zwn-qQ-Fhe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1Vx-yV-KIR">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-qa-efc">
+                    <rect key="frame" x="0.0" y="468" width="393" height="350"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adults" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmE-Fc-FM4" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="174.66666666666666" y="20.333333333333314" width="43.666666666666657" height="17.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the base and max number of adult guests the room is designed to accommodate." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWt-im-BVD" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                            <rect key="frame" x="20" y="48" width="353" height="26"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                            <color key="textColor" name="TextColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7f9-34-Rcb">
+                            <rect key="frame" x="20" y="84" width="353" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6K-Bz-Ayy">
+                                    <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="20"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKW-Rj-dkF">
+                                    <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="20"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="gSY-ld-wTx"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IH4-vJ-tDX">
+                            <rect key="frame" x="20" y="114" width="353" height="216"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMS-Ya-eTr">
+                                    <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="216"/>
+                                    <subviews>
+                                        <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMA-zJ-hkY">
+                                            <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="216"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="Sae-ot-Q5L"/>
+                                                <outlet property="delegate" destination="-1" id="2Sf-d5-2kB"/>
+                                            </connections>
+                                        </pickerView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="IMA-zJ-hkY" firstAttribute="top" secondItem="FMS-Ya-eTr" secondAttribute="top" id="Kkf-wq-kKa"/>
+                                        <constraint firstAttribute="bottom" secondItem="IMA-zJ-hkY" secondAttribute="bottom" id="TZr-qd-zPY"/>
+                                        <constraint firstAttribute="trailing" secondItem="IMA-zJ-hkY" secondAttribute="trailing" id="WBn-L2-Gcm"/>
+                                        <constraint firstItem="IMA-zJ-hkY" firstAttribute="leading" secondItem="FMS-Ya-eTr" secondAttribute="leading" id="ahf-XU-Bga"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jv-uA-ejj">
+                                    <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="216"/>
+                                    <subviews>
+                                        <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpU-zq-wOb">
+                                            <rect key="frame" x="0.0" y="0.0" width="176.33333333333334" height="216"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="IcB-8T-1Uj"/>
+                                                <outlet property="delegate" destination="-1" id="kxo-wE-Z3b"/>
+                                            </connections>
+                                        </pickerView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="dpU-zq-wOb" firstAttribute="leading" secondItem="3jv-uA-ejj" secondAttribute="leading" id="LW3-rD-6eG"/>
+                                        <constraint firstAttribute="trailing" secondItem="dpU-zq-wOb" secondAttribute="trailing" id="dmX-hp-Ovw"/>
+                                        <constraint firstAttribute="bottom" secondItem="dpU-zq-wOb" secondAttribute="bottom" id="iqG-xU-hLy"/>
+                                        <constraint firstItem="dpU-zq-wOb" firstAttribute="top" secondItem="3jv-uA-ejj" secondAttribute="top" id="ubn-IA-bTn"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="IH4-vJ-tDX" secondAttribute="bottom" constant="20" id="4cG-Ew-jej"/>
+                        <constraint firstAttribute="trailing" secondItem="7f9-34-Rcb" secondAttribute="trailing" constant="20" id="8P8-2T-IXl"/>
+                        <constraint firstAttribute="trailing" secondItem="IH4-vJ-tDX" secondAttribute="trailing" constant="20" id="9Oa-MW-QLn"/>
+                        <constraint firstItem="IH4-vJ-tDX" firstAttribute="leading" secondItem="ujc-qa-efc" secondAttribute="leading" constant="20" id="KoQ-VK-Dmh"/>
+                        <constraint firstAttribute="trailing" secondItem="lWt-im-BVD" secondAttribute="trailing" constant="20" id="Wr2-at-HKo"/>
+                        <constraint firstItem="lWt-im-BVD" firstAttribute="leading" secondItem="ujc-qa-efc" secondAttribute="leading" constant="20" id="XDO-5M-bLt"/>
+                        <constraint firstItem="7f9-34-Rcb" firstAttribute="leading" secondItem="ujc-qa-efc" secondAttribute="leading" constant="20" id="ctp-4c-HU1"/>
+                        <constraint firstItem="IH4-vJ-tDX" firstAttribute="top" secondItem="7f9-34-Rcb" secondAttribute="bottom" constant="10" id="eFJ-HP-7DF"/>
+                        <constraint firstItem="7f9-34-Rcb" firstAttribute="top" secondItem="lWt-im-BVD" secondAttribute="bottom" constant="10" id="fLI-J5-wUM"/>
+                        <constraint firstAttribute="height" constant="350" id="gBH-mn-7gz"/>
+                        <constraint firstItem="VmE-Fc-FM4" firstAttribute="centerX" secondItem="ujc-qa-efc" secondAttribute="centerX" id="h2k-wr-8BS"/>
+                        <constraint firstItem="lWt-im-BVD" firstAttribute="top" secondItem="VmE-Fc-FM4" secondAttribute="bottom" constant="10" id="pqD-GO-5nv"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Max Child Can not be Less than Base Adults" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUN-Q9-oOp" customClass="CustomLabel" customModule="Hotel_Management_System" customModuleProvider="target">
+                    <rect key="frame" x="61.333333333333343" y="795" width="270.33333333333326" height="13"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="fontscaling" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vWb-Vf-5X6"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vWb-Vf-5X6" firstAttribute="bottom" secondItem="ujc-qa-efc" secondAttribute="bottom" id="1rO-NS-b2y"/>
+                <constraint firstItem="ujc-qa-efc" firstAttribute="leading" secondItem="vWb-Vf-5X6" secondAttribute="leading" id="AT1-8V-MAb"/>
+                <constraint firstItem="iUN-Q9-oOp" firstAttribute="centerX" secondItem="ujc-qa-efc" secondAttribute="centerX" id="TV0-z1-NJ1"/>
+                <constraint firstItem="vWb-Vf-5X6" firstAttribute="bottom" secondItem="iUN-Q9-oOp" secondAttribute="bottom" constant="10" id="iXL-S3-e07"/>
+                <constraint firstItem="vWb-Vf-5X6" firstAttribute="trailing" secondItem="ujc-qa-efc" secondAttribute="trailing" id="nks-re-RlD"/>
+            </constraints>
+            <point key="canvasLocation" x="767" y="-12"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="TextColor">
+            <color red="0.36862745098039218" green="0.40784313725490196" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
